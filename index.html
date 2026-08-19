@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>安徽格罗特智能科技有限公司 | PCBA EMS OEM一站式电子制造服务</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0F52BA',
+                        secondary: '#165DFF',
+                        dark: '#1E293B',
+                        lightgray: '#F3F4F6',
+                        footerBg: '#0b1120'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .section-title {
+                @apply text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-dark border-l-4 border-primary pl-4 mb-8;
+            }
+            .card-shadow {
+                @apply bg-white rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300;
+            }
+            .nav-fixed {
+                @apply fixed top-0 left-0 right-0 bg-white/95 backdrop-blur z-50 shadow-lg;
+            }
+            .fade-in-up {
+                opacity:0;
+                transform: translateY(24px);
+                transition: all 0.6s ease-out;
+            }
+            .fade-in-up.show {
+                opacity:1;
+                transform: translateY(0px);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans text-gray-700 leading-relaxed">
+<!--导航栏-->
+<header id="navbar" class="w-full transition-all duration-300">
+    <div class="container mx-auto px-4 md:px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center gap-2">
+            <i class="fa fa-microchip text-primary text-2xl"></i>
+            <h1 class="text-xl md:text-2xl font-bold text-dark">安徽格罗特智能科技</h1>
+        </div>
+        <!--桌面导航-->
+        <nav class="hidden md:flex gap-8">
+            <a href="#about" class="hover:text-primary transition-colors relative after:absolute after:bg-primary after:h-0.5 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all">公司简况</a>
+            <a href="#factory" class="hover:text-primary transition-colors relative after:absolute after:bg-primary after:h-0.5 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all">制造能力</a>
+            <a href="#equipment" class="hover:text-primary transition-colors relative after:absolute after:bg-primary after:h-0.5 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all">核心设备</a>
+            <a href="#capacity" class="hover:text-primary transition-colors relative after:absolute after:bg-primary after:h-0.5 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all">工厂产能</a>
+            <a href="#quality" class="hover:text-primary transition-colors relative after:absolute after:bg-primary after:h-0.5 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all">质量体系</a>
+            <a href="#contact" class="hover:text-primary transition-colors relative after:absolute after:bg-primary after:h-0.5 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all">联系我们</a>
+        </nav>
+        <!--移动端菜单按钮-->
+        <button id="menuBtn" class="md:hidden text-dark text-xl p-1.5">
+            <i class="fa fa-bars"></i>
+        </button>
+    </div>
+    <!--移动端下拉菜单-->
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-t shadow-md">
+        <div class="container mx-auto px-4 py-3 flex flex-col gap-2">
+            <a href="#about" class="py-2 px-2 hover:bg-gray-100 rounded">公司简况</a>
+            <a href="#factory" class="py-2 px-2 hover:bg-gray-100 rounded">制造能力</a>
+            <a href="#equipment" class="py-2 px-2 hover:bg-gray-100 rounded">核心设备</a>
+            <a href="#capacity" class="py-2 px-2 hover:bg-gray-100 rounded">工厂产能</a>
+            <a href="#quality" class="py-2 px-2 hover:bg-gray-100 rounded">质量体系</a>
+            <a href="#contact" class="py-2 px-2 hover:bg-gray-100 rounded">联系我们</a>
+        </div>
+    </div>
+</header>
+
+<!--Banner-->
+<section class="relative bg-gradient-to-r from-primary to-secondary text-white py-16 md:py-28 overflow-hidden">
+    <div class="absolute inset-0 bg-black/10"></div>
+    <div class="container relative mx-auto px-4 md:px-6">
+        <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-bold mb-4 fade-in-up">专业电子产品生产服务高新技术企业</h2>
+        <p class="text-lg md:text-xl opacity-95 max-w-3xl fade-in-up" style="transition-delay:0.1s">SMT贴片、DIP、PCBA一站式服务，提供试产与批量EMS、OEM加工服务</p>
+        <div class="mt-8 flex flex-wrap gap-4 fade-in-up" style="transition-delay:0.2s">
+            <a href="#about" class="bg-white text-primary px-6 py-3 rounded-md font-medium hover:bg-gray-100 hover:shadow-lg transition-all">了解我们</a>
+            <a href="#contact" class="border border-white px-6 py-3 rounded-md font-medium hover:bg-white/15 transition-all">联系业务</a>
+        </div>
+    </div>
+</section>
+
+<!--公司简况介绍-->
+<section id="about" class="py-16 md:py-20 fade-in-up">
+    <div class="container mx-auto px-4 md:px-6">
+        <h3 class="section-title">公司简况介绍</h3>
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+            <div>
+                <p class="mb-4">安徽格罗特智能科技有限公司成立于2022年6月，注册资本1000万元，二期投资总额1500万元，是一家专业从事电子产品生产服务的高新技术企业。</p>
+                <p class="mb-4">总部坐落于安徽省马鞍山市郑蒲港新区姥桥镇新陶路107号浦建半导体产业园9栋1‑4层。公司前身为浙江格瑞实业股份有限公司，位于浙江嘉善。2022年与恒为科技合作，建立格罗特生产车间。</p>
+                <p class="mb-4">业务方向：Smt贴片、Dip，Pcba一站式服务，为多领域客户提供试产与批量EMS、OEM加工服务，具备完善供应链与智能制造服务能力。</p>
+                <div class="mt-6">
+                    <h4 class="font-semibold text-lg mb-2">服务领域：</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">通信网络</span>
+                        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">汽车电子</span>
+                        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">消费电子</span>
+                        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">科研</span>
+                        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">医疗</span>
+                        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">军工</span>
+                        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">航空航天</span>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="card-shadow overflow-hidden">
+                    <div class="bg-gray-200 h-48 flex items-center justify-center">
+                        <i class="fa fa-building text-5xl text-gray-400"></i>
+                    </div>
+                    <div class="p-3 text-center">
+                        <p class="font-medium">嘉善姚庄厂区</p>
+                    </div>
+                </div>
+                <div class="card-shadow overflow-hidden">
+                    <div class="bg-gray-200 h-48 flex items-center justify-center">
+                        <i class="fa fa-industry text-5xl text-gray-400"></i>
+                    </div>
+                    <div class="p-3 text-center">
+                        <p class="font-medium">嘉善魏塘厂区</p>
+                    </div>
+                </div>
+                <div class="card-shadow p-4">
+                    <h5 class="font-semibold mb-2">厂区建筑面积</h5>
+                    <ul class="text-sm space-y-1">
+                        <li>姚庄：总建面3500㎡｜车间1500㎡｜办公楼2000㎡</li>
+                        <li>魏塘：总建面50650㎡｜车间6100㎡｜办公楼3000㎡</li>
+                    </ul>
+                </div>
+                <div class="card-shadow p-4">
+                    <h5 class="font-semibold mb-2">人员配置</h5>
+                    <ul class="text-sm space-y-1">
+                        <li>总人数：120人（规划160人）</li>
+                        <li>制造部：80人</li>
+                        <li>工程部：18人</li>
+                        <li>品质部：10人</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!--组织架构-->
+        <div class="mt-16 fade-in-up">
+            <h4 class="text-xl font-semibold mb-6">公司组织架构</h4>
+            <div class="card-shadow p-6 overflow-x-auto">
+                <div class="min-w-[700px]">
+                    <div class="text-center mb-4">
+                        <span class="bg-primary text-white px-4 py-2 rounded inline-block">总经理</span>
+                    </div>
+                    <div class="flex justify-center gap-2 flex-wrap">
+                        <div class="border border-gray-300 p-3 rounded text-center w-28 hover:border-primary transition-colors">制造部</div>
+                        <div class="border border-gray-300 p-3 rounded text-center w-28 hover:border-primary transition-colors">品质部</div>
+                        <div class="border border-gray-300 p-3 rounded text-center w-28 hover:border-primary transition-colors">采购部</div>
+                        <div class="border border-gray-300 p-3 rounded text-center w-28 hover:border-primary transition-colors">业务部</div>
+                        <div class="border border-gray-300 p-3 rounded text-center w-28 hover:border-primary transition-colors">工程部</div>
+                        <div class="border border-gray-300 p-3 rounded text-center w-28 hover:border-primary transition-colors">人事部</div>
+                        <div class="border border-gray-300 p-3 rounded text-center w-28 hover:border-primary transition-colors">财务部</div>
+                        <div class="border border-gray-300 p-3 rounded text-center w-28 hover:border-primary transition-colors">经营部</div>
+                    </div>
+                    <div class="mt-4 text-sm text-gray-500">制造部下设制造一部SMT、制造二部DIP；工程部包含工艺工程、项目工程、设备工程；品质部包含品质管理、质量体系。</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--制造能力介绍-->
+<section id="factory" class="py-16 md:py-20 bg-lightgray fade-in-up">
+    <div class="container mx-auto px-4 md:px-6">
+        <h3 class="section-title">制造能力介绍</h3>
+        <div class="overflow-x-auto rounded-lg shadow">
+            <table class="w-full min-w-[800px] bg-white">
+                <thead class="bg-primary text-white">
+                    <tr>
+                        <th class="p-3 text-left">设备名称</th>
+                        <th class="p-3">型号</th>
+                        <th class="p-3">供应商</th>
+                        <th class="p-3 text-left">关键规格</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr class="border-b hover:bg-blue-50 transition-colors">
+                    <td class="p-3">印刷机</td>
+                    <td>GT++</td>
+                    <td>GKG</td>
+                    <td>重复印刷精度±17um@6σ，CPK≥2.0；基板0.4‑6mm，50*50~510*510mm</td>
+                </tr>
+                <tr class="border-b bg-gray-50 hover:bg-blue-50 transition-colors">
+                    <td class="p-3">在线SPI</td>
+                    <td>Storm‑SPIS</td>
+                    <td>JUTZE</td>
+                    <td>分辨率12M，高度测量精度1μm；基板50×70‑510×460mm</td>
+                </tr>
+                <tr class="border-b hover:bg-blue-50 transition-colors">
+                    <td class="p-3">贴片机</td>
+                    <td>NPM W2</td>
+                    <td>Panasonic</td>
+                    <td>基板50×50~750×550mm；贴片精度±30μm(chip)</td>
+                </tr>
+                <tr class="border-b bg-gray-50 hover:bg-blue-50 transition-colors">
+                    <td class="p-3">回流炉</td>
+                    <td>HOTFLOW3/26XL</td>
+                    <td>Ersa</td>
+                    <td>上下多温区，4区冷却，噪音＜70dB(A)</td>
+                </tr>
+                <tr class="border-b hover:bg-blue-50 transition-colors">
+                    <td class="p-3">在线AOI</td>
+                    <td>strom‑2DS</td>
+                    <td>JUTZE</td>
+                    <td>基板50×70‑510×460mm，多档分辨率可选</td>
+                </tr>
+                <tr class="border-b bg-gray-50 hover:bg-blue-50 transition-colors">
+                    <td class="p-3">波峰焊</td>
+                    <td>E‑FLOW 610L</td>
+                    <td>Sun east</td>
+                    <td>上下各4加热区</td>
+                </tr>
+                <tr class="border-b hover:bg-blue-50 transition-colors">
+                    <td class="p-3">X‑RAY</td>
+                    <td>S‑7200L</td>
+                    <td>智诚精展</td>
+                    <td>检测尺寸610*508mm，BGA空洞检测</td>
+                </tr>
+                <tr class="hover:bg-blue-50 transition-colors">
+                    <td class="p-3">三防漆涂覆</td>
+                    <td>法罗威</td>
+                    <td>法罗威</td>
+                    <td>加工尺寸450mm*450mm</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!--核心设备展示-->
+<section id="equipment" class="py-16 md:py-20 fade-in-up">
+    <div class="container mx-auto px-4 md:px-6">
+        <h3 class="section-title">核心设备介绍</h3>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="card-shadow p-5">
+                <div class="h-44 bg-gray-100 flex items-center justify-center mb-4 rounded">
+                    <i class="fa fa-print text-4xl text-primary"></i>
+                </div>
+                <h4 class="font-bold text-lg mb-2">GKG GT++锡膏印刷机</h4>
+                <ul class="text-sm space-y-1 text-gray-600">
+                    <li>最大基板 510×510mm</li>
+                    <li>PCB厚度0.4‑6mm</li>
+                    <li>印刷重复精度±22μm</li>
+                </ul>
+            </div>
+            <div class="card-shadow p-5">
+                <div class="h-44 bg-gray-100 flex items-center justify-center mb-4 rounded">
+                    <i class="fa fa-search text-4xl text-primary"></i>
+                </div>
+                <h4 class="font-bold text-lg mb-2">JUTZE 3D SPI锡膏检测</h4>
+                <ul class="text-sm space-y-1 text-gray-600">
+                    <li>PCB：50×50~510×505mm</li>
+                    <li>检测精度XY＜10um；H=0.37um</li>
+                    <li>最小检测元件01005</li>
+                </ul>
+            </div>
+            <div class="card-shadow p-5">
+                <div class="h-44 bg-gray-100 flex items-center justify-center mb-4 rounded">
+                    <i class="fa fa-microchip text-4xl text-primary"></i>
+                </div>
+                <h4 class="font-bold text-lg mb-2">松下NPM高速贴片机</h4>
+                <ul class="text-sm space-y-1 text-gray-600">
+                    <li>贴片速度75000Cph/小时</li>
+                    <li>贴装范围01005~28mm</li>
+                    <li>贴装精度±0.05mm</li>
+                </ul>
+            </div>
+            <div class="card-shadow p-5">
+                <div class="h-44 bg-gray-100 flex items-center justify-center mb-4 rounded">
+                    <i class="fa fa-fire text-4xl text-primary"></i>
+                </div>
+                <h4 class="font-bold text-lg mb-2">ERSA回流焊炉</h4>
+                <ul class="text-sm space-y-1 text-gray-600">
+                    <li>多独立温控温区</li>
+                    <li>温度精度±1℃</li>
+                    <li>支持高品质双面PCB焊接</li>
+                </ul>
+            </div>
+            <div class="card-shadow p-5">
+                <div class="h-44 bg-gray-100 flex items-center justify-center mb-4 rounded">
+                    <i class="fa fa-eye text-4xl text-primary"></i>
+                </div>
+                <h4 class="font-bold text-lg mb-2">X‑RAY检测仪</h4>
+                <ul class="text-sm space-y-1 text-gray-600">
+                    <li>BGA空洞检测，2.5D扫描</li>
+                    <li>区分上下层焊点互不干扰</li>
+                    <li>自动图像算法分析</li>
+                </ul>
+            </div>
+            <div class="card-shadow p-5">
+                <div class="h-44 bg-gray-100 flex items-center justify-center mb-4 rounded">
+                    <i class="fa fa-cogs text-4xl text-primary"></i>
+                </div>
+                <h4 class="font-bold text-lg mb-2">自动化测试平台</h4>
+                <ul class="text-sm space-y-1 text-gray-600">
+                    <li>MES系统对接自动过站防呆</li>
+                    <li>测试日志自动备份，后台预警</li>
+                    <li>支持并行全自动单板测试</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--工厂产能-->
+<section id="capacity" class="py-16 md:py-20 bg-lightgray fade-in-up">
+    <div class="container mx-auto px-4 md:px-6">
+        <h3 class="section-title">工厂产能</h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="card-shadow p-5 text-center">
+                <div class="text-5xl text-primary mb-2"><i class="fa fa-microchip"></i></div>
+                <h5 class="font-semibold text-lg">SMT产线</h5>
+                <p class="text-sm text-gray-500">自有3条，可扩展2条</p>
+                <p class="mt-2 text-xl font-bold text-primary">月产能：200K PCS</p>
+            </div>
+            <div class="card-shadow p-5 text-center">
+                <div class="text-5xl text-primary mb-2"><i class="fa fa-plug"></i></div>
+                <h5 class="font-semibold text-lg">DIP产线</h5>
+                <p class="text-sm text-gray-500">自有1条，可扩展1条</p>
+                <p class="mt-2 text-xl font-bold text-primary">月产能：200K PCS</p>
+            </div>
+            <div class="card-shadow p-5 text-center">
+                <div class="text-5xl text-primary mb-2"><i class="fa fa-wrench"></i></div>
+                <h5 class="font-semibold text-lg">组装线</h5>
+                <p class="text-sm text-gray-500">自有1条，可扩展2条</p>
+                <p class="mt-2 text-xl font-bold text-primary">月产能：150K PCS</p>
+            </div>
+            <div class="card-shadow p-5 text-center">
+                <div class="text-5xl text-primary mb-2"><i class="fa fa-box"></i></div>
+                <h5 class="font-semibold text-lg">包装线</h5>
+                <p class="text-sm text-gray-500">自有2条，可扩展2条</p>
+                <p class="mt-2 text-xl font-bold text-primary">月产能：150K PCS</p>
+            </div>
+            <div class="card-shadow p-5 text-center">
+                <div class="text-5xl text-primary mb-2"><i class="fa fa-thermometer-half"></i></div>
+                <h5 class="font-semibold text-lg">老化房</h5>
+                <p class="text-sm text-gray-500">自有3个</p>
+                <p class="mt-2 text-xl font-bold text-primary">月产能：150K PCS</p>
+            </div>
+            <div class="card-shadow p-5 text-center">
+                <div class="text-5xl text-primary mb-2"><i class="fa fa-check-square-o"></i></div>
+                <h5 class="font-semibold text-lg">TEST测试线</h5>
+                <p class="text-sm text-gray-500">自有1条，可扩展1条</p>
+                <p class="mt-2 text-xl font-bold text-primary">月产能：6K PCS</p>
+            </div>
+            <div class="card-shadow p-5 text-center">
+                <div class="text-5xl text-primary mb-2"><i class="fa fa-paint-brush"></i></div>
+                <h5 class="font-semibold text-lg">三防涂敷线</h5>
+                <p class="text-sm text-gray-500">1条产线</p>
+                <p class="mt-2 text-xl font-bold text-primary">月产能：30K PCS</p>
+            </div>
+            <div class="card-shadow p-5 text-center">
+                <div class="text-5xl text-primary mb-2"><i class="fa fa-cogs"></i></div>
+                <h5 class="font-semibold text-lg">AI插件线</h5>
+                <p class="text-sm text-gray-500">建设中</p>
+                <p class="mt-2 text-xl font-bold text-primary">月产能：150Lot</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--质量体系-->
+<section id="quality" class="py-16 md:py-20 fade-in-up">
+    <div class="container mx-auto px-4 md:px-6">
+        <h3 class="section-title">质量体系介绍</h3>
+        <div class="grid md:grid-cols-2 gap-10">
+            <div>
+                <h4 class="text-xl font-semibold mb-4">体系认证与环境管控</h4>
+                <ul class="space-y-3">
+                    <li class="flex gap-3 items-start">
+                        <i class="fa fa-certificate text-primary mt-1"></i>
+                        <div>
+                            <span class="font-medium">ISO9001质量管理体系</span>
+                            <p class="text-sm text-gray-500">严格按照GB/T19001‑2016 / ISO9001:2015标准运行</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-3 items-start">
+                        <i class="fa fa-certificate text-primary mt-1"></i>
+                        <div>
+                            <span class="font-medium">IECQ QC 080000有害物质管理体系</span>
+                            <p class="text-sm text-gray-500">管控元器件有害物质，满足行业环保要求</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-3 items-start">
+                        <i class="fa fa-shield text-primary mt-1"></i>
+                        <div>
+                            <span class="font-medium">ESD静电防护管控</span>
+                            <p class="text-sm text-gray-500">ESD远程监控看板、工位离子风机、手环防呆、温湿度远程监控</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-3 items-start">
+                        <i class="fa fa-leaf text-primary mt-1"></i>
+                        <div>
+                            <span class="font-medium">洁净度管控</span>
+                            <p class="text-sm text-gray-500">单板整机车间分区，PCB风棒清洁，车间去除纸箱管控</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-xl font-semibold mb-4">MES生产制造执行系统</h4>
+                <p class="mb-3 text-gray-600">全流程数字化管理，覆盖系统管理、基础数据、设备、仓库、生产、品质、数据采集、BI看板。</p>
+                <ul class="space-y-2 text-sm">
+                    <li>✅ 产品全链路追溯、作业防呆、流程防呆、异常处理</li>
+                    <li>✅ 仓库先进先出FIFO、MSD湿敏器件管控、超期预警</li>
+                    <li>✅ IQC来料检验、制程巡检、首件管理、OQC出库检验</li>
+                    <li>✅ 设备OEE管理、品质数据看板、效率进度BI报表</li>
+                    <li>✅ 测试Log自动备份，后台数据统计与异常预警</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="mt-12 card-shadow p-6">
+            <h4 class="text-xl font-semibold mb-4">全流程质量管控链路</h4>
+            <div class="overflow-x-auto">
+                <div class="flex flex-nowrap gap-2 whitespace-nowrap min-w-max items-center">
+                    <span class="bg-primary text-white px-3 py-2 rounded text-sm">仓库发料</span>
+                    <i class="fa fa-arrow-right text-primary"></i>
+                    <span class="bg-primary text-white px-3 py-2 rounded text-sm">SMT印刷‑SPI‑贴片‑回流‑AOI</span>
+                    <i class="fa fa-arrow-right text-primary"></i>
+                    <span class="bg-primary text-white px-3 py-2 rounded text-sm">DIP插件‑波峰焊‑DIP‑AOI‑分板</span>
+                    <i class="fa fa-arrow-right text-primary"></i>
+                    <span class="bg-primary text-white px-3 py-2 rounded text-sm">单板测试</span>
+                    <i class="fa fa-arrow-right text-primary"></i>
+                    <span class="bg-primary text-white px-3 py-2 rounded text-sm">组装‑预测试‑老化‑系统测试</span>
+                    <i class="fa fa-arrow-right text-primary"></i>
+                    <span class="bg-primary text-white px-3 py-2 rounded text-sm">包装‑OQC出库</span>
+                </div>
+            </div>
+            <div class="mt-4 text-sm text-gray-600">
+                包含IQC来料检验、错混料MES防呆、应力应变管控、NPI试产质量管理、ECN/DCN变更管理、客诉闭环处理，完整8D问题改善流程。
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--联系我们-->
+<section id="contact" class="py-16 bg-dark text-white fade-in-up">
+    <div class="container mx-auto px-4 md:px-6">
+        <h3 class="section-title text-white">联系我们</h3>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div>
+                <h4 class="text-xl font-semibold mb-4">安徽格罗特智能科技有限公司</h4>
+                <ul class="space-y-3">
+                    <li><i class="fa fa-map-marker mr-2"></i>地址：安徽省马鞍山市郑蒲港新区姥桥镇新陶路107号浦建半导体产业园9栋1‑4层</li>
+                    <li><i class="fa fa-building mr-2"></i>前身：浙江格瑞实业股份有限公司（嘉善生产基地）</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-xl font-semibold mb-4">业务合作</h4>
+                <p>欢迎洽谈SMT贴片、DIP插件、PCBA加工、EMS/OEM批量与试产订单。</p>
+                <div class="mt-6">
+                    <a href="#" class="bg-secondary px-6 py-3 rounded inline-block hover:bg-blue-600 transition-all">业务咨询</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 香港收货地址富耀科技 -->
+        <div class="mt-10 bg-white/10 p-6 rounded-xl border border-white/20">
+            <h4 class="text-xl font-semibold mb-4">香港收货地址｜富耀科技有限公司<br><span class="text-sm opacity-80">Rich Brilliance Technology Limited</span></h4>
+            <div class="grid md:grid-cols-2 gap-6 text-sm">
+                <div class="bg-white/5 p-4 rounded-lg">
+                    <p class="mb-2"><strong>中文地址：</strong><br>香港元朗安樂路 109‑111號安樂工業大厦1樓 B1 室</p>
+                    <p class="mb-2"><strong>联系人：</strong>Sandy Chan 陳小姐</p>
+                    <p class="mb-2"><strong>电话：</strong>+852 21108826，60189976</p>
+                    <p class="mb-2"><strong>传真：</strong>21108825</p>
+                </div>
+                <div class="bg-white/5 p-4 rounded-lg">
+                    <p class="mb-2"><strong>English Address:</strong><br>Unit B1, 1/F, On Lok Industrial Building,109‑111 On Lok Road,Yuen Long, Hong Kong</p>
+                    <p class="mb-2"><strong>Contact Name:</strong> Sandy Chan</p>
+                    <p class="mb-2"><strong>TEL：</strong>+852 21108826，60189976</p>
+                    <p class="mb-2"><strong>FAX：</strong>21108825</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--页脚-->
+<footer class="bg-footerBg text-white py-8 text-sm">
+    <div class="container mx-auto px-4">
+        <div class="border-b border-gray-700 pb-4 mb-4"></div>
+        <div class="text-center">
+            ©2026 安徽格罗特智能科技有限公司 版权所有 | PCBA EMS OEM电子制造服务商
+        </div>
+    </div>
+</footer>
+
+<script>
+//导航栏滚动效果
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', ()=>{
+    if(window.scrollY > 80){
+        navbar.classList.add('nav-fixed');
+    }else{
+        navbar.classList.remove('nav-fixed');
+    }
+})
+
+//移动端菜单
+const menuBtn = document.getElementById('menuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+menuBtn.addEventListener('click', ()=>{
+    mobileMenu.classList.toggle('hidden');
+})
+
+//平滑滚动
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+    anchor.addEventListener('click',function(e){
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetDom = document.querySelector(targetId);
+        if(targetDom){
+            window.scrollTo({
+                top: targetDom.offsetTop - 80,
+                behavior:'smooth'
+            })
+            mobileMenu.classList.add('hidden');
+        }
+    })
+})
+
+//滚动淡入动画
+const observerOptions = {
+    threshold:0.1
+}
+const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(item=>{
+        if(item.isIntersecting){
+            item.target.classList.add('show')
+        }
+    })
+},observerOptions)
+
+document.querySelectorAll('.fade-in-up').forEach(el=>{
+    observer.observe(el)
+})
+</script>
+</body>
+</html>
