@@ -65,7 +65,7 @@
         <nav class="hidden md:flex gap-8">
             <a href="#about" class="hover:text-primary transition-colors relative after:absolute after:bg-primary after:h-0.5 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all">公司简况</a>
             <a href="#factory" class="hover:text-primary transition-colors relative after:absolute after:bg-primary after:h-0.5 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all">制造能力</a>
-           
+           <a href="#equipment" class="hover:text-primary transition-colors relative after:absolute after:bg-primary after:h-0.5 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all">设备能力</a>
             <a href="#contact" class="hover:text-primary transition-colors relative after:absolute after:bg-primary after:h-0.5 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all">联系我们</a>
         </nav>
         <!--移动端菜单按钮-->
@@ -78,8 +78,7 @@
         <div class="container mx-auto px-4 py-3 flex flex-col gap-2">
             <a href="#about" class="py-2 px-2 hover:bg-gray-100 rounded">公司简况</a>
             <a href="#factory" class="py-2 px-2 hover:bg-gray-100 rounded">制造能力</a>
-            <a href="#equipment" class="py-2 px-2 hover:bg-gray-100 rounded">核心设备</a>
-            <a href="#capacity" class="py-2 px-2 hover:bg-gray-100 rounded">工厂产能</a>
+            <a href="#equipment" class="py-2 px-2 hover:bg-gray-100 rounded">设备能力</a>
             <a href="#quality" class="py-2 px-2 hover:bg-gray-100 rounded">质量体系</a>
             <a href="#contact" class="py-2 px-2 hover:bg-gray-100 rounded">联系我们</a>
         </div>
@@ -289,106 +288,514 @@
                 </tbody>
             </table>
         </div>
-        <h3 class="text-xl font-semibold mt-6">制造与交付 – 工厂产能</h3>
-        <div class="shadow bg-white card-shadow">
-            <div class="relative w-[1200px] h-[720px] mx-auto">
-                <!-- 中间大圆 现有产能 -->
-                <div class="absolute w-[320px] h-[320px] rounded-full bg-gradient-to-br from-[#0052b3] to-[#0070cc] text-white text-3xl font-bold flex items-center justify-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 shadow-lg shadow-blue-500/20">
-                    现有产能
-                </div>
+        <h3 class="text-xl font-semibold mt-6 mb-2">制造与交付 – 工厂产能</h3>
 
-                <!-- SMT 左上 -->
-                <div class="absolute w-[340px] bg-white border border-[#b8d8f0] rounded p-4 shadow-md top-5 left-5 z-20">
-                    <div class="flex justify-between items-center">
-                        <div>
-                            <div class="text-xl text-gray-500 mb-1">自有3条，可扩展2条</div>
-                            <div class="text-base text-gray-500">Production capacity (pcs/month): <span class="text-[#007bdd] text-1xl font-bold">200K</span></div>
-                        </div>
-                        <div class="text-[#0052b3] text-2xl font-bold whitespace-nowrap">SMT</div>
+        <div class="relative overflow-hidden rounded-xl p-6 md:p-8 mb-6" style="background: linear-gradient(135deg, #0F52BA 0%, #165DFF 100%);">
+            <div class="absolute inset-0 opacity-10">
+                <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="1"/>
+                        </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#grid)"/>
+                </svg>
+            </div>
+            <div class="relative flex flex-col sm:flex-row items-center justify-between gap-4 text-white">
+                <div>
+                    <div class="text-sm md:text-base opacity-80 mb-1">月度总产能</div>
+                    <div class="text-4xl md:text-5xl font-extrabold tracking-tight">2,000K+</div>
+                    <div class="text-sm md:text-base opacity-80 mt-1">pcs / month</div>
+                </div>
+                <div class="grid grid-cols-2 gap-4 text-center">
+                    <div class="bg-white/15 backdrop-blur rounded-lg px-4 py-3">
+                        <div class="text-2xl font-bold">8</div>
+                        <div class="text-xs opacity-80">生产线</div>
+                    </div>
+                    <div class="bg-white/15 backdrop-blur rounded-lg px-4 py-3">
+                        <div class="text-2xl font-bold">160</div>
+                        <div class="text-xs opacity-80">人员规模</div>
                     </div>
                 </div>
+            </div>
+        </div>
 
-                <!-- DIP 右上 -->
-                <div class="absolute w-[340px] bg-white border border-[#b8d8f0] rounded p-4 shadow-md top-5 right-5 z-20">
-                <div class="flex justify-between items-center">
-                    <div class="text-[#0052b3] text-2xl font-bold mr-6">DIP</div>
-                    <div>
-                        <div class="text-xl text-gray-500 mb-1">自有1条，可扩展1条</div>
-                        <div class="text-base text-gray-500">Production capacity (pcs/month): <span class="text-[#007bdd] text-1xl font-bold">200K</span></div>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
+            <div class="group relative bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border-t-4 border-primary">
+                <div class="p-4 md:p-5">
+                    <div class="flex items-center gap-2 mb-3">
+                        <div class="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center text-xs font-bold">SMT</div>
+                        <span class="text-sm text-gray-400">自有3条，可扩展2条</span>
+                    </div>
+                    <div class="flex items-baseline gap-1">
+                        <span class="text-2xl md:text-3xl font-extrabold text-primary">200</span>
+                        <span class="text-sm text-gray-500 font-semibold">K pcs / month</span>
                     </div>
                 </div>
-                </div>
+            </div>
 
-                <!-- 组装线 左中 -->
-                <div class="absolute w-[340px] bg-white border border-[#b8d8f0] rounded p-4 shadow-md top-[200px] left-5 z-20">
-                <div class="flex justify-between items-center">
-                    <div>
-                        <div class="text-xl text-gray-500 mb-1">自有1条，扩展2条</div>
-                        <div class="text-base text-gray-500">Production capacity (pcs/month): <span class="text-[#007bdd] text-1xl font-bold">150K</span></div>
+            <div class="group relative bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border-t-4 border-[#0070cc]">
+                <div class="p-4 md:p-5">
+                    <div class="flex items-center gap-2 mb-3">
+                        <div class="w-8 h-8 rounded-full bg-[#0070cc]/10 text-[#0070cc] flex items-center justify-center text-xs font-bold">DIP</div>
+                        <span class="text-sm text-gray-400">自有1条，可扩展1条</span>
                     </div>
-                    <div class="text-[#0052b3] text-2xl font-bold whitespace-nowrap">组装线</div>
-                </div>
-                </div>
-
-                <!-- 包装线 右中 -->
-                <div class="absolute w-[340px] bg-white border border-[#b8d8f0] rounded p-4 shadow-md top-[200px] right-5 z-20">
-                <div class="flex justify-between items-center">
-                    <div class="text-[#0052b3] text-2xl font-bold whitespace-nowrap  mr-6">包装线</div>
-                    <div>
-                        <div class="text-xl text-gray-500 mb-1">自有2条，可扩展2条</div>
-                        <div class="text-base text-gray-500">Production capacity (pcs/month): <span class="text-[#007bdd] text-1xl font-bold">150K</span></div>
+                    <div class="flex items-baseline gap-1">
+                        <span class="text-2xl md:text-3xl font-extrabold text-[#0070cc]">200</span>
+                        <span class="text-sm text-gray-500 font-semibold">K pcs / month</span>
                     </div>
                 </div>
-                </div>
+            </div>
 
-                <!-- 老化房 左下 -->
-                <div class="absolute w-[340px] bg-white border border-[#b8d8f0] rounded p-4 shadow-md top-[380px] left-5 z-20">
-                <div class="flex justify-between items-center">
-                    <div>
-                        <div class="text-xl text-gray-500 mb-1">自有3个</div>
-                        <div class="text-base text-gray-500">Production capacity (pcs/month): <span class="text-[#007bdd] text-1xl font-bold">150K</span></div>
+            <div class="group relative bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border-t-4 border-[#2563eb]">
+                <div class="p-4 md:p-5">
+                    <div class="flex items-center gap-2 mb-3">
+                        <div class="w-8 h-8 rounded-full bg-[#2563eb]/10 text-[#2563eb] flex items-center justify-center text-xs font-bold">装</div>
+                        <span class="text-sm text-gray-400">组装线，自有1条</span>
                     </div>
-                    <div class="text-[#0052b3] text-2xl font-bold whitespace-nowrap">老化房</div>
-                </div>
-                </div>
-
-                <!-- TEST 右下 -->
-                <div class="absolute w-[340px] bg-white border border-[#b8d8f0] rounded p-4 shadow-md top-[380px] right-5 z-20">
-                <div class="flex justify-between items-center">
-                    <div class="text-[#0052b3] text-2xl font-bold whitespace-nowrap mr-6">TEST</div>
-                    <div>
-                        <div class="text-xl text-gray-500 mb-1">自有1条，可扩展1条</div>
-                        <div class="text-base text-gray-500">Production capacity (pcs/month): <span class="text-[#007bdd] text-1xl font-bold">6K</span></div>
+                    <div class="flex items-baseline gap-1">
+                        <span class="text-2xl md:text-3xl font-extrabold text-[#2563eb]">150</span>
+                        <span class="text-sm text-gray-500 font-semibold">K pcs / month</span>
                     </div>
                 </div>
-                </div>
+            </div>
 
-                <!-- AI插件 最左下 -->
-                <div class="absolute w-[340px] bg-white border border-[#b8d8f0] rounded p-4 shadow-md top-[560px] left-5 z-20">
-                    <div class="flex justify-between items-center">
-                        <div>
-                            <div class="text-xl text-gray-500 mb-1">AI插件线建设中</div>
-                            <div class="text-base text-gray-500">Production capacity (pcs/month): <span class="text-[#007bdd] text-1xl font-bold">150lot</span></div>
-                        </div>
-                        <div class="text-[#0052b3] text-2xl font-bold whitespace-nowrap">AI插件</div>
+            <div class="group relative bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border-t-4 border-[#3b82f6]">
+                <div class="p-4 md:p-5">
+                    <div class="flex items-center gap-2 mb-3">
+                        <div class="w-8 h-8 rounded-full bg-[#3b82f6]/10 text-[#3b82f6] flex items-center justify-center text-xs font-bold">包</div>
+                        <span class="text-sm text-gray-400">包装线，自有2条</span>
+                    </div>
+                    <div class="flex items-baseline gap-1">
+                        <span class="text-2xl md:text-3xl font-extrabold text-[#3b82f6]">150</span>
+                        <span class="text-sm text-gray-500 font-semibold">K pcs / month</span>
                     </div>
                 </div>
+            </div>
 
-                <!-- 三防涂敷线 最右下 -->
-                <div class="absolute w-[340px] bg-white border border-[#b8d8f0] rounded p-4 shadow-md top-[560px] right-5 z-20">
-                <div class="flex justify-between items-center">
-                    <div class="text-[#0052b3] text-2xl font-bold whitespace-nowrap  mr-6">三防涂敷线</div>
-                    <div>
-                        <div class="text-xl text-gray-500 mb-1">1条</div>
-                        <div class="text-base text-gray-500">Production capacity (pcs/month): <span class="text-[#007bdd] text-1xl font-bold">30K</span></div>
+            <div class="group relative bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border-t-4 border-[#1d4ed8]">
+                <div class="p-4 md:p-5">
+                    <div class="flex items-center gap-2 mb-3">
+                        <div class="w-8 h-8 rounded-full bg-[#1d4ed8]/10 text-[#1d4ed8] flex items-center justify-center text-xs font-bold">老</div>
+                        <span class="text-sm text-gray-400">老化房，自有3个</span>
+                    </div>
+                    <div class="flex items-baseline gap-1">
+                        <span class="text-2xl md:text-3xl font-extrabold text-[#1d4ed8]">150</span>
+                        <span class="text-sm text-gray-500 font-semibold">K pcs / month</span>
                     </div>
                 </div>
+            </div>
+
+            <div class="group relative bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border-t-4 border-[#0369a1]">
+                <div class="p-4 md:p-5">
+                    <div class="flex items-center gap-2 mb-3">
+                        <div class="w-8 h-8 rounded-full bg-[#0369a1]/10 text-[#0369a1] flex items-center justify-center text-xs font-bold">T</div>
+                        <span class="text-sm text-gray-400">TEST，自有1条</span>
+                    </div>
+                    <div class="flex items-baseline gap-1">
+                        <span class="text-2xl md:text-3xl font-extrabold text-[#0369a1]">6</span>
+                        <span class="text-sm text-gray-500 font-semibold">K pcs / month</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group relative bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border-t-4 border-[#0ea5e9]">
+                <div class="p-4 md:p-5">
+                    <div class="flex items-center gap-2 mb-3">
+                        <div class="w-8 h-8 rounded-full bg-[#0ea5e9]/10 text-[#0ea5e9] flex items-center justify-center text-xs font-bold">AI</div>
+                        <span class="text-sm text-gray-400">AI插件线建设中</span>
+                    </div>
+                    <div class="flex items-baseline gap-1">
+                        <span class="text-2xl md:text-3xl font-extrabold text-[#0ea5e9]">150</span>
+                        <span class="text-sm text-gray-500 font-semibold">lot / month</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group relative bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border-t-4 border-[#0284c7]">
+                <div class="p-4 md:p-5">
+                    <div class="flex items-center gap-2 mb-3">
+                        <div class="w-8 h-8 rounded-full bg-[#0284c7]/10 text-[#0284c7] flex items-center justify-center text-xs font-bold">防</div>
+                        <span class="text-sm text-gray-400">三防涂敷线，1条</span>
+                    </div>
+                    <div class="flex items-baseline gap-1">
+                        <span class="text-2xl md:text-3xl font-extrabold text-[#0284c7]">30</span>
+                        <span class="text-sm text-gray-500 font-semibold">K pcs / month</span>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
+<!--设备能力介绍-->
+<section id="equipment" class="py-16 md:py-20 fade-in-up">
+    <div class="container mx-auto px-4 md:px-6">
+        <h3 class="section-title">设备能力</h3>
+
+        <!-- 印刷机 -->
+        <div class="mb-16">
+            <h4 class="text-xl font-semibold mb-6">关键设备介绍 – 印刷机</h4>
+            <div class="flex items-center gap-3 mb-6">
+                <span class="text-lg font-medium">生产设备-锡膏印刷设备 GKG GK++</span>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 items-start">
+                <div class="card-shadow overflow-hidden">
+                    <img src="./images/printingpress1.png" alt="GKG GK++印刷机" class="w-full h-auto">
+                </div>
+                <div>
+                    <div class="grid grid-cols-3 gap-3 mb-3">
+                        <div class="card-shadow overflow-hidden text-center">
+                            <p class="py-2 text-sm font-medium">刮刀</p>
+                            <div class="h-48 overflow-hidden">
+                                <img src="./images/printingpress-icon1.png" alt="刮刀" class="w-full h-auto object-top block">
+                            </div>
+                        </div>
+                        <div class="card-shadow overflow-hidden text-center">
+                            <p class="py-2 text-sm font-medium">程式</p>
+                            <div class="h-48 overflow-hidden">
+                                <img src="./images/printingpress-icon2.png" alt="程式" class="w-full h-auto object-top block">
+                            </div>
+                        </div>
+                 
+                        <div class="card-shadow overflow-hidden text-center">
+                            <p class="py-2 text-sm font-medium">印刷</p>
+                            <div class="h-48 overflow-hidden">
+                                <img src="./images/printingpress-icon3.png" alt="印刷" class="w-full h-auto object-top block">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-3 gap-3 mb-6">
+                        <div class="card-shadow overflow-hidden text-center">
+                            <p class="py-2 text-sm font-medium">脱模后</p>
+                            <div class="h-48 overflow-hidden">
+                                <img src="./images/printingpress-icon4.png" alt="脱模后" class="w-full h-auto object-top block">
+                            </div>
+                        </div>
+                        <div class="card-shadow overflow-hidden text-center">
+                            <p class="py-2 text-sm font-medium">精度</p>
+                            <div class="h-48 overflow-hidden">
+                                <img src="./images/printingpress-icon5.png" alt="精度" class="w-full h-auto object-top block">
+                            </div>
+                        </div>
+                        <div class="card-shadow overflow-hidden text-center">
+                            <p class="py-2 text-sm font-medium">放大后</p>
+                            <div class="h-48 overflow-hidden">
+                                <img src="./images/printingpress-icon6.png" alt="放大后" class="w-full h-auto object-top block">
+                            </div>
+                        </div>
+                    </div>
+                    <h5 class="text-lg font-semibold text-dark mb-3">GKG GK++印刷机</h5>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li>• 对象基板:L510×W510 (最大) ~ L50×W50 (最小)</li>
+                        <li>• PCB厚度: 0.4-6mm</li>
+                        <li>• 相机像素:1200万像素</li>
+                        <li>• 印刷重复精度: ±22μm</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- SPI 检测设备 -->
+        <div class="mb-16">
+            <h4 class="text-xl font-semibold mb-6">关键设备介绍 – 检测设备SPI</h4>
+            <div class="flex items-center gap-3 mb-6">
+                <span class="text-lg font-medium">生产设备-锡膏厚度检测设备 3D SPI Storm-SPIS</span>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 items-start">
+                <div class="card-shadow overflow-hidden">
+                    <img src="./images/spi1.png" alt="3D SPI Storm-SPIS" class="w-full h-auto object-cover">
+                </div>
+                <div>
+                    <div class="grid grid-cols-4 gap-3 mb-6">
+                        <div class="card-shadow overflow-hidden text-center">
+                            <p class="py-2 text-sm font-medium">坐标</p>
+                            <div class="h-48 overflow-hidden">
+                                <img src="./images/spi-icon1.png" alt="坐标" class="w-full h-auto object-top block">
+                            </div>
+                        </div>
+                        <div class="card-shadow overflow-hidden text-center">
+                            <p class="py-2 text-sm font-medium">检测前</p>
+                            <div class="h-48 overflow-hidden">
+                                <img src="./images/spi-icon2.png" alt="检测前" class="w-full h-auto object-top block">
+                            </div>
+                        </div>
+                        <div class="card-shadow overflow-hidden text-center">
+                            <p class="py-2 text-sm font-medium">检测中</p>
+                            <div class="h-48 overflow-hidden">
+                                <img src="./images/spi-icon3.png" alt="检测中" class="w-full h-auto object-top block">
+                            </div>
+                        </div>
+                        <div class="card-shadow overflow-hidden text-center">
+                            <p class="py-2 text-sm font-medium">检测后</p>
+                            <div class="h-48 overflow-hidden">
+                                <img src="./images/spi-icon4.png" alt="检测后" class="w-full h-auto object-top block">
+                            </div>
+                        </div>
+                    </div>
+                    <h5 class="text-lg font-semibold text-dark mb-3">Storm-SPIS主要技术参数：</h5>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li>• PCB尺寸：50×50 ~ 510×505mm</li>
+                        <li>• 检测精度：XY < 10μm；H = 0.37μm</li>
+                        <li>• 检测面积：480×490mm</li>
+                        <li>• 最小检测元件：01005</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 贴片机 -->
+        <div class="mb-16">
+            <h4 class="text-xl font-semibold mb-6">关键设备介绍 – 贴片机</h4>
+            <div class="flex items-center gap-3 mb-6">
+                <span class="text-lg font-medium">生产设备-松下高速贴片机 NPM-W2 组合 S-7200L</span>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 items-start">
+                <div class="card-shadow overflow-hidden">
+                    <img src="./images/patch1.png" alt="松下NPM-W2贴片机" class="w-full h-auto object-cover">
+                </div>
+                <div>
+                    <div class="grid grid-cols-3 gap-3 mb-6">
+                        <div class="card-shadow overflow-hidden text-center">
+                            <p class="py-2 text-sm font-medium">BGA</p>
+                            <div class="">
+                                <img src="./images/patch-icon1.png" alt="BGA" class="w-full object-top block">
+                            </div>
+                        </div>
+                        <div class="card-shadow overflow-hidden text-center">
+                            <p class="py-2 text-sm font-medium">QFN</p>
+                            <div class="">
+                                <img src="./images/patch-icon2.png" alt="QFN" class="w-full object-top block">
+                            </div>
+                        </div>
+                        <div class="card-shadow overflow-hidden text-center">
+                            <p class="py-2 text-sm font-medium">QFP</p>
+                            <div class="">
+                                <img src="./images/patch-icon3.png" alt="QFP" class="w-full object-top block">
+                            </div>
+                        </div>
+                    </div>
+                    <h5 class="text-lg font-semibold text-dark mb-3">松下NPM-W2主要技术参数：</h5>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li>• 贴片理论速度：75000Cph /小时</li>
+                        <li>• 贴装范围：01005 ~ max.□28mm（H=12mm）</li>
+                        <li>• 贴装精度：±0.05mm</li>
+                        <li>• PCB尺寸：50×50mm ~ 610×460mm</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- AOI 检测设备 -->
+        <div class="mb-16">
+            <h4 class="text-xl font-semibold mb-6">关键设备介绍 – 检测设备AOI</h4>
+            <div class="flex items-center gap-3 mb-6">
+                <span class="text-lg font-medium">生产设备-AOI光学检测设备 Strom-2DS</span>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 items-start">
+                <div class="card-shadow overflow-hidden">
+                    <img src="./images/aoi1.png" alt="AOI Strom-2DS" class="w-full h-auto object-cover">
+                </div>
+                <div>
+                    <div class="card-shadow overflow-hidden text-center mb-6">
+                        <img src="./images/aoi2.png" alt="AOI检测示例" class="w-full">
+                    </div>
+                    <h5 class="text-lg font-semibold text-dark mb-3">Strom-2DS（3D混合型光学式外观检查装置）</h5>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li>• 对象基板:L520×W480 (最大) ~ L50×W50 (最小)</li>
+                        <li>• 相机像素:1200万像素</li>
+                        <li>• 分辨率：13μm / 16μm / 19μm</li>
+                        <li class="text-gray-600">特点：可以对整个视野的高度进行一次性高速测量。即使是元件浮起等通过2维图像难以判别的情况也能够精准检测。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 回流焊 -->
+        <div class="mb-16">
+            <h4 class="text-xl font-semibold mb-6">关键设备介绍 – 回流焊</h4>
+            <div class="flex items-center gap-3 mb-6">
+                <span class="text-lg font-medium">生产设备-回流焊接设备 ERSA HOTFLOW 3/26XL</span>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 items-start">
+                <div class="card-shadow overflow-hidden">
+                    <img src="./images/soldering1.png" alt="ERSA HOTFLOW 3/26XL" class="w-full h-auto object-cover">
+                </div>
+                <div>
+                    <div class="grid grid-cols-3 gap-3 mb-6">
+                        <div class="card-shadow overflow-hidden text-center">
+                            <p class="py-2 text-sm font-medium">Reflow曲线</p>
+                            <img src="./images/soldering-icon1.png" alt="Reflow曲线" class="w-full">
+                        </div>
+                        <div class="card-shadow overflow-hidden text-center">
+                            <p class="py-2 text-sm font-medium">炉温界面</p>
+                            <img src="./images/soldering-icon2.png" alt="炉温界面" class="w-full">
+                        </div>
+                        <div class="card-shadow overflow-hidden text-center">
+                            <p class="py-2 text-sm font-medium">焊接PCBA</p>
+                            <img src="./images/soldering-icon3.png" alt="焊接PCBA" class="w-full">
+                        </div>
+                    </div>
+                    <h5 class="text-lg font-semibold text-dark mb-3">劲拓回流焊 HOTFLOW 3/26XL回流炉：</h5>
+                    <ol class="space-y-2 text-sm text-gray-700 list-decimal list-inside">
+                        <li>独特的强对流风扇及三文治结构加热板；</li>
+                        <li>助焊剂处理系统，科学高效地排放助焊剂废气；</li>
+                        <li>温度：在0~300°C能稳定运行，精度达±1°C；</li>
+                        <li>温区：10个加热区，2个冷却区，每个温区独立运作，相互干扰小；</li>
+                        <li>温差：上下同一温区温差可达20°C以上，出色焊接双面板；</li>
+                        <li>轨道最大宽度490mm。</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <!-- X-Ray 检测设备 -->
+        <div class="mb-16">
+            <h4 class="text-xl font-semibold mb-6">关键设备介绍 – 检测设备X-Ray</h4>
+            <div class="flex items-center gap-3 mb-6">
+                <span class="text-lg font-medium">生产设备-XRAY wisdomshow S-7200L</span>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 items-start">
+                <div class="card-shadow overflow-hidden">
+                    <img src="./images/xray1.png" alt="XRAY S-7200L" class="w-full h-auto object-cover">
+                </div>
+                <div>
+                    <div class="grid grid-cols-2 gap-3 mb-6">
+                        <div class="card-shadow overflow-hidden text-center">
+                            <p class="py-2 text-sm font-medium">芯片空洞分析</p>
+                            <div class="h-48 flex items-center justify-center">
+                                <img src="./images/xray-icon1.png" alt="芯片空洞分析" class="w-full h-full object-top">
+                            </div>
+                        </div>
+                        <div class="card-shadow overflow-hidden text-center">
+                            <p class="py-2 text-sm font-medium">具备2.5D功能</p>
+                            <div class="h-48 flex items-center justify-center">
+                                <img src="./images/xray-icon2.png" alt="具备2.5D功能" class="w-full h-full object-top">
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-700 leading-relaxed">多层次分段式扫描，可以很好的区分开top面和bottom面的焊点，互补影响，对BGA可以进行空洞测试，系统通过抓取的图像结合多种算法自动分析。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 测试设备 -->
+        <div class="mb-16">
+            <h4 class="text-xl font-semibold mb-6">关键设备介绍 – 测试设备</h4>
+
+           
+
+            <!-- 第一行：超大尺寸加工能力 / 测试装备平台开发能力 / 自动测试夹具开发能力 -->
+            <div class="grid md:grid-cols-3 gap-6 mb-6">
+                <div class="card-shadow overflow-hidden">
+                    <div class="bg-primary text-white py-3 px-4 text-center text-base font-semibold">超大尺寸加工能力</div>
+                    <div class="p-4">
+                        <div class="flex justify-center mb-4">
+                            <img src="./images/test3.png" alt="超大尺寸加工" class="max-h-40 w-auto">
+                        </div>
+                        <ul class="space-y-2 text-sm text-gray-700">
+                            <li>• 最大板尺寸：910*220mm</li>
+                            <li>• 最大BGA尺寸：67.5*67.5mm</li>
+                            <li>• 高速连接器压接能力</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-shadow overflow-hidden">
+                    <div class="bg-primary text-white py-3 px-4 text-center text-base font-semibold">测试装备平台开发能力</div>
+                    <div class="p-4">
+                        <div class="flex justify-center mb-4">
+                            <img src="./images/test4.png" alt="测试装备平台" class="max-h-40 w-auto">
+                        </div>
+                        <ul class="space-y-2 text-sm text-gray-700 list-decimal list-inside">
+                            <li>并行测试</li>
+                            <li>MES系统对接，自动过站与防呆</li>
+                            <li>测试log自动备份服务器</li>
+                            <li>后台数据统计与预警功能</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-shadow overflow-hidden">
+                    <div class="bg-primary text-white py-3 px-4 text-center text-base font-semibold">自动测试夹具开发能力</div>
+                    <div class="p-4">
+                        <div class="flex justify-center mb-4">
+                            <img src="./images/test5.png" alt="自动测试夹具" class="max-h-40 w-auto">
+                        </div>
+                        <p class="text-sm text-gray-700 leading-relaxed">全自动单板测试，覆盖所有对外接口、内存条、CPU压力，支持操作系统切换等</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 第二行：WiFi测试 / 发包测试 -->
+            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                <div class="card-shadow overflow-hidden">
+                    <div class="bg-primary text-white py-3 px-4 text-center text-lg font-semibold">WiFi 测试</div>
+                    <div class="p-6">
+                        <div class="flex justify-center mb-4">
+                            <img src="./images/test1.png" alt="WiFi测试" class="max-h-48 w-auto">
+                        </div>
+                        <ul class="space-y-2 text-sm text-gray-700">
+                            <li>• 涵盖802.11ac、802.11a/b/g/n/p与蓝牙1.0-4.0</li>
+                            <li>• 支持所有802.11ac信道带宽组合的80与160MHz版本</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-shadow overflow-hidden">
+                    <div class="bg-primary text-white py-3 px-4 text-center text-lg font-semibold">发包测试</div>
+                    <div class="p-6">
+                        <div class="flex justify-center mb-4">
+                            <img src="./images/test2.png" alt="发包测试" class="max-h-48 w-auto">
+                        </div>
+                        <ul class="space-y-2 text-sm text-gray-700">
+                            <li>• BigTao6100机箱满配可实现96个千兆测试端口</li>
+                            <li>• 支持从10M到100G多种速率的测试</li>
+                            <li>• 模块任意组合，能够长期连续（N*24小时）稳定运行</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- 第三行：环境实验箱ESS / 功能测试自动化 / PC自动测试夹具 -->
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="card-shadow overflow-hidden">
+                    <div class="bg-primary text-white py-3 px-4 text-center text-base font-semibold">环境实验箱ESS</div>
+                    <div class="p-4">
+                        <div class="flex justify-center mb-4">
+                            <img src="./images/test6.png" alt="环境实验箱" class="max-h-40 w-auto">
+                        </div>
+                        <ul class="space-y-2 text-sm text-gray-700 list-decimal list-inside">
+                            <li>温箱的温变（升降温速率）：-10°C ~ 55°C / 15°C/min（空载）</li>
+                            <li>温度范围：-20°C ~ +80°C ±0.2°C</li>
+                            <li>温度分布均匀度 ±1.5°C(-40°C ~ +100°C)(空载)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-shadow overflow-hidden">
+                    <div class="bg-primary text-white py-3 px-4 text-center text-base font-semibold">功能测试自动化</div>
+                    <div class="p-4">
+                        <div class="flex justify-center mb-4">
+                            <img src="./images/test7.png" alt="功能测试自动化" class="max-h-40 w-auto">
+                        </div>
+                        <ul class="space-y-2 text-sm text-gray-700 list-decimal list-inside">
+                            <li>测试接口覆盖率100%</li>
+                            <li>自动化程序与MES系统对接自动过站，防呆机制</li>
+                            <li>SPC监控异常预警</li>
+                            <li>测试日志自动上传备份服务器</li>
+                            <li>支持多产品并行测试</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-shadow overflow-hidden">
+                    <div class="bg-primary text-white py-3 px-4 text-center text-base font-semibold">PC自动测试夹具</div>
+                    <div class="p-4">
+                        <div class="flex justify-center mb-4">
+                            <img src="./images/test8.png" alt="PC自动测试夹具" class="max-h-40 w-auto">
+                        </div>
+                        <p class="text-sm text-gray-700 leading-relaxed">全自动单板测试，覆盖所有对外接口、内存条、CPU应力，支持操作系统切换等</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
 
 
 <!--联系我们-->
