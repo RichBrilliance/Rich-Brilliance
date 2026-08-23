@@ -66,7 +66,9 @@
             <a href="#about" class="hover:text-primary transition-colors relative after:absolute after:bg-primary after:h-0.5 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all">公司简况</a>
             <a href="#factory" class="hover:text-primary transition-colors relative after:absolute after:bg-primary after:h-0.5 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all">制造能力</a>
            <a href="#equipment" class="hover:text-primary transition-colors relative after:absolute after:bg-primary after:h-0.5 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all">设备能力</a>
+           <a href="#contact" class="hover:text-primary transition-colors relative after:absolute after:bg-primary after:h-0.5 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all">质量体系</a>
             <a href="#contact" class="hover:text-primary transition-colors relative after:absolute after:bg-primary after:h-0.5 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all">联系我们</a>
+            
         </nav>
         <!--移动端菜单按钮-->
         <button id="menuBtn" class="md:hidden text-dark text-xl p-1.5">
@@ -427,6 +429,7 @@
         </div>
     </div>
 </section>
+
 
 <!--设备能力介绍-->
 <section id="equipment" class="py-16 md:py-20 fade-in-up">
@@ -797,11 +800,535 @@
     </div>
 </section>
 
+<!--质量体系介绍-->
+<section id="quality" class="py-16 md:py-20 bg-lightgray fade-in-up">
+    <div class="container mx-auto px-4 md:px-6">
+        <h3 class="section-title">质量体系</h3>
 
-<!--联系我们-->
+        <!-- 1. 体系框架 -->
+        <div class="mb-12">
+            <h4 class="text-xl font-semibold mb-6">质量保证能力 – 体系框架</h4>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-xl p-6 card-shadow">
+                    <h5 class="text-lg font-bold text-primary mb-4">体系保障</h5>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-primary"></span> ISO9001 质量管理体系</li>
+                        <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-primary"></span> IECQ QC 080000 体系</li>
+                    </ul>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="card-shadow overflow-hidden">
+                        <div class="aspect-[3/4] overflow-hidden">
+                            <img src="./images/quality1.png" alt="ISO9001证书" class="w-full h-full object-cover block">
+                        </div>
+                        <p class="text-center py-2 text-sm font-medium">ISO9001 认证证书</p>
+                    </div>
+                    <div class="card-shadow overflow-hidden">
+                        <div class="aspect-[3/4] overflow-hidden">
+                            <img src="./images/quality2.png" alt="IECQ QC080000证书" class="w-full h-full object-cover block">
+                        </div>
+                        <p class="text-center py-2 text-sm font-medium">IECQ QC 080000 认证证书</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. 基础环境 -->
+        <div class="mb-12">
+            <h4 class="text-xl font-semibold mb-6">质量保证能力 – 基础环境</h4>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="card-shadow overflow-hidden">
+                    <div class="aspect-video overflow-hidden bg-gray-800">
+                        <img src="./images/quality3.png" alt="ESD监控中心" class="w-full h-full object-cover block">
+                    </div>
+                    <p class="text-center py-2 text-sm text-gray-500">ESD 监控中心看板</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="bg-white rounded-xl p-5 card-shadow border-l-4 border-primary">
+                        <h5 class="text-lg font-bold text-primary mb-3">ESD 管控</h5>
+                        <ul class="space-y-2 text-sm text-gray-700">
+                            <li>• ESD 接地远程监控看板</li>
+                            <li>• 手环接地带感应防呆装置</li>
+                            <li>• SMT线、插件所有工位、补焊工位等风险岗位配置离子风机</li>
+                            <li>• 配置湿膜加湿机</li>
+                            <li>• 温湿度远程监控看板</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white rounded-xl p-5 card-shadow border-l-4 border-secondary">
+                        <h5 class="text-lg font-bold text-secondary mb-3">灰尘管控</h5>
+                        <ul class="space-y-2 text-sm text-gray-700">
+                            <li>• 单板与整机车间分开</li>
+                            <li>• 印刷前 PCB 清洁风棒</li>
+                            <li>• 单板车间去除纸箱</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. 供应商及物料管理 -->
+        <div class="mb-12">
+            <h4 class="text-xl font-semibold mb-6">质量保证能力 – 供应商及物料管理</h4>
+            <div class="card-shadow overflow-hidden">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm min-w-[640px]">
+                        <thead>
+                            <tr class="bg-gradient-to-r from-primary to-secondary text-white">
+                                <th colspan="7" class="px-4 py-3 text-center font-semibold">供应商及物料管控</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-gray-200 bg-gray-50">
+                                <td class="px-4 py-3 font-semibold text-primary text-center">管理模块</td>
+                                <td class="px-4 py-3 text text-gray-700">供应商选择</td>
+                                <td class="px-4 py-3 text text-gray-700">新物料导入</td>
+                                <td class="px-4 py-3 text text-gray-700">IQC进料检验</td>
+                                <td class="px-4 py-3 text text-gray-700">物料问题处理</td>
+                                <td class="px-4 py-3 text text-gray-700">供应商管理</td>
+                                <td class="px-4 py-3 text text-gray-700">供应商质量预防</td>
+                            </tr>
+                            <tr class="border-b border-gray-100">
+                                <td class="px-4 py-3 font-semibold text-primary text-center align-middle">管控方式</td>
+                                <td class="px-3 py-3 text-xs text-gray-700 leading-relaxed">新供应商介绍沟通会<br>供应商能力基线要求<br>新供应商现场稽核</td>
+                                <td class="px-3 py-3 text-xs text-gray-700 leading-relaxed">新物料导入流程<br>替代料导入和认证</td>
+                                <td class="px-3 py-3 text-xs text-gray-700 leading-relaxed">抽样比例<br>检验规范</td>
+                                <td class="px-3 py-3 text-xs text-gray-700 leading-relaxed">电子系统追踪物料质量问题<br>研发参与8D报告审核</td>
+                                <td class="px-3 py-3 text-xs text-gray-700 leading-relaxed">供应商月度质量绩效<br>供应商季度绩效<br>供应商绩效红绿灯管理</td>
+                                <td class="px-3 py-3 text-xs text-gray-700 leading-relaxed">关键供应商稽核<br>供应商改善报告</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-semibold text-primary text-center align-middle">管理体系</td>
+                                <td class="px-3 py-3 text-xs text-gray-700 leading-relaxed">供应商系统平台<br>-供应商引入</td>
+                                <td class="px-3 py-3 text-xs text-gray-700 leading-relaxed">OA管控系统</td>
+                                <td class="px-3 py-3 text-xs text-gray-700 leading-relaxed">WMES IQC<br>检验系统</td>
+                                <td class="px-3 py-3 text-xs text-gray-700 leading-relaxed">物料不合格品电子流、<br>物料让步电子流</td>
+                                <td class="px-3 py-3 text-xs text-gray-700 leading-relaxed">供应商红绿灯管理办法</td>
+                                <td class="px-3 py-3 text-xs text-gray-700 leading-relaxed">关键供应商体系<br>纠正预防管理规范</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. 来料检验能力 -->
+        <div class="mb-12">
+            <h4 class="text-xl font-semibold mb-6">质量保证能力 – 来料检验能力</h4>
+            <div class="card-shadow overflow-hidden">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm min-w-[560px]">
+                        <thead>
+                            <tr class="bg-gradient-to-r from-primary to-secondary text-white">
+                                <th class="px-3 py-3 text-left font-semibold">器件类别</th>
+                                <th class="px-3 py-3 text-center font-semibold">AI类</th>
+                                <th class="px-3 py-3 text-center font-semibold">AII类</th>
+                                <th class="px-3 py-3 text-center font-semibold">AIII类</th>
+                                <th class="px-3 py-3 text-center font-semibold">B类</th>
+                                <th class="px-3 py-3 text-left font-semibold">备注</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-700">
+                            <tr class="border-b border-gray-100"><td class="px-3 py-2.5 font-medium">电阻</td><td class="px-3 py-2.5 text-center">满足</td><td class="px-3 py-2.5 text-center">部分满足</td><td class="px-3 py-2.5 text-center">满足</td><td class="px-3 py-2.5 text-center">满足</td><td class="px-3 py-2.5 text-xs text-gray-500">AII类DPA不满足，2021年规划中</td></tr>
+                            <tr class="border-b border-gray-100 bg-gray-50/60"><td class="px-3 py-2.5 font-medium">电容</td><td class="px-3 py-2.5 text-center">满足</td><td class="px-3 py-2.5 text-center">部分满足</td><td class="px-3 py-2.5 text-center">满足</td><td class="px-3 py-2.5 text-center">满足</td><td class="px-3 py-2.5 text-xs text-gray-500">AII类DPA不满足，2021年规划中</td></tr>
+                            <tr class="border-b border-gray-100"><td class="px-3 py-2.5 font-medium">变压器、电感</td><td class="px-3 py-2.5 text-center">部分满足</td><td class="px-3 py-2.5 text-center">部分满足</td><td class="px-3 py-2.5 text-center">满足</td><td class="px-3 py-2.5 text-center">—</td><td class="px-3 py-2.5 text-xs text-gray-500">AI类匝间耐压测试仪和AIII类共模噪声测试仪，已提单购买</td></tr>
+                            <tr class="border-b border-gray-100 bg-gray-50/60"><td class="px-3 py-2.5 font-medium">晶振</td><td class="px-3 py-2.5 text-center">满足</td><td class="px-3 py-2.5 text-center">满足</td><td class="px-3 py-2.5 text-center">NA</td><td class="px-3 py-2.5 text-center">部分满足</td><td class="px-3 py-2.5 text-xs text-gray-500">各类封装测试巡巡工具板和B类测试仪器，已提单购买</td></tr>
+                            <tr class="border-b border-gray-100"><td class="px-3 py-2.5 font-medium">晶体管</td><td class="px-3 py-2.5 text-center">满足</td><td class="px-3 py-2.5 text-center">部分满足</td><td class="px-3 py-2.5 text-center">NA</td><td class="px-3 py-2.5 text-center">NA</td><td class="px-3 py-2.5 text-xs text-gray-500">AII类STI5000NA晶体管图示仪已提单购买，DPA不满足，2021年规划中</td></tr>
+                            <tr class="border-b border-gray-100 bg-gray-50/60"><td class="px-3 py-2.5 font-medium">保险丝、厚膜</td><td class="px-3 py-2.5 text-center">满足</td><td class="px-3 py-2.5 text-center">NA</td><td class="px-3 py-2.5 text-center">NA</td><td class="px-3 py-2.5 text-center">NA</td><td class="px-3 py-2.5 text-xs text-gray-500"></td></tr>
+                            <tr class="border-b border-gray-100"><td class="px-3 py-2.5 font-medium">IC</td><td class="px-3 py-2.5 text-center">满足</td><td class="px-3 py-2.5 text-center">NA</td><td class="px-3 py-2.5 text-center">NA</td><td class="px-3 py-2.5 text-center">部分满足</td><td class="px-3 py-2.5 text-xs text-gray-500">B类DPA不满足，2021年规划中</td></tr>
+                            <tr class="border-b border-gray-100 bg-gray-50/60"><td class="px-3 py-2.5 font-medium">开关</td><td class="px-3 py-2.5 text-center">满足</td><td class="px-3 py-2.5 text-center">满足</td><td class="px-3 py-2.5 text-center">满足</td><td class="px-3 py-2.5 text-center">满足</td><td class="px-3 py-2.5 text-xs text-gray-500"></td></tr>
+                            <tr class="border-b border-gray-100"><td class="px-3 py-2.5 font-medium">PCB</td><td class="px-3 py-2.5 text-center">满足</td><td class="px-3 py-2.5 text-center">NA</td><td class="px-3 py-2.5 text-center">NA</td><td class="px-3 py-2.5 text-center">不满足</td><td class="px-3 py-2.5 text-xs text-gray-500">B类检验项目参考供应商报告</td></tr>
+                            <tr class="border-b border-gray-100 bg-gray-50/60"><td class="px-3 py-2.5 font-medium">结构件类</td><td class="px-3 py-2.5 text-center">满足</td><td class="px-3 py-2.5 text-center">NA</td><td class="px-3 py-2.5 text-center">NA</td><td class="px-3 py-2.5 text-center">部分满足</td><td class="px-3 py-2.5 text-xs text-gray-500">B类材料成分、抗拉、阻燃、镀层厚度参考供应商报告或委外</td></tr>
+                            <tr class="border-b border-gray-100"><td class="px-3 py-2.5 font-medium">连接器</td><td class="px-3 py-2.5 text-center">满足</td><td class="px-3 py-2.5 text-center">满足</td><td class="px-3 py-2.5 text-center">NA</td><td class="px-3 py-2.5 text-center">部分满足</td><td class="px-3 py-2.5 text-xs text-gray-500">B类膜厚、个别测试项目需要继续完善</td></tr>
+                            <tr class="border-b border-gray-100 bg-gray-50/60"><td class="px-3 py-2.5 font-medium">辅料</td><td class="px-3 py-2.5 text-center">满足</td><td class="px-3 py-2.5 text-center">满足</td><td class="px-3 py-2.5 text-center">NA</td><td class="px-3 py-2.5 text-center">NA</td><td class="px-3 py-2.5 text-xs text-gray-500">AII类参考供应商报告</td></tr>
+                            <tr class="border-b border-gray-100"><td class="px-3 py-2.5 font-medium">风扇</td><td class="px-3 py-2.5 text-center">部分满足</td><td class="px-3 py-2.5 text-center">NA</td><td class="px-3 py-2.5 text-center">NA</td><td class="px-3 py-2.5 text-center">部分满足</td><td class="px-3 py-2.5 text-xs text-gray-500">风扇测试仪、风扇老化监控设备，2021年规划中</td></tr>
+                            <tr class="border-b border-gray-100 bg-gray-50/60"><td class="px-3 py-2.5 font-medium">标签、包材类</td><td class="px-3 py-2.5 text-center">满足</td><td class="px-3 py-2.5 text-center">NA</td><td class="px-3 py-2.5 text-center">NA</td><td class="px-3 py-2.5 text-center">部分满足</td><td class="px-3 py-2.5 text-xs text-gray-500">含水率测试仪、万能试验机参考供应商报告</td></tr>
+                            <tr><td class="px-3 py-2.5 font-medium">电缆类</td><td class="px-3 py-2.5 text-center">满足</td><td class="px-3 py-2.5 text-center">NA</td><td class="px-3 py-2.5 text-center">NA</td><td class="px-3 py-2.5 text-center">部分满足</td><td class="px-3 py-2.5 text-xs text-gray-500">参考供应商报告</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="px-4 py-3 bg-gray-50 border-t border-gray-200 text-xs text-gray-500 leading-relaxed">
+                    <strong class="text-primary">范围：</strong>光模块、bosa、光器件、继电器、避雷器、射频、滤波器（海旦）、磁芯、传感器（IC类物料除外）、分流器、天线电机、热缩套管、资料、计算机类、摄像机、摄像头配件、机芯、镜头、双工器、天线附件、LCD、电池类、IT配套类、计算机、内存、硬盘、二次电源、GPS接收卡、星卡类、采购模条、微波天线、线材、光纤类，不涉及。
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. 错混料管控 -->
+        <div class="mb-4">
+            <h4 class="text-xl font-semibold mb-6">质量保证能力 – 错混料管控</h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="card-shadow p-5">
+                    <div class="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-3">
+                        <i class="fa fa-file-text-o text-lg"></i>
+                    </div>
+                    <h5 class="font-bold text-primary mb-3">订单接收与转化</h5>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li>• 使用前缀+客户产品编码，无需编码对照表</li>
+                        <li>• 使用系统BOM自动生成配料单</li>
+                    </ul>
+                </div>
+                <div class="card-shadow p-5">
+                    <div class="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-3">
+                        <i class="fa fa-cogs text-lg"></i>
+                    </div>
+                    <h5 class="font-bold text-primary mb-3">生产制造管控</h5>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li>• 5S区域划分与标识，防止混料</li>
+                        <li>• MES系统一键隔离</li>
+                        <li>• 在线打印标签，标签内容根据后台数据库自动生成</li>
+                        <li>• 电子标签、本体标签、外箱标签一致性系统校验</li>
+                        <li>• 换线清线管控</li>
+                    </ul>
+                </div>
+                <div class="card-shadow p-5">
+                    <div class="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-3">
+                        <i class="fa fa-truck text-lg"></i>
+                    </div>
+                    <h5 class="font-bold text-primary mb-3">理货与发货</h5>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li>• 成品标签客户格式在线打印和粘贴，不离线粘贴</li>
+                        <li>• 发货标签100%采集与订单核对</li>
+                        <li>• 集合包装拆箱模块</li>
+                    </ul>
+                </div>
+                <div class="card-shadow p-5">
+                    <div class="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-3">
+                        <i class="fa fa-cubes text-lg"></i>
+                    </div>
+                    <h5 class="font-bold text-primary mb-3">尾数管理</h5>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li>• MES流程管控</li>
+                        <li>• 尾数专线安排</li>
+                        <li>• 100% FQC检验</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6. 系统质量管控点 -->
+        <div class="mb-12">
+            <h4 class="text-xl font-semibold mb-6">质量保证能力 – 系统质量管控点</h4>
+            <div class="card-shadow overflow-hidden">
+                <div class="p-4 flex justify-center">
+                    <img src="./images/quality3-1.png" class="w-full" alt="系统质量管控点流程图">
+                </div>
+            </div>
+        </div>
+
+        <!-- 7. IQC -->
+        <div class="mb-12">
+            <h4 class="text-xl font-semibold mb-6">质量保证能力 – IQC</h4>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="card-shadow overflow-hidden">
+                    <div class="p-4 flex justify-center">
+                        <img src="./images/quality4.png" alt="IQC检验仪器设备" class="h-full">
+                    </div>
+                    <div class="p-4 flex justify-center mt-4">
+                        <img src="./images/quality5.png" alt="IQC检验仪器设备" class="h-full">
+                    </div>
+                    <p class="text-center pb-4 text-sm text-gray-500">IQC 检验仪器设备</p>
+                </div>
+                <div class="space-y-5">
+                    <div class="bg-white rounded-xl p-5 card-shadow border-l-4 border-primary">
+                        <h5 class="text-lg font-bold text-primary mb-3">IQC 的检验能力</h5>
+                        <ul class="space-y-2 text-sm text-gray-700">
+                            <li>• 检验项目：外观检验、尺寸结构、电气特性、性能特性</li>
+                            <li>• 检验设备：元素成分分析仪、LCR数字电桥、影像测试仪、耐压绝缘测试仪、千分尺、漏电流测试仪、显微镜、耐压耐破等</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white rounded-xl p-5 card-shadow border-l-4 border-secondary">
+                        <h5 class="text-lg font-bold text-secondary mb-3">供应商来料的质量管理</h5>
+                        <ul class="space-y-2 text-sm text-gray-700">
+                            <li>• 来料检验项目审视、物料标准检验文件的制定与输出</li>
+                            <li>• 原材料不良的判定、反馈并辅导供应商有效改善，8D报告对策输出的实施与跟踪确认</li>
+                            <li>• 重点供应商实施QBR月度会议，讨论LRR、DPPM状况，提升和稳定入料品质</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 8. MES系统 -->
+        <div class="mb-12">
+            <h4 class="text-xl font-semibold mb-6">质量保证能力 – MES系统</h4>
+            <div class="card-shadow overflow-hidden">
+                <div class="p-4 flex justify-center">
+                    <img src="./images/quality5-1.png" class="w-full" alt="质量保证能力 – MES系统">
+                </div>
+            </div>
+        </div>
+
+        <!-- 9. 装备开发与验证 -->
+        <div class="mb-4">
+            <h4 class="text-xl font-semibold mb-6">质量保证能力 – 装备开发与验证</h4>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="card-shadow overflow-hidden">
+                    <div class="p-4">
+                        <img src="./images/quality6-1.png" alt="装备开发与验证流程图" class="w-full">
+                    </div>
+                    <p class="text-center pb-4 text-sm text-gray-500">装备开发与验证流程</p>
+                </div>
+                <div class="space-y-5">
+                    <div class="bg-white rounded-xl p-5 card-shadow border-l-4 border-primary">
+                        <h5 class="text-lg font-bold text-primary mb-3">测试装备平台开发能力</h5>
+                        <div class="flex">
+                            <div class="overflow-hidden rounded">
+                                <img src="./images/test7.png" alt="自动测试夹具2" class="w-full h-auto object-cover block">
+                            </div>
+                            <ul class="ml-10">
+                                <li>1. 并行测试</li>
+                                <li>2. MES系统自动过站与防呆</li>
+                                <li>3. 测试log自动备份服务器</li>
+                                <li>4. 后台数据统计与预警功能</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl p-5 card-shadow border-l-4 border-secondary">
+                        <h5 class="text-lg font-bold text-secondary mb-3">自动测试夹具开发能力</h5>
+                       <div class="flex">
+                            <div class="mt-3 grid grid-cols-2 gap-2">
+                                <div class="aspect-video overflow-hidden rounded">
+                                    <img src="./images/quality6.png" alt="自动测试夹具1" class="w-full h-full object-cover block">
+                                </div>
+                                <div class="aspect-video overflow-hidden rounded">
+                                    <img src="./images/quality7.png" alt="自动测试夹具2" class="w-full h-full object-cover block">
+                                </div>
+                            </div>
+                            <ul class="ml-10 flex items-center">
+                                <li>全自动单板测试，覆盖所有对外接口内存条、CPU，支持操作系统切换等</li>
+                            </ul>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 10. 应力应变测试与控制 -->
+        <div class="mb-12">
+            <h4 class="text-xl font-semibold mb-6">质量保证能力 – 应力应变测试与控制</h4>
+            <p class="text-gray-600 mb-4">按 IPC/JEDEC-9074A 印制板应变测试指南测试</p>
+            <div class="grid md:grid-cols-5 gap-4">
+                <div class="md:col-span-3">
+                    <div class="card-shadow overflow-hidden">
+                        <div class="grid grid-cols-2 bg-gradient-to-r from-primary to-secondary text-white">
+                            <div class="px-4 py-3 font-semibold text-sm">应力应变测试工序</div>
+                            <div class="px-4 py-3 font-semibold text-sm">应力应变管控点</div>
+                        </div>
+                        <table class="w-full text-sm">
+                            <tbody class="text-gray-700">
+                                <tr class="border-b border-gray-100"><td class="px-4 py-3 font-medium">周转运输</td><td class="px-4 py-3">抽屉式周转车，竖插周转车，单板托盘</td></tr>
+                                <tr class="border-b border-gray-100 bg-gray-50/50"><td class="px-4 py-3 font-medium">插件工序</td><td class="px-4 py-3">专用波峰焊托盘，擦拭方式清洁补焊焊点</td></tr>
+                                <tr class="border-b border-gray-100"><td class="px-4 py-3 font-medium">分板工序</td><td class="px-4 py-3">Router分板机，刀具寿命管控</td></tr>
+                                <tr class="border-b border-gray-100 bg-gray-50/50"><td class="px-4 py-3 font-medium">ICT测试</td><td class="px-4 py-3">ICT夹具例行保养和例行应力监控</td></tr>
+                                <tr class="border-b border-gray-100"><td class="px-4 py-3 font-medium">FBT测试</td><td class="px-4 py-3">辅助定位角和定位pin设计，防止放置失误</td></tr>
+                                <tr><td class="px-4 py-3 font-medium">产品组装</td><td class="px-4 py-3">散热片安装，DIMM/PCIE安装，制作专用治具</td></tr>
+                            </tbody>
+                        </table>
+                        <div class="px-4 py-3 text-xs text-gray-500 bg-gray-50">* 切片和染色分析，当前委托第三方进行</div>
+                    </div>
+                </div>
+                <div class="md:col-span-2 card-shadow overflow-hidden flex items-center justify-center">
+                    <img src="./images/quality7-1.png" alt="IPC/JEDEC-9074A PWB应变曲线图" class="w-full p-4">
+                </div>
+            </div>
+        </div>
+
+        <!-- 11. 过程质量框架 -->
+        <div class="mb-12">
+            <h4 class="text-xl font-semibold mb-6">质量保证能力 – 过程质量框架</h4>
+            <div class="card-shadow overflow-hidden">
+                <div class="p-4">
+                    <img src="./images/quality7-2.png" alt="过程质量框架图" class="w-full">
+                </div>
+            </div>
+                
+        </div>
+
+        <!-- 12. 生产管理：三化一稳定 -->
+        <div class="mb-12">
+            <h4 class="text-xl font-semibold mb-2">生产管理：三化一稳定一流程IT化</h4>
+
+            <!-- 12.1 流程IT化 -->
+            <div class="mb-8">
+                <div class="card-shadow overflow-hidden p-4">
+                    <img src="./images/quality7-3.png" alt="流程IT化架构图" class="w-full">
+                </div>
+            </div>
+
+            <!-- 12.2 生产自动化 -->
+            <div class="mb-8">
+                <h5 class="text-lg font-semibold mb-4 text-primary">生产管理：三化一稳定 – 生产自动化</h5>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="card-shadow overflow-hidden p-4">
+                        <h6 class="font-semibold text-primary mb-3">设备自动化</h6>
+                        <img src="./images/product1.png" class="w-full" alt="设备自动化">
+                    </div>
+                    <div class="card-shadow overflow-hidden p-4">
+                        <h6 class="font-semibold text-primary mb-3">软件自动化</h6>
+                        <div class="card-shadow overflow-hidden p-4">
+                            <h6 class="font-bold text-primary mb-3">功能测试自动化</h6>
+                            <div class="flex ">
+                                <ul class="space-y-1 text-sm text-gray-700">
+                                    <li>1. 测试接口覆盖率100%</li>
+                                    <li>2. 自动化程序与MES系统对接自动过站；防呆机制</li>
+                                    <li>3. SPC监控异常预警</li>
+                                    <li>4. 测试日志自动上传备份服务器</li>
+                                </ul>
+                                <div>
+                                    <img src="./images/product2.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-shadow overflow-hidden p-4 mt-4">
+                            <h6 class="font-bold text-primary mb-3">智能仓储</h6>
+                            <div class="flex ">
+                                <ul class="space-y-1 text-sm text-gray-700">
+                                    <li>上架：随机分配储位</li>
+                                    <li>备料：同工单同时亮起储位信号</li>
+                                    <li>补仓：储位不足安全库存，自动亮灯提示补货</li>
+                                </ul>
+                                <div class="flex">
+                                    <img class="w-1/2" src="./images/product2-1.png" alt="">
+                                    <img class="w-1/2" src="./images/product2-2.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 12.3 人员稳定化 -->
+            <div>
+                <h5 class="text-lg font-semibold mb-4 text-primary">生产管理：三化一稳定 – 人员稳定化</h5>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="card-shadow overflow-hidden">
+                        <div class="p-4">
+                            <h6 class="font-semibold text-primary mb-2">ISO9001/ISO45001 体系培训</h6>
+                            <ul class="space-y-1 text-xs text-gray-700">
+                                <li>• 组织生产，质量和工艺参加 IOS9001/ISO45001 体系培训</li>
+                                <li>• 加强体系管理概念，增强流程意识</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-shadow overflow-hidden">
+                        <div class="p-4">
+                            <h6 class="font-semibold text-primary mb-2">六西格玛培训</h6>
+                            <ul class="space-y-1 text-xs text-gray-700">
+                                <li>• 接轨全球质量经验，提升团队质量等级</li>
+                                <li>• 用六西格玛管理方法指导生产质量</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-shadow overflow-hidden">
+                        <div class="p-4">
+                            <h6 class="font-semibold text-primary mb-2">MSA和SPC培训</h6>
+                            <h6 class="font-semibold text-primary mb-2">对关键量测系统进行分析</h6>
+                            <ul class="space-y-1 text-xs text-gray-700">
+                                <li>• 评估环境校准周期，设备外部校准周期</li>
+                                <li>• 对测量系统一致性分析改善</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 13. 关键人员岗位稳定 -->
+        <div class="mb-12">
+            <h4 class="text-xl font-semibold mb-6">生产管理：三化一稳定 – 关键人员岗位稳定</h4>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="card-shadow overflow-hidden p-6">
+                    <h5 class="text-lg font-bold text-primary mb-4">活动类</h5>
+                  
+                    <div >
+                        <ul class="w-1/2">
+                            <li>• 月度之星评选</li>
+                            <li>• 员工慰问</li>
+                            <li>• 恒为趣味运动会</li>
+                        </ul>
+                        <div class="grid grid-cols-2 gap-2">
+                            <div class="aspect-video overflow-hidden rounded">
+                                <img src="./images/product5.png" alt="月度之星" class="w-full h-auto object-cover block">
+                            </div>
+                            <div class="aspect-video overflow-hidden rounded">
+                                <img src="./images/product3.png" alt="趣味运动会" class="w-full h-full object-cover block">
+                            </div>
+                            <div class="aspect-video overflow-hidden rounded">
+                                <img src="./images/product4.png" alt="月度之星" class="w-full h-full object-cover block">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-shadow overflow-hidden p-6">
+                    <h5 class="text-lg font-bold text-primary mb-4">培训类</h5>
+                    <ul class="space-y-2 text-gray-700 mb-4">
+                        <li>• 回归基本、夯实基础，建立信赖性工厂专题培训</li>
+                        <li>• 六西格玛培训</li>
+                        <li>• 基层管理者储备干部系列培训和考核</li>
+                    </ul>
+                    <div class="aspect-video overflow-hidden rounded">
+                        <img src="./images/product6.png" alt="培训现场" class="w-full h-full object-cover block">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 14. 领导现场管理 – 走动式管理 -->
+        <div class="mb-4">
+            <h4 class="text-xl font-semibold mb-6">生产管理：领导现场管理 – 走动式管理</h4>
+
+            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                <div class="card-shadow overflow-hidden">
+                    <div class="bg-gradient-to-r from-primary to-secondary text-white px-4 py-3 font-semibold">活动目的</div>
+                    <div class="p-4 text-sm text-gray-700 space-y-2">
+                        <p><span class="font-semibold text-primary">A 了解情况：</span>不下一线亲自走走，心中没底</p>
+                        <p><span class="font-semibold text-primary">B 加强沟通：</span>走动中和各级的交流就是沟通</p>
+                        <p><span class="font-semibold text-primary">C 交流情感：</span>经常的下基层可以和一线员工直接交流</p>
+                        <p><span class="font-semibold text-primary">D 监督工作：</span>对下属的工作情况进行的一次检查</p>
+                    </div>
+                </div>
+                <div class="card-shadow overflow-hidden">
+                    <div class="bg-gradient-to-r from-primary to-secondary text-white px-4 py-3 font-semibold">活动内容</div>
+                    <div class="p-4 text-sm text-gray-700 space-y-2">
+                        <p><strong>参与人员：</strong>所有主管及以上人员</p>
+                        <p><strong>活动范围：</strong>涉及IQC，生产，工艺，维修，仓库等所有单位</p>
+                        <p><strong>工作内容：</strong>"三现主义" 每日去现场发现问题，改善问题</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-3 gap-4">
+                <div class="card-shadow overflow-hidden">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="./images/product7.png" alt="发现问题" class="w-full h-full object-cover block">
+                    </div>
+                    <div class="p-3 text-center">
+                        <h6 class="font-semibold text-primary mb-1">发现问题</h6>
+                    </div>
+                </div>
+                <div class="card-shadow overflow-hidden">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="./images/product8.png" alt="制定改善措施" class="w-full h-full object-cover block">
+                    </div>
+                    <div class="p-3 text-center">
+                        <h6 class="font-semibold text-primary mb-1">制定改善措施</h6>
+                    </div>
+                </div>
+                <div class="card-shadow overflow-hidden">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="./images/product9.png" alt="问题改善和宣导" class="w-full h-full object-cover block">
+                    </div>
+                    <div class="p-3 text-center">
+                        <h6 class="font-semibold text-primary mb-1">问题改善和宣导</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
 <section id="contact" class="py-16 bg-dark text-white fade-in-up">
     <div class="container mx-auto px-4 md:px-6">
-        <h3 class="section-title text-white">联系我们</h3>
+        <h1 class="text-3xl mb-4">联系我们</h1>
         <div class="grid md:grid-cols-2 gap-8">
             <div>
                 <h4 class="text-xl font-semibold mb-4">安徽格罗特智能科技有限公司</h4>
