@@ -1,5 +1,8 @@
 {
-  "assetsDir": "./",        // 告诉 ESA：所有的静态文件就在根目录下
-  "functionsDir": "./",     // 告诉 ESA：没有需要运行的服务端函数
-  "outputDir": "./"         // 告诉 ESA：不需要额外生成文件，原地生效
+  "name": "Rich-Brilliance",
+  "installCommand": "",
+  "buildCommand": "",
+  "assets": {
+    "directory": "./"
+  }
 }
