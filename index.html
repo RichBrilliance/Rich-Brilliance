@@ -65,9 +65,7 @@
         <nav class="hidden md:flex gap-8">
             <a href="#about" class="hover:text-primary transition-colors relative after:absolute after:bg-primary after:h-0.5 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all">公司简况</a>
             <a href="#factory" class="hover:text-primary transition-colors relative after:absolute after:bg-primary after:h-0.5 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all">制造能力</a>
-            <a href="#equipment" class="hover:text-primary transition-colors relative after:absolute after:bg-primary after:h-0.5 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all">核心设备</a>
-            <a href="#capacity" class="hover:text-primary transition-colors relative after:absolute after:bg-primary after:h-0.5 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all">工厂产能</a>
-            <a href="#quality" class="hover:text-primary transition-colors relative after:absolute after:bg-primary after:h-0.5 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all">质量体系</a>
+           
             <a href="#contact" class="hover:text-primary transition-colors relative after:absolute after:bg-primary after:h-0.5 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all">联系我们</a>
         </nav>
         <!--移动端菜单按钮-->
@@ -292,309 +290,106 @@
             </table>
         </div>
         <h3 class="text-xl font-semibold mt-6">制造与交付 – 工厂产能</h3>
-        <div class="relative w-[1200px] h-[720px] mx-auto">
-            <!-- 中间大圆 现有产能 -->
-            <div class="absolute w-[320px] h-[320px] rounded-full bg-gradient-to-br from-[#0052b3] to-[#0070cc] text-white text-3xl font-bold flex items-center justify-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 shadow-lg shadow-blue-500/20">
-                现有产能
-            </div>
+        <div class="shadow bg-white card-shadow">
+            <div class="relative w-[1200px] h-[720px] mx-auto">
+                <!-- 中间大圆 现有产能 -->
+                <div class="absolute w-[320px] h-[320px] rounded-full bg-gradient-to-br from-[#0052b3] to-[#0070cc] text-white text-3xl font-bold flex items-center justify-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 shadow-lg shadow-blue-500/20">
+                    现有产能
+                </div>
 
-            <!-- SMT 左上 -->
-            <div class="absolute w-[340px] bg-white border border-[#b8d8f0] rounded p-4 shadow-md top-5 left-5 z-20">
-                <div class="flex justify-between items-start">
-                    <div>
-                    <div class="text-xl text-gray-700 mb-1">自有3条，可扩展2条</div>
-                    <div class="text-base text-gray-500">Production capacity (pcs/month): <span class="text-[#007bdd] text-1xl font-bold">200K</span></div>
+                <!-- SMT 左上 -->
+                <div class="absolute w-[340px] bg-white border border-[#b8d8f0] rounded p-4 shadow-md top-5 left-5 z-20">
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <div class="text-xl text-gray-500 mb-1">自有3条，可扩展2条</div>
+                            <div class="text-base text-gray-500">Production capacity (pcs/month): <span class="text-[#007bdd] text-1xl font-bold">200K</span></div>
+                        </div>
+                        <div class="text-[#0052b3] text-2xl font-bold whitespace-nowrap">SMT</div>
                     </div>
-                    <div class="text-[#0052b3] text-2xl font-bold">SMT</div>
                 </div>
-            </div>
 
-            <!-- DIP 右上 -->
-            <div class="absolute w-[340px] bg-white border border-[#b8d8f0] rounded p-4 shadow-md top-5 right-5 z-20">
-            <div class="flex justify-between items-start">
-                <div>
-                <div class="text-xl text-gray-700 mb-1">自有1条，可扩展1条</div>
-                <div class="text-base text-gray-500">Production capacity (pcs/month): <span class="text-[#007bdd] text-1xl font-bold">200K</span></div>
+                <!-- DIP 右上 -->
+                <div class="absolute w-[340px] bg-white border border-[#b8d8f0] rounded p-4 shadow-md top-5 right-5 z-20">
+                <div class="flex justify-between items-center">
+                    <div class="text-[#0052b3] text-2xl font-bold mr-6">DIP</div>
+                    <div>
+                        <div class="text-xl text-gray-500 mb-1">自有1条，可扩展1条</div>
+                        <div class="text-base text-gray-500">Production capacity (pcs/month): <span class="text-[#007bdd] text-1xl font-bold">200K</span></div>
+                    </div>
                 </div>
-                <div class="text-[#0052b3] text-2xl font-bold">DIP</div>
-            </div>
-            </div>
+                </div>
 
-            <!-- 组装线 左中 -->
-            <div class="absolute w-[340px] bg-white border border-[#b8d8f0] rounded p-4 shadow-md top-[200px] left-5 z-20">
-            <div class="flex justify-between items-start">
-                <div>
-                <div class="text-xl text-gray-700 mb-1">自有1条，扩展2条</div>
-                <div class="text-base text-gray-500">Production capacity (pcs/month): <span class="text-[#007bdd] text-1xl font-bold">150K</span></div>
+                <!-- 组装线 左中 -->
+                <div class="absolute w-[340px] bg-white border border-[#b8d8f0] rounded p-4 shadow-md top-[200px] left-5 z-20">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <div class="text-xl text-gray-500 mb-1">自有1条，扩展2条</div>
+                        <div class="text-base text-gray-500">Production capacity (pcs/month): <span class="text-[#007bdd] text-1xl font-bold">150K</span></div>
+                    </div>
+                    <div class="text-[#0052b3] text-2xl font-bold whitespace-nowrap">组装线</div>
                 </div>
-                <div class="text-[#0052b3] text-2xl font-bold">组装线</div>
-            </div>
-            </div>
+                </div>
 
-            <!-- 包装线 右中 -->
-            <div class="absolute w-[340px] bg-white border border-[#b8d8f0] rounded p-4 shadow-md top-[200px] right-5 z-20">
-            <div class="flex justify-between items-start">
-                <div>
-                <div class="text-xl text-gray-700 mb-1">自有2条，可扩展2条</div>
-                <div class="text-base text-gray-500">Production capacity (pcs/month): <span class="text-[#007bdd] text-1xl font-bold">150K</span></div>
+                <!-- 包装线 右中 -->
+                <div class="absolute w-[340px] bg-white border border-[#b8d8f0] rounded p-4 shadow-md top-[200px] right-5 z-20">
+                <div class="flex justify-between items-center">
+                    <div class="text-[#0052b3] text-2xl font-bold whitespace-nowrap  mr-6">包装线</div>
+                    <div>
+                        <div class="text-xl text-gray-500 mb-1">自有2条，可扩展2条</div>
+                        <div class="text-base text-gray-500">Production capacity (pcs/month): <span class="text-[#007bdd] text-1xl font-bold">150K</span></div>
+                    </div>
                 </div>
-                <div class="text-[#0052b3] text-2xl font-bold">包装线</div>
-            </div>
-            </div>
+                </div>
 
-            <!-- 老化房 左下 -->
-            <div class="absolute w-[340px] bg-white border border-[#b8d8f0] rounded p-4 shadow-md top-[380px] left-5 z-20">
-            <div class="flex justify-between items-start">
-                <div>
-                <div class="text-xl text-gray-700 mb-1">自有3个</div>
-                <div class="text-base text-gray-500">Production capacity (pcs/month): <span class="text-[#007bdd] text-1xl font-bold">150K</span></div>
+                <!-- 老化房 左下 -->
+                <div class="absolute w-[340px] bg-white border border-[#b8d8f0] rounded p-4 shadow-md top-[380px] left-5 z-20">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <div class="text-xl text-gray-500 mb-1">自有3个</div>
+                        <div class="text-base text-gray-500">Production capacity (pcs/month): <span class="text-[#007bdd] text-1xl font-bold">150K</span></div>
+                    </div>
+                    <div class="text-[#0052b3] text-2xl font-bold whitespace-nowrap">老化房</div>
                 </div>
-                <div class="text-[#0052b3] text-2xl font-bold">老化房</div>
-            </div>
-            </div>
+                </div>
 
-            <!-- TEST 右下 -->
-            <div class="absolute w-[340px] bg-white border border-[#b8d8f0] rounded p-4 shadow-md top-[380px] right-5 z-20">
-            <div class="flex justify-between items-start">
-                <div>
-                <div class="text-xl text-gray-700 mb-1">自有1条，可扩展1条</div>
-                <div class="text-base text-gray-500">Production capacity (pcs/month): <span class="text-[#007bdd] text-1xl font-bold">6K</span></div>
+                <!-- TEST 右下 -->
+                <div class="absolute w-[340px] bg-white border border-[#b8d8f0] rounded p-4 shadow-md top-[380px] right-5 z-20">
+                <div class="flex justify-between items-center">
+                    <div class="text-[#0052b3] text-2xl font-bold whitespace-nowrap mr-6">TEST</div>
+                    <div>
+                        <div class="text-xl text-gray-500 mb-1">自有1条，可扩展1条</div>
+                        <div class="text-base text-gray-500">Production capacity (pcs/month): <span class="text-[#007bdd] text-1xl font-bold">6K</span></div>
+                    </div>
                 </div>
-                <div class="text-[#0052b3] text-2xl font-bold">TEST</div>
-            </div>
-            </div>
+                </div>
 
-            <!-- AI插件 最左下 -->
-            <div class="absolute w-[340px] bg-white border border-[#b8d8f0] rounded p-4 shadow-md top-[560px] left-5 z-20">
-            <div class="flex justify-between items-start">
-                <div>
-                <div class="text-xl text-gray-700 mb-1">AI插件线建设中</div>
-                <div class="text-base text-gray-500">Production capacity (pcs/month): <span class="text-[#007bdd] text-1xl font-bold">150lot</span></div>
+                <!-- AI插件 最左下 -->
+                <div class="absolute w-[340px] bg-white border border-[#b8d8f0] rounded p-4 shadow-md top-[560px] left-5 z-20">
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <div class="text-xl text-gray-500 mb-1">AI插件线建设中</div>
+                            <div class="text-base text-gray-500">Production capacity (pcs/month): <span class="text-[#007bdd] text-1xl font-bold">150lot</span></div>
+                        </div>
+                        <div class="text-[#0052b3] text-2xl font-bold whitespace-nowrap">AI插件</div>
+                    </div>
                 </div>
-                <div class="text-[#0052b3] text-2xl font-bold">AI插件</div>
-            </div>
-            </div>
 
-            <!-- 三防涂敷线 最右下 -->
-            <div class="absolute w-[340px] bg-white border border-[#b8d8f0] rounded p-4 shadow-md top-[560px] right-5 z-20">
-            <div class="flex justify-between items-start">
-                <div>
-                <div class="text-xl text-gray-700 mb-1">1条</div>
-                <div class="text-base text-gray-500">Production capacity (pcs/month): <span class="text-[#007bdd] text-1xl font-bold">30K</span></div>
+                <!-- 三防涂敷线 最右下 -->
+                <div class="absolute w-[340px] bg-white border border-[#b8d8f0] rounded p-4 shadow-md top-[560px] right-5 z-20">
+                <div class="flex justify-between items-center">
+                    <div class="text-[#0052b3] text-2xl font-bold whitespace-nowrap  mr-6">三防涂敷线</div>
+                    <div>
+                        <div class="text-xl text-gray-500 mb-1">1条</div>
+                        <div class="text-base text-gray-500">Production capacity (pcs/month): <span class="text-[#007bdd] text-1xl font-bold">30K</span></div>
+                    </div>
                 </div>
-                <div class="text-[#0052b3] text-2xl font-bold">三防涂敷线</div>
-            </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<!--核心设备展示-->
-<section id="equipment" class="py-16 md:py-20 fade-in-up">
-    <div class="container mx-auto px-4 md:px-6">
-        <h3 class="section-title">核心设备介绍</h3>
-        <div class="grid md:grid-cols-3 gap-6">
-            <div class="card-shadow p-5">
-                <div class="h-44 bg-gray-100 flex items-center justify-center mb-4 rounded">
-                    <i class="fa fa-print text-4xl text-primary"></i>
-                </div>
-                <h4 class="font-bold text-lg mb-2">GKG GT++锡膏印刷机</h4>
-                <ul class="text-sm space-y-1 text-gray-600">
-                    <li>最大基板 510×510mm</li>
-                    <li>PCB厚度0.4‑6mm</li>
-                    <li>印刷重复精度±22μm</li>
-                </ul>
-            </div>
-            <div class="card-shadow p-5">
-                <div class="h-44 bg-gray-100 flex items-center justify-center mb-4 rounded">
-                    <i class="fa fa-search text-4xl text-primary"></i>
-                </div>
-                <h4 class="font-bold text-lg mb-2">JUTZE 3D SPI锡膏检测</h4>
-                <ul class="text-sm space-y-1 text-gray-600">
-                    <li>PCB：50×50~510×505mm</li>
-                    <li>检测精度XY＜10um；H=0.37um</li>
-                    <li>最小检测元件01005</li>
-                </ul>
-            </div>
-            <div class="card-shadow p-5">
-                <div class="h-44 bg-gray-100 flex items-center justify-center mb-4 rounded">
-                    <i class="fa fa-microchip text-4xl text-primary"></i>
-                </div>
-                <h4 class="font-bold text-lg mb-2">松下NPM高速贴片机</h4>
-                <ul class="text-sm space-y-1 text-gray-600">
-                    <li>贴片速度75000Cph/小时</li>
-                    <li>贴装范围01005~28mm</li>
-                    <li>贴装精度±0.05mm</li>
-                </ul>
-            </div>
-            <div class="card-shadow p-5">
-                <div class="h-44 bg-gray-100 flex items-center justify-center mb-4 rounded">
-                    <i class="fa fa-fire text-4xl text-primary"></i>
-                </div>
-                <h4 class="font-bold text-lg mb-2">ERSA回流焊炉</h4>
-                <ul class="text-sm space-y-1 text-gray-600">
-                    <li>多独立温控温区</li>
-                    <li>温度精度±1℃</li>
-                    <li>支持高品质双面PCB焊接</li>
-                </ul>
-            </div>
-            <div class="card-shadow p-5">
-                <div class="h-44 bg-gray-100 flex items-center justify-center mb-4 rounded">
-                    <i class="fa fa-eye text-4xl text-primary"></i>
-                </div>
-                <h4 class="font-bold text-lg mb-2">X‑RAY检测仪</h4>
-                <ul class="text-sm space-y-1 text-gray-600">
-                    <li>BGA空洞检测，2.5D扫描</li>
-                    <li>区分上下层焊点互不干扰</li>
-                    <li>自动图像算法分析</li>
-                </ul>
-            </div>
-            <div class="card-shadow p-5">
-                <div class="h-44 bg-gray-100 flex items-center justify-center mb-4 rounded">
-                    <i class="fa fa-cogs text-4xl text-primary"></i>
-                </div>
-                <h4 class="font-bold text-lg mb-2">自动化测试平台</h4>
-                <ul class="text-sm space-y-1 text-gray-600">
-                    <li>MES系统对接自动过站防呆</li>
-                    <li>测试日志自动备份，后台预警</li>
-                    <li>支持并行全自动单板测试</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
 
-<!--工厂产能-->
-<section id="capacity" class="py-16 md:py-20 bg-lightgray fade-in-up">
-    <div class="container mx-auto px-4 md:px-6">
-        <h3 class="section-title">工厂产能</h3>
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div class="card-shadow p-5 text-center">
-                <div class="text-5xl text-primary mb-2"><i class="fa fa-microchip"></i></div>
-                <h5 class="font-semibold text-lg">SMT产线</h5>
-                <p class="text-sm text-gray-500">自有3条，可扩展2条</p>
-                <p class="mt-2 text-xl font-bold text-primary">月产能：200K PCS</p>
-            </div>
-            <div class="card-shadow p-5 text-center">
-                <div class="text-5xl text-primary mb-2"><i class="fa fa-plug"></i></div>
-                <h5 class="font-semibold text-lg">DIP产线</h5>
-                <p class="text-sm text-gray-500">自有1条，可扩展1条</p>
-                <p class="mt-2 text-xl font-bold text-primary">月产能：200K PCS</p>
-            </div>
-            <div class="card-shadow p-5 text-center">
-                <div class="text-5xl text-primary mb-2"><i class="fa fa-wrench"></i></div>
-                <h5 class="font-semibold text-lg">组装线</h5>
-                <p class="text-sm text-gray-500">自有1条，可扩展2条</p>
-                <p class="mt-2 text-xl font-bold text-primary">月产能：150K PCS</p>
-            </div>
-            <div class="card-shadow p-5 text-center">
-                <div class="text-5xl text-primary mb-2"><i class="fa fa-box"></i></div>
-                <h5 class="font-semibold text-lg">包装线</h5>
-                <p class="text-sm text-gray-500">自有2条，可扩展2条</p>
-                <p class="mt-2 text-xl font-bold text-primary">月产能：150K PCS</p>
-            </div>
-            <div class="card-shadow p-5 text-center">
-                <div class="text-5xl text-primary mb-2"><i class="fa fa-thermometer-half"></i></div>
-                <h5 class="font-semibold text-lg">老化房</h5>
-                <p class="text-sm text-gray-500">自有3个</p>
-                <p class="mt-2 text-xl font-bold text-primary">月产能：150K PCS</p>
-            </div>
-            <div class="card-shadow p-5 text-center">
-                <div class="text-5xl text-primary mb-2"><i class="fa fa-check-square-o"></i></div>
-                <h5 class="font-semibold text-lg">TEST测试线</h5>
-                <p class="text-sm text-gray-500">自有1条，可扩展1条</p>
-                <p class="mt-2 text-xl font-bold text-primary">月产能：6K PCS</p>
-            </div>
-            <div class="card-shadow p-5 text-center">
-                <div class="text-5xl text-primary mb-2"><i class="fa fa-paint-brush"></i></div>
-                <h5 class="font-semibold text-lg">三防涂敷线</h5>
-                <p class="text-sm text-gray-500">1条产线</p>
-                <p class="mt-2 text-xl font-bold text-primary">月产能：30K PCS</p>
-            </div>
-            <div class="card-shadow p-5 text-center">
-                <div class="text-5xl text-primary mb-2"><i class="fa fa-cogs"></i></div>
-                <h5 class="font-semibold text-lg">AI插件线</h5>
-                <p class="text-sm text-gray-500">建设中</p>
-                <p class="mt-2 text-xl font-bold text-primary">月产能：150Lot</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!--质量体系-->
-<section id="quality" class="py-16 md:py-20 fade-in-up">
-    <div class="container mx-auto px-4 md:px-6">
-        <h3 class="section-title">质量体系介绍</h3>
-        <div class="grid md:grid-cols-2 gap-10">
-            <div>
-                <h4 class="text-xl font-semibold mb-4">体系认证与环境管控</h4>
-                <ul class="space-y-3">
-                    <li class="flex gap-3 items-start">
-                        <i class="fa fa-certificate text-primary mt-1"></i>
-                        <div>
-                            <span class="font-medium">ISO9001质量管理体系</span>
-                            <p class="text-sm text-gray-500">严格按照GB/T19001‑2016 / ISO9001:2015标准运行</p>
-                        </div>
-                    </li>
-                    <li class="flex gap-3 items-start">
-                        <i class="fa fa-certificate text-primary mt-1"></i>
-                        <div>
-                            <span class="font-medium">IECQ QC 080000有害物质管理体系</span>
-                            <p class="text-sm text-gray-500">管控元器件有害物质，满足行业环保要求</p>
-                        </div>
-                    </li>
-                    <li class="flex gap-3 items-start">
-                        <i class="fa fa-shield text-primary mt-1"></i>
-                        <div>
-                            <span class="font-medium">ESD静电防护管控</span>
-                            <p class="text-sm text-gray-500">ESD远程监控看板、工位离子风机、手环防呆、温湿度远程监控</p>
-                        </div>
-                    </li>
-                    <li class="flex gap-3 items-start">
-                        <i class="fa fa-leaf text-primary mt-1"></i>
-                        <div>
-                            <span class="font-medium">洁净度管控</span>
-                            <p class="text-sm text-gray-500">单板整机车间分区，PCB风棒清洁，车间去除纸箱管控</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-xl font-semibold mb-4">MES生产制造执行系统</h4>
-                <p class="mb-3 text-gray-600">全流程数字化管理，覆盖系统管理、基础数据、设备、仓库、生产、品质、数据采集、BI看板。</p>
-                <ul class="space-y-2 text-sm">
-                    <li>✅ 产品全链路追溯、作业防呆、流程防呆、异常处理</li>
-                    <li>✅ 仓库先进先出FIFO、MSD湿敏器件管控、超期预警</li>
-                    <li>✅ IQC来料检验、制程巡检、首件管理、OQC出库检验</li>
-                    <li>✅ 设备OEE管理、品质数据看板、效率进度BI报表</li>
-                    <li>✅ 测试Log自动备份，后台数据统计与异常预警</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="mt-12 card-shadow p-6">
-            <h4 class="text-xl font-semibold mb-4">全流程质量管控链路</h4>
-            <div class="overflow-x-auto">
-                <div class="flex flex-nowrap gap-2 whitespace-nowrap min-w-max items-center">
-                    <span class="bg-primary text-white px-3 py-2 rounded text-sm">仓库发料</span>
-                    <i class="fa fa-arrow-right text-primary"></i>
-                    <span class="bg-primary text-white px-3 py-2 rounded text-sm">SMT印刷‑SPI‑贴片‑回流‑AOI</span>
-                    <i class="fa fa-arrow-right text-primary"></i>
-                    <span class="bg-primary text-white px-3 py-2 rounded text-sm">DIP插件‑波峰焊‑DIP‑AOI‑分板</span>
-                    <i class="fa fa-arrow-right text-primary"></i>
-                    <span class="bg-primary text-white px-3 py-2 rounded text-sm">单板测试</span>
-                    <i class="fa fa-arrow-right text-primary"></i>
-                    <span class="bg-primary text-white px-3 py-2 rounded text-sm">组装‑预测试‑老化‑系统测试</span>
-                    <i class="fa fa-arrow-right text-primary"></i>
-                    <span class="bg-primary text-white px-3 py-2 rounded text-sm">包装‑OQC出库</span>
-                </div>
-            </div>
-            <div class="mt-4 text-sm text-gray-600">
-                包含IQC来料检验、错混料MES防呆、应力应变管控、NPI试产质量管理、ECN/DCN变更管理、客诉闭环处理，完整8D问题改善流程。
-            </div>
-        </div>
-    </div>
-</section>
 
 <!--联系我们-->
 <section id="contact" class="py-16 bg-dark text-white fade-in-up">
