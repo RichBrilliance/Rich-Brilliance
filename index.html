@@ -153,20 +153,8 @@
         <div class="mt-16 fade-in-up">
             <h4 class="text-xl font-semibold mb-6">公司组织架构</h4>
             <div class="card-shadow p-6 overflow-x-auto">
-                <div class="min-w-[700px]">
-                    <div class="text-center mb-4">
-                        <span class="bg-primary text-white px-4 py-2 rounded inline-block">总经理</span>
-                    </div>
-                    <div class="flex justify-center gap-2 flex-wrap">
-                        <div class="border border-gray-300 p-3 rounded text-center w-28 hover:border-primary transition-colors">制造部</div>
-                        <div class="border border-gray-300 p-3 rounded text-center w-28 hover:border-primary transition-colors">品质部</div>
-                        <div class="border border-gray-300 p-3 rounded text-center w-28 hover:border-primary transition-colors">采购部</div>
-                        <div class="border border-gray-300 p-3 rounded text-center w-28 hover:border-primary transition-colors">业务部</div>
-                        <div class="border border-gray-300 p-3 rounded text-center w-28 hover:border-primary transition-colors">工程部</div>
-                        <div class="border border-gray-300 p-3 rounded text-center w-28 hover:border-primary transition-colors">人事部</div>
-                        <div class="border border-gray-300 p-3 rounded text-center w-28 hover:border-primary transition-colors">财务部</div>
-                        <div class="border border-gray-300 p-3 rounded text-center w-28 hover:border-primary transition-colors">经营部</div>
-                    </div>
+                <div class="min-w-[700px] text-center">
+                    <img style="width: 60%;margin: 0 auto;" src="./images/jiagou.png" alt="">
                     <div class="mt-4 text-sm text-gray-500">2023年公司规划总人数：160人 ，目前总人数：120人  ，其中制造部：80人 ，工程部：18人 品质部:10人。</div>
                 </div>
             </div>
@@ -182,61 +170,123 @@
             <table class="w-full min-w-[800px] bg-white">
                 <thead class="bg-primary text-white">
                     <tr>
-                        <th class="p-3 text-left">设备名称</th>
-                        <th class="p-3">型号</th>
-                        <th class="p-3">供应商</th>
-                        <th class="p-3 text-left">关键规格</th>
+                        <th class="p-3 text-left">Machine</th>
+                        <th class="p-3 text-left">Model</th>
+                        <th class="p-3 text-left">Supplier</th>
+                        <th class="p-3 text-left">Spec</th>
                     </tr>
                 </thead>
                 <tbody>
-                <tr class="border-b hover:bg-blue-50 transition-colors">
-                    <td class="p-3">印刷机</td>
-                    <td>GT++</td>
-                    <td>GKG</td>
-                    <td>重复印刷精度±17um@6σ，CPK≥2.0；基板0.4‑6mm，50*50~510*510mm</td>
-                </tr>
-                <tr class="border-b bg-gray-50 hover:bg-blue-50 transition-colors">
-                    <td class="p-3">在线SPI</td>
-                    <td>Storm‑SPIS</td>
-                    <td>JUTZE</td>
-                    <td>分辨率12M，高度测量精度1μm；基板50×70‑510×460mm</td>
-                </tr>
-                <tr class="border-b hover:bg-blue-50 transition-colors">
-                    <td class="p-3">贴片机</td>
-                    <td>NPM W2</td>
-                    <td>Panasonic</td>
-                    <td>基板50×50~750×550mm；贴片精度±30μm(chip)</td>
-                </tr>
-                <tr class="border-b bg-gray-50 hover:bg-blue-50 transition-colors">
-                    <td class="p-3">回流炉</td>
-                    <td>HOTFLOW3/26XL</td>
-                    <td>Ersa</td>
-                    <td>上下多温区，4区冷却，噪音＜70dB(A)</td>
-                </tr>
-                <tr class="border-b hover:bg-blue-50 transition-colors">
-                    <td class="p-3">在线AOI</td>
-                    <td>strom‑2DS</td>
-                    <td>JUTZE</td>
-                    <td>基板50×70‑510×460mm，多档分辨率可选</td>
-                </tr>
-                <tr class="border-b bg-gray-50 hover:bg-blue-50 transition-colors">
-                    <td class="p-3">波峰焊</td>
-                    <td>E‑FLOW 610L</td>
-                    <td>Sun east</td>
-                    <td>上下各4加热区</td>
-                </tr>
-                <tr class="border-b hover:bg-blue-50 transition-colors">
-                    <td class="p-3">X‑RAY</td>
-                    <td>S‑7200L</td>
-                    <td>智诚精展</td>
-                    <td>检测尺寸610*508mm，BGA空洞检测</td>
-                </tr>
-                <tr class="hover:bg-blue-50 transition-colors">
-                    <td class="p-3">三防漆涂覆</td>
-                    <td>法罗威</td>
-                    <td>法罗威</td>
-                    <td>加工尺寸450mm*450mm</td>
-                </tr>
+                    <tr class="border-b hover:bg-blue-50 transition-colors">
+                        <td class="p-3">印刷机</td>
+                        <td class="p-3">GT++</td>
+                        <td class="p-3">GKG</td>
+                        <td class="p-3">
+                            <p>重复印刷精度±17um@6σ，CPK≥2.0</p>
+                            <p>基板厚度尺寸0.4~6mm</p>
+                            <p>基板尺寸50*50MM,510MM*510MM</p>
+                        </td>
+                    </tr>
+                    <tr class="border-b bg-gray-50 hover:bg-blue-50 transition-colors">
+                        <td class="p-3">在线SPI</td>
+                        <td class="p-3">Storm‑SPIS</td>
+                        <td class="p-3">JUTZE</td>
+                        <td class="p-3">
+                            <p>分辨率12M:8μm-10um</p>
+                            <p>高度测量精度:1μm</p>
+                            <p>机器尺寸:W1000x D1170xH1800mm</p>
+                            <p>FOV尺寸:37.4x30mm (5M.15um)</p>
+                            <p>>基板尺寸:50mmx70mm -510mmx460mm</p>
+                            <p>基板限制高度:上面:35mm 下面:50mm</p>
+                            <p>基板厚度:0.6-6.0mm</p>
+
+                        </td>
+                    </tr>
+                    <tr class="border-b hover:bg-blue-50 transition-colors">
+                        <td class="p-3">贴片机</td>
+                        <td class="p-3">NPM W2</td>
+                        <td class="p-3">Panasonic</td>
+                        <td class="p-3">
+                            <p>Substrate size：50x50 mm ~ 750x550 mm</p>
+                            <p>Placement capability（Cpk ≧1）</p>
+                            <p>± 30 μm/chip，± 30 μm/QFP 12 mm 〜32 mm，± 50 μm/QFP 12 mm below</p>
+                        </td>
+                    </tr>
+                    <tr class="border-b bg-gray-50 hover:bg-blue-50 transition-colors">
+                        <td class="p-3">回流炉</td>
+                        <td class="p-3">HOTFLOW3/26XL</td>
+                        <td class="p-3">Ersa</td>
+                        <td class="p-3">
+                            <p>预热：9顶部/9底部，焊接区：4顶部/4底部</p>
+                            <p>对流模块：13顶部/4-13底部</p>
+                            <p>冷却区：ErsaMultijet系统；4区</p>
+                            <p>冷却介质：水/R407C（可选）/空气</p>
+                            <p>环境温度：最高32°C(90°F)</p>
+                            <p>持续噪音等级：<70dB(A)</p>
+                        </td>
+                    </tr>
+                    <tr class="border-b hover:bg-blue-50 transition-colors">
+                        <td class="p-3">在线AOI</td>
+                        <td class="p-3">strom‑2DS</td>
+                        <td class="p-3">JUTZE</td>
+                        <td class="p-3">
+                            <p>基板尺寸50mmx70mm -510mmx460mm</p>
+                            <p>机器尺寸：W1000 xD1170xH1800mm</p>
+                            <p>分辨率：12M:8μm-10um(可调),5μm(可选)5M:15um-18um(可调),10um-15um(可选)12μm (5μm-17.5μm可选)</p>
+                            <p>高度测量精度：</p>
+                            <p>FOV尺寸：36.7mm*30.7mm(5M 15pm)</p>
+                        </td>
+                    </tr>
+                    <tr class="border-b bg-gray-50 hover:bg-blue-50 transition-colors">
+                        <td class="p-3">双面插件AOI</td>
+                        <td class="p-3">伍洲</td>
+                        <td class="p-3">伍洲</td>
+                        <td class="p-3">双面AOI<br>Substrate size: 650mm*610mm</td>
+                    </tr>
+                    <tr class="border-b hover:bg-blue-50 transition-colors">
+                        <td class="p-3">选择喷雾机</td>
+                        <td class="p-3">亿带亿路</td>
+                        <td class="p-3">亿带亿路</td>
+                        <td class="p-3">Substrate size: W 650mm</td>
+                    </tr>
+                    <tr class="border-b bg-gray-50 hover:bg-blue-50 transition-colors">
+                        <td class="p-3">波峰焊</td>
+                        <td class="p-3">E-FLOW 610L</td>
+                        <td class="p-3">Sun east</td>
+                        <td class="p-3">Top: 4 heating zone<br>Bottom: 4 heating zone</td>
+                    </tr>
+                    <tr class="border-b hover:bg-blue-50 transition-colors">
+                        <td class="p-3">伺服压接机</td>
+                        <td class="p-3">CT-1025E</td>
+                        <td class="p-3">智展</td>
+                        <td class="p-3">伺服压接机，6吨</td>
+                    </tr>
+                    <tr class="border-b bg-gray-50 hover:bg-blue-50 transition-colors">
+                        <td class="p-3">router分板机</td>
+                        <td class="p-3">R-55D</td>
+                        <td class="p-3">纬创</td>
+                        <td class="p-3">500mm*700mm*60mm</td>
+                    </tr>
+                    <tr class="border-b hover:bg-blue-50 transition-colors">
+                        <td class="p-3">BGA返修台</td>
+                        <td class="p-3">MLX-E625</td>
+                        <td class="p-3">效时</td>
+                        <td class="p-3">700*650mm，上部热风 2000W 下部热风800W，底部预热远红外4800W</td>
+                    </tr>
+                    <tr class="border-b bg-gray-50 hover:bg-blue-50 transition-colors">
+                        <td class="p-3">X‑RAY</td>
+                        <td class="p-3">S‑7200L</td>
+                        <td class="p-3">智诚精展</td>
+                        <td class="p-3">610*508mm</td>
+                    </tr>
+                    <tr class="border-b hover:bg-blue-50 transition-colors">
+                        <td class="p-3">三防漆涂覆</td>
+                        <td class="p-3">法罗威</td>
+                        <td class="p-3">法罗威</td>
+                        <td class="p-3">450mm*450mm</td>
+                    </tr>
+
+                    
                 </tbody>
             </table>
         </div>
