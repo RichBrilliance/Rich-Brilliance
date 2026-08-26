@@ -6,51 +6,24 @@
     <title>安徽格罗特智能科技有限公司</title>
     <meta name="description" content="格洛特专注于电子产品领域，提供生产服务的高新技术企业X">
     <meta name="keywords" content="安徽格罗特智能科技有限公司,格罗特,格罗特智能科技,安徽格罗特">
-
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="theme-color" content="#0F52BA">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="preload" as="style" href="./css/tailwind.min.css">
+    <link rel="stylesheet" href="./css/tailwind.min.css">
     <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#0F52BA',
-                        secondary: '#165DFF',
-                        dark: '#1E293B',
-                        lightgray: '#F3F4F6',
-                        footerBg: '#0b1120'
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
-    <style type="text/tailwindcss">
-        @layer utilities {
-            .content-auto {
-                content-visibility: auto;
-            }
-            .section-title {
-                @apply text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-dark border-l-4 border-primary pl-4 mb-8;
-            }
-            .card-shadow {
-                @apply bg-white rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300;
-            }
-            .nav-fixed {
-                @apply fixed top-0 left-0 right-0 bg-white/95 backdrop-blur z-50 shadow-lg;
-            }
-            .fade-in-up {
-                opacity:0;
-                transform: translateY(24px);
-                transition: all 0.6s ease-out;
-            }
-            .fade-in-up.show {
-                opacity:1;
-                transform: translateY(0px);
-            }
-        }
+    <style>
+        html{scroll-behavior:smooth}
+        /* 首屏关键内联样式兜底，避免任何 CSS 加载延迟导致白屏 */
+        body{margin:0;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;color:#374151;background:#f9fafb}
+        .container{max-width:1200px;margin-left:auto;margin-right:auto;width:100%}
+        .py-16{padding-top:4rem;padding-bottom:4rem}
+        .px-4{padding-left:1rem;padding-right:1rem}
+        .text-primary{color:#0F52BA}
+        .bg-lightgray{background:#F3F4F6}
+        .bg-dark{background:#1E293B}
+        .text-white{color:#fff}
+        img{max-width:100%;display:block}
     </style>
 </head>
 <body class="bg-gray-50 font-sans text-gray-700 leading-relaxed">
@@ -125,7 +98,7 @@
             <div class="grid grid-cols-2 gap-4">
                 <div class="card-shadow overflow-hidden">
                     <div class="flex items-center justify-center">
-                       <img src="./images/factory1.png" alt="">
+                       <img loading="lazy" decoding="async" src="./images/factory1.png" alt="">
                     </div>
                     <div class="p-3 text-center">
                         <p class="font-medium">嘉善姚庄厂区</p>
@@ -136,7 +109,7 @@
                 </div>
                 <div class="card-shadow overflow-hidden">
                     <div class="flex items-center justify-center">
-                        <img src="./images/factory2.png" alt="">
+                        <img loading="lazy" decoding="async" src="./images/factory2.png" alt="">
                     </div>
                     <div class="p-3 text-center">
                         <p class="font-medium">嘉善魏塘厂区</p>
@@ -153,7 +126,7 @@
             <h4 class="text-xl font-semibold mb-6">公司组织架构</h4>
             <div class="card-shadow p-6 overflow-x-auto">
                 <div class="min-w-[700px] text-center">
-                    <img style="width: 60%;margin: 0 auto;" src="./images/jiagou.png" alt="">
+                    <img loading="lazy" decoding="async" style="width: 60%;margin: 0 auto;" src="./images/jiagou.png" alt="">
                     <div class="mt-4 text-sm text-gray-500">2023年公司规划总人数：160人 ，目前总人数：120人  ，其中制造部：80人 ，工程部：18人 品质部:10人。</div>
                 </div>
             </div>
@@ -444,27 +417,27 @@
             </div>
             <div class="grid md:grid-cols-2 gap-8 items-start">
                 <div class="card-shadow overflow-hidden">
-                    <img src="./images/printingpress1.png" alt="GKG GK++印刷机" class="w-full h-auto">
+                    <img loading="lazy" decoding="async" src="./images/printingpress1.png" alt="GKG GK++印刷机" class="w-full h-auto">
                 </div>
                 <div>
                     <div class="grid grid-cols-3 gap-3 mb-3">
                         <div class="card-shadow overflow-hidden text-center">
                             <p class="py-2 text-sm font-medium">刮刀</p>
                             <div class="h-48 overflow-hidden">
-                                <img src="./images/printingpress-icon1.png" alt="刮刀" class="w-full h-auto object-top block">
+                                <img loading="lazy" decoding="async" src="./images/printingpress-icon1.png" alt="刮刀" class="w-full h-auto object-top block">
                             </div>
                         </div>
                         <div class="card-shadow overflow-hidden text-center">
                             <p class="py-2 text-sm font-medium">程式</p>
                             <div class="h-48 overflow-hidden">
-                                <img src="./images/printingpress-icon2.png" alt="程式" class="w-full h-auto object-top block">
+                                <img loading="lazy" decoding="async" src="./images/printingpress-icon2.png" alt="程式" class="w-full h-auto object-top block">
                             </div>
                         </div>
                  
                         <div class="card-shadow overflow-hidden text-center">
                             <p class="py-2 text-sm font-medium">印刷</p>
                             <div class="h-48 overflow-hidden">
-                                <img src="./images/printingpress-icon3.png" alt="印刷" class="w-full h-auto object-top block">
+                                <img loading="lazy" decoding="async" src="./images/printingpress-icon3.png" alt="印刷" class="w-full h-auto object-top block">
                             </div>
                         </div>
                     </div>
@@ -472,19 +445,19 @@
                         <div class="card-shadow overflow-hidden text-center">
                             <p class="py-2 text-sm font-medium">脱模后</p>
                             <div class="h-48 overflow-hidden">
-                                <img src="./images/printingpress-icon4.png" alt="脱模后" class="w-full h-auto object-top block">
+                                <img loading="lazy" decoding="async" src="./images/printingpress-icon4.png" alt="脱模后" class="w-full h-auto object-top block">
                             </div>
                         </div>
                         <div class="card-shadow overflow-hidden text-center">
                             <p class="py-2 text-sm font-medium">精度</p>
                             <div class="h-48 overflow-hidden">
-                                <img src="./images/printingpress-icon5.png" alt="精度" class="w-full h-auto object-top block">
+                                <img loading="lazy" decoding="async" src="./images/printingpress-icon5.png" alt="精度" class="w-full h-auto object-top block">
                             </div>
                         </div>
                         <div class="card-shadow overflow-hidden text-center">
                             <p class="py-2 text-sm font-medium">放大后</p>
                             <div class="h-48 overflow-hidden">
-                                <img src="./images/printingpress-icon6.png" alt="放大后" class="w-full h-auto object-top block">
+                                <img loading="lazy" decoding="async" src="./images/printingpress-icon6.png" alt="放大后" class="w-full h-auto object-top block">
                             </div>
                         </div>
                     </div>
@@ -507,32 +480,32 @@
             </div>
             <div class="grid md:grid-cols-2 gap-8 items-start">
                 <div class="card-shadow overflow-hidden">
-                    <img src="./images/spi1.png" alt="3D SPI Storm-SPIS" class="w-full h-auto object-cover">
+                    <img loading="lazy" decoding="async" src="./images/spi1.png" alt="3D SPI Storm-SPIS" class="w-full h-auto object-cover">
                 </div>
                 <div>
                     <div class="grid grid-cols-4 gap-3 mb-6">
                         <div class="card-shadow overflow-hidden text-center">
                             <p class="py-2 text-sm font-medium">坐标</p>
                             <div class="h-48 overflow-hidden">
-                                <img src="./images/spi-icon1.png" alt="坐标" class="w-full h-auto object-top block">
+                                <img loading="lazy" decoding="async" src="./images/spi-icon1.png" alt="坐标" class="w-full h-auto object-top block">
                             </div>
                         </div>
                         <div class="card-shadow overflow-hidden text-center">
                             <p class="py-2 text-sm font-medium">检测前</p>
                             <div class="h-48 overflow-hidden">
-                                <img src="./images/spi-icon2.png" alt="检测前" class="w-full h-auto object-top block">
+                                <img loading="lazy" decoding="async" src="./images/spi-icon2.png" alt="检测前" class="w-full h-auto object-top block">
                             </div>
                         </div>
                         <div class="card-shadow overflow-hidden text-center">
                             <p class="py-2 text-sm font-medium">检测中</p>
                             <div class="h-48 overflow-hidden">
-                                <img src="./images/spi-icon3.png" alt="检测中" class="w-full h-auto object-top block">
+                                <img loading="lazy" decoding="async" src="./images/spi-icon3.png" alt="检测中" class="w-full h-auto object-top block">
                             </div>
                         </div>
                         <div class="card-shadow overflow-hidden text-center">
                             <p class="py-2 text-sm font-medium">检测后</p>
                             <div class="h-48 overflow-hidden">
-                                <img src="./images/spi-icon4.png" alt="检测后" class="w-full h-auto object-top block">
+                                <img loading="lazy" decoding="async" src="./images/spi-icon4.png" alt="检测后" class="w-full h-auto object-top block">
                             </div>
                         </div>
                     </div>
@@ -555,26 +528,26 @@
             </div>
             <div class="grid md:grid-cols-2 gap-8 items-start">
                 <div class="card-shadow overflow-hidden">
-                    <img src="./images/patch1.png" alt="松下NPM-W2贴片机" class="w-full h-auto object-cover">
+                    <img loading="lazy" decoding="async" src="./images/patch1.png" alt="松下NPM-W2贴片机" class="w-full h-auto object-cover">
                 </div>
                 <div>
                     <div class="grid grid-cols-3 gap-3 mb-6">
                         <div class="card-shadow overflow-hidden text-center">
                             <p class="py-2 text-sm font-medium">BGA</p>
                             <div class="">
-                                <img src="./images/patch-icon1.png" alt="BGA" class="w-full object-top block">
+                                <img loading="lazy" decoding="async" src="./images/patch-icon1.png" alt="BGA" class="w-full object-top block">
                             </div>
                         </div>
                         <div class="card-shadow overflow-hidden text-center">
                             <p class="py-2 text-sm font-medium">QFN</p>
                             <div class="">
-                                <img src="./images/patch-icon2.png" alt="QFN" class="w-full object-top block">
+                                <img loading="lazy" decoding="async" src="./images/patch-icon2.png" alt="QFN" class="w-full object-top block">
                             </div>
                         </div>
                         <div class="card-shadow overflow-hidden text-center">
                             <p class="py-2 text-sm font-medium">QFP</p>
                             <div class="">
-                                <img src="./images/patch-icon3.png" alt="QFP" class="w-full object-top block">
+                                <img loading="lazy" decoding="async" src="./images/patch-icon3.png" alt="QFP" class="w-full object-top block">
                             </div>
                         </div>
                     </div>
@@ -597,11 +570,11 @@
             </div>
             <div class="grid md:grid-cols-2 gap-8 items-start">
                 <div class="card-shadow overflow-hidden">
-                    <img src="./images/aoi1.png" alt="AOI Strom-2DS" class="w-full h-auto object-cover">
+                    <img loading="lazy" decoding="async" src="./images/aoi1.png" alt="AOI Strom-2DS" class="w-full h-auto object-cover">
                 </div>
                 <div>
                     <div class="card-shadow overflow-hidden text-center mb-6">
-                        <img src="./images/aoi2.png" alt="AOI检测示例" class="w-full">
+                        <img loading="lazy" decoding="async" src="./images/aoi2.png" alt="AOI检测示例" class="w-full">
                     </div>
                     <h5 class="text-lg font-semibold text-dark mb-3">Strom-2DS（3D混合型光学式外观检查装置）</h5>
                     <ul class="space-y-2 text-sm text-gray-700">
@@ -622,21 +595,21 @@
             </div>
             <div class="grid md:grid-cols-2 gap-8 items-start">
                 <div class="card-shadow overflow-hidden">
-                    <img src="./images/soldering1.png" alt="ERSA HOTFLOW 3/26XL" class="w-full h-auto object-cover">
+                    <img loading="lazy" decoding="async" src="./images/soldering1.png" alt="ERSA HOTFLOW 3/26XL" class="w-full h-auto object-cover">
                 </div>
                 <div>
                     <div class="grid grid-cols-3 gap-3 mb-6">
                         <div class="card-shadow overflow-hidden text-center">
                             <p class="py-2 text-sm font-medium">Reflow曲线</p>
-                            <img src="./images/soldering-icon1.png" alt="Reflow曲线" class="w-full">
+                            <img loading="lazy" decoding="async" src="./images/soldering-icon1.png" alt="Reflow曲线" class="w-full">
                         </div>
                         <div class="card-shadow overflow-hidden text-center">
                             <p class="py-2 text-sm font-medium">炉温界面</p>
-                            <img src="./images/soldering-icon2.png" alt="炉温界面" class="w-full">
+                            <img loading="lazy" decoding="async" src="./images/soldering-icon2.png" alt="炉温界面" class="w-full">
                         </div>
                         <div class="card-shadow overflow-hidden text-center">
                             <p class="py-2 text-sm font-medium">焊接PCBA</p>
-                            <img src="./images/soldering-icon3.png" alt="焊接PCBA" class="w-full">
+                            <img loading="lazy" decoding="async" src="./images/soldering-icon3.png" alt="焊接PCBA" class="w-full">
                         </div>
                     </div>
                     <h5 class="text-lg font-semibold text-dark mb-3">劲拓回流焊 HOTFLOW 3/26XL回流炉：</h5>
@@ -660,20 +633,20 @@
             </div>
             <div class="grid md:grid-cols-2 gap-8 items-start">
                 <div class="card-shadow overflow-hidden">
-                    <img src="./images/xray1.png" alt="XRAY S-7200L" class="w-full h-auto object-cover">
+                    <img loading="lazy" decoding="async" src="./images/xray1.png" alt="XRAY S-7200L" class="w-full h-auto object-cover">
                 </div>
                 <div>
                     <div class="grid grid-cols-2 gap-3 mb-6">
                         <div class="card-shadow overflow-hidden text-center">
                             <p class="py-2 text-sm font-medium">芯片空洞分析</p>
                             <div class="h-48 flex items-center justify-center">
-                                <img src="./images/xray-icon1.png" alt="芯片空洞分析" class="w-full h-full object-top">
+                                <img loading="lazy" decoding="async" src="./images/xray-icon1.png" alt="芯片空洞分析" class="w-full h-full object-top">
                             </div>
                         </div>
                         <div class="card-shadow overflow-hidden text-center">
                             <p class="py-2 text-sm font-medium">具备2.5D功能</p>
                             <div class="h-48 flex items-center justify-center">
-                                <img src="./images/xray-icon2.png" alt="具备2.5D功能" class="w-full h-full object-top">
+                                <img loading="lazy" decoding="async" src="./images/xray-icon2.png" alt="具备2.5D功能" class="w-full h-full object-top">
                             </div>
                         </div>
                     </div>
@@ -694,7 +667,7 @@
                     <div class="bg-primary text-white py-3 px-4 text-center text-base font-semibold">超大尺寸加工能力</div>
                     <div class="p-4">
                         <div class="flex justify-center mb-4">
-                            <img src="./images/test3.png" alt="超大尺寸加工" class="max-h-40 w-auto">
+                            <img loading="lazy" decoding="async" src="./images/test3.png" alt="超大尺寸加工" class="max-h-40 w-auto">
                         </div>
                         <ul class="space-y-2 text-sm text-gray-700">
                             <li>• 最大板尺寸：910*220mm</li>
@@ -707,7 +680,7 @@
                     <div class="bg-primary text-white py-3 px-4 text-center text-base font-semibold">测试装备平台开发能力</div>
                     <div class="p-4">
                         <div class="flex justify-center mb-4">
-                            <img src="./images/test4.png" alt="测试装备平台" class="max-h-40 w-auto">
+                            <img loading="lazy" decoding="async" src="./images/test4.png" alt="测试装备平台" class="max-h-40 w-auto">
                         </div>
                         <ul class="space-y-2 text-sm text-gray-700 list-decimal list-inside">
                             <li>并行测试</li>
@@ -721,7 +694,7 @@
                     <div class="bg-primary text-white py-3 px-4 text-center text-base font-semibold">自动测试夹具开发能力</div>
                     <div class="p-4">
                         <div class="flex justify-center mb-4">
-                            <img src="./images/test5.png" alt="自动测试夹具" class="max-h-40 w-auto">
+                            <img loading="lazy" decoding="async" src="./images/test5.png" alt="自动测试夹具" class="max-h-40 w-auto">
                         </div>
                         <p class="text-sm text-gray-700 leading-relaxed">全自动单板测试，覆盖所有对外接口、内存条、CPU压力，支持操作系统切换等</p>
                     </div>
@@ -733,7 +706,7 @@
                     <div class="bg-primary text-white py-3 px-4 text-center text-lg font-semibold">WiFi 测试</div>
                     <div class="p-6">
                         <div class="flex justify-center mb-4">
-                            <img src="./images/test1.png" alt="WiFi测试" class="max-h-48 w-auto">
+                            <img loading="lazy" decoding="async" src="./images/test1.png" alt="WiFi测试" class="max-h-48 w-auto">
                         </div>
                         <ul class="space-y-2 text-sm text-gray-700">
                             <li>• 涵盖802.11ac、802.11a/b/g/n/p与蓝牙1.0-4.0</li>
@@ -745,7 +718,7 @@
                     <div class="bg-primary text-white py-3 px-4 text-center text-lg font-semibold">发包测试</div>
                     <div class="p-6">
                         <div class="flex justify-center mb-4">
-                            <img src="./images/test2.png" alt="发包测试" class="max-h-48 w-auto">
+                            <img loading="lazy" decoding="async" src="./images/test2.png" alt="发包测试" class="max-h-48 w-auto">
                         </div>
                         <ul class="space-y-2 text-sm text-gray-700">
                             <li>• BigTao6100机箱满配可实现96个千兆测试端口</li>
@@ -761,7 +734,7 @@
                     <div class="bg-primary text-white py-3 px-4 text-center text-base font-semibold">环境实验箱ESS</div>
                     <div class="p-4">
                         <div class="flex justify-center mb-4">
-                            <img src="./images/test6.png" alt="环境实验箱" class="max-h-40 w-auto">
+                            <img loading="lazy" decoding="async" src="./images/test6.png" alt="环境实验箱" class="max-h-40 w-auto">
                         </div>
                         <ul class="space-y-2 text-sm text-gray-700 list-decimal list-inside">
                             <li>温箱的温变（升降温速率）：-10°C ~ 55°C / 15°C/min（空载）</li>
@@ -774,7 +747,7 @@
                     <div class="bg-primary text-white py-3 px-4 text-center text-base font-semibold">功能测试自动化</div>
                     <div class="p-4">
                         <div class="flex justify-center mb-4">
-                            <img src="./images/test7.png" alt="功能测试自动化" class="max-h-40 w-auto">
+                            <img loading="lazy" decoding="async" src="./images/test7.png" alt="功能测试自动化" class="max-h-40 w-auto">
                         </div>
                         <ul class="space-y-2 text-sm text-gray-700 list-decimal list-inside">
                             <li>测试接口覆盖率100%</li>
@@ -789,7 +762,7 @@
                     <div class="bg-primary text-white py-3 px-4 text-center text-base font-semibold">PC自动测试夹具</div>
                     <div class="p-4">
                         <div class="flex justify-center mb-4">
-                            <img src="./images/test8.png" alt="PC自动测试夹具" class="max-h-40 w-auto">
+                            <img loading="lazy" decoding="async" src="./images/test8.png" alt="PC自动测试夹具" class="max-h-40 w-auto">
                         </div>
                         <p class="text-sm text-gray-700 leading-relaxed">全自动单板测试，覆盖所有对外接口、内存条、CPU应力，支持操作系统切换等</p>
                     </div>
@@ -819,13 +792,13 @@
                 <div class="grid grid-cols-2 gap-4">
                     <div class="card-shadow overflow-hidden">
                         <div class="aspect-[3/4] overflow-hidden">
-                            <img src="./images/quality1.png" alt="ISO9001证书" class="w-full h-full object-cover block">
+                            <img loading="lazy" decoding="async" src="./images/quality1.png" alt="ISO9001证书" class="w-full h-full object-cover block">
                         </div>
                         <p class="text-center py-2 text-sm font-medium">ISO9001 认证证书</p>
                     </div>
                     <div class="card-shadow overflow-hidden">
                         <div class="aspect-[3/4] overflow-hidden">
-                            <img src="./images/quality2.png" alt="IECQ QC080000证书" class="w-full h-full object-cover block">
+                            <img loading="lazy" decoding="async" src="./images/quality2.png" alt="IECQ QC080000证书" class="w-full h-full object-cover block">
                         </div>
                         <p class="text-center py-2 text-sm font-medium">IECQ QC 080000 认证证书</p>
                     </div>
@@ -839,7 +812,7 @@
             <div class="grid md:grid-cols-2 gap-6">
                 <div class="card-shadow overflow-hidden">
                     <div class="aspect-video overflow-hidden bg-gray-800">
-                        <img src="./images/quality3.png" alt="ESD监控中心" class="w-full h-full object-cover block">
+                        <img loading="lazy" decoding="async" src="./images/quality3.png" alt="ESD监控中心" class="w-full h-full object-cover block">
                     </div>
                     <p class="text-center py-2 text-sm text-gray-500">ESD 监控中心看板</p>
                 </div>
@@ -1009,7 +982,7 @@
             <h4 class="text-xl font-semibold mb-6">质量保证能力 – 系统质量管控点</h4>
             <div class="card-shadow overflow-hidden">
                 <div class="p-4 flex justify-center">
-                    <img src="./images/quality3-1.png" class="w-full" alt="系统质量管控点流程图">
+                    <img loading="lazy" decoding="async" src="./images/quality3-1.png" class="w-full" alt="系统质量管控点流程图">
                 </div>
             </div>
         </div>
@@ -1020,10 +993,10 @@
             <div class="grid md:grid-cols-2 gap-6">
                 <div class="card-shadow overflow-hidden">
                     <div class="p-4 flex justify-center">
-                        <img src="./images/quality4.png" alt="IQC检验仪器设备" class="h-full">
+                        <img loading="lazy" decoding="async" src="./images/quality4.png" alt="IQC检验仪器设备" class="h-full">
                     </div>
                     <div class="p-4 flex justify-center mt-4">
-                        <img src="./images/quality5.png" alt="IQC检验仪器设备" class="h-full">
+                        <img loading="lazy" decoding="async" src="./images/quality5.png" alt="IQC检验仪器设备" class="h-full">
                     </div>
                     <p class="text-center pb-4 text-sm text-gray-500">IQC 检验仪器设备</p>
                 </div>
@@ -1052,7 +1025,7 @@
             <h4 class="text-xl font-semibold mb-6">质量保证能力 – MES系统</h4>
             <div class="card-shadow overflow-hidden">
                 <div class="p-4 flex justify-center">
-                    <img src="./images/quality5-1.png" class="w-full" alt="质量保证能力 – MES系统">
+                    <img loading="lazy" decoding="async" src="./images/quality5-1.png" class="w-full" alt="质量保证能力 – MES系统">
                 </div>
             </div>
         </div>
@@ -1063,7 +1036,7 @@
             <div class="grid md:grid-cols-2 gap-6">
                 <div class="card-shadow overflow-hidden">
                     <div class="p-4">
-                        <img src="./images/quality6-1.png" alt="装备开发与验证流程图" class="w-full">
+                        <img loading="lazy" decoding="async" src="./images/quality6-1.png" alt="装备开发与验证流程图" class="w-full">
                     </div>
                     <p class="text-center pb-4 text-sm text-gray-500">装备开发与验证流程</p>
                 </div>
@@ -1072,7 +1045,7 @@
                         <h5 class="text-lg font-bold text-primary mb-3">测试装备平台开发能力</h5>
                         <div class="flex">
                             <div class="overflow-hidden rounded">
-                                <img src="./images/test7.png" alt="自动测试夹具2" class="w-full h-auto object-cover block">
+                                <img loading="lazy" decoding="async" src="./images/test7.png" alt="自动测试夹具2" class="w-full h-auto object-cover block">
                             </div>
                             <ul class="ml-10">
                                 <li>1. 并行测试</li>
@@ -1087,10 +1060,10 @@
                        <div class="flex">
                             <div class="mt-3 grid grid-cols-2 gap-2">
                                 <div class="aspect-video overflow-hidden rounded">
-                                    <img src="./images/quality6.png" alt="自动测试夹具1" class="w-full h-full object-cover block">
+                                    <img loading="lazy" decoding="async" src="./images/quality6.png" alt="自动测试夹具1" class="w-full h-full object-cover block">
                                 </div>
                                 <div class="aspect-video overflow-hidden rounded">
-                                    <img src="./images/quality7.png" alt="自动测试夹具2" class="w-full h-full object-cover block">
+                                    <img loading="lazy" decoding="async" src="./images/quality7.png" alt="自动测试夹具2" class="w-full h-full object-cover block">
                                 </div>
                             </div>
                             <ul class="ml-10 flex items-center">
@@ -1127,7 +1100,7 @@
                     </div>
                 </div>
                 <div class="md:col-span-2 card-shadow overflow-hidden flex items-center justify-center">
-                    <img src="./images/quality7-1.png" alt="IPC/JEDEC-9074A PWB应变曲线图" class="w-full p-4">
+                    <img loading="lazy" decoding="async" src="./images/quality7-1.png" alt="IPC/JEDEC-9074A PWB应变曲线图" class="w-full p-4">
                 </div>
             </div>
         </div>
@@ -1137,7 +1110,7 @@
             <h4 class="text-xl font-semibold mb-6">质量保证能力 – 过程质量框架</h4>
             <div class="card-shadow overflow-hidden">
                 <div class="p-4">
-                    <img src="./images/quality7-2.png" alt="过程质量框架图" class="w-full">
+                    <img loading="lazy" decoding="async" src="./images/quality7-2.png" alt="过程质量框架图" class="w-full">
                 </div>
             </div>
                 
@@ -1150,7 +1123,7 @@
             <!-- 12.1 流程IT化 -->
             <div class="mb-8">
                 <div class="card-shadow overflow-hidden p-4">
-                    <img src="./images/quality7-3.png" alt="流程IT化架构图" class="w-full">
+                    <img loading="lazy" decoding="async" src="./images/quality7-3.png" alt="流程IT化架构图" class="w-full">
                 </div>
             </div>
 
@@ -1160,7 +1133,7 @@
                 <div class="grid md:grid-cols-2 gap-6">
                     <div class="card-shadow overflow-hidden p-4">
                         <h6 class="font-semibold text-primary mb-3">设备自动化</h6>
-                        <img src="./images/product1.png" class="w-full" alt="设备自动化">
+                        <img loading="lazy" decoding="async" src="./images/product1.png" class="w-full" alt="设备自动化">
                     </div>
                     <div class="card-shadow overflow-hidden p-4">
                         <h6 class="font-semibold text-primary mb-3">软件自动化</h6>
@@ -1174,7 +1147,7 @@
                                     <li>4. 测试日志自动上传备份服务器</li>
                                 </ul>
                                 <div>
-                                    <img src="./images/product2.png" alt="">
+                                    <img loading="lazy" decoding="async" src="./images/product2.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -1187,8 +1160,8 @@
                                     <li>补仓：储位不足安全库存，自动亮灯提示补货</li>
                                 </ul>
                                 <div class="flex">
-                                    <img class="w-1/2" src="./images/product2-1.png" alt="">
-                                    <img class="w-1/2" src="./images/product2-2.png" alt="">
+                                    <img loading="lazy" decoding="async" class="w-1/2" src="./images/product2-1.png" alt="">
+                                    <img loading="lazy" decoding="async" class="w-1/2" src="./images/product2-2.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -1247,13 +1220,13 @@
                         </ul>
                         <div class="grid grid-cols-2 gap-2">
                             <div class="aspect-video overflow-hidden rounded">
-                                <img src="./images/product5.png" alt="月度之星" class="w-full h-auto object-cover block">
+                                <img loading="lazy" decoding="async" src="./images/product5.png" alt="月度之星" class="w-full h-auto object-cover block">
                             </div>
                             <div class="aspect-video overflow-hidden rounded">
-                                <img src="./images/product3.png" alt="趣味运动会" class="w-full h-full object-cover block">
+                                <img loading="lazy" decoding="async" src="./images/product3.png" alt="趣味运动会" class="w-full h-full object-cover block">
                             </div>
                             <div class="aspect-video overflow-hidden rounded">
-                                <img src="./images/product4.png" alt="月度之星" class="w-full h-full object-cover block">
+                                <img loading="lazy" decoding="async" src="./images/product4.png" alt="月度之星" class="w-full h-full object-cover block">
                             </div>
                         </div>
                     </div>
@@ -1266,7 +1239,7 @@
                         <li>• 基层管理者储备干部系列培训和考核</li>
                     </ul>
                     <div class="aspect-video overflow-hidden rounded">
-                        <img src="./images/product6.png" alt="培训现场" class="w-full h-full object-cover block">
+                        <img loading="lazy" decoding="async" src="./images/product6.png" alt="培训现场" class="w-full h-full object-cover block">
                     </div>
                 </div>
             </div>
@@ -1299,7 +1272,7 @@
             <div class="grid grid-cols-3 gap-4">
                 <div class="card-shadow overflow-hidden">
                     <div class="aspect-video overflow-hidden">
-                        <img src="./images/product7.png" alt="发现问题" class="w-full h-full object-cover block">
+                        <img loading="lazy" decoding="async" src="./images/product7.png" alt="发现问题" class="w-full h-full object-cover block">
                     </div>
                     <div class="p-3 text-center">
                         <h6 class="font-semibold text-primary mb-1">发现问题</h6>
@@ -1307,7 +1280,7 @@
                 </div>
                 <div class="card-shadow overflow-hidden">
                     <div class="aspect-video overflow-hidden">
-                        <img src="./images/product8.png" alt="制定改善措施" class="w-full h-full object-cover block">
+                        <img loading="lazy" decoding="async" src="./images/product8.png" alt="制定改善措施" class="w-full h-full object-cover block">
                     </div>
                     <div class="p-3 text-center">
                         <h6 class="font-semibold text-primary mb-1">制定改善措施</h6>
@@ -1315,7 +1288,7 @@
                 </div>
                 <div class="card-shadow overflow-hidden">
                     <div class="aspect-video overflow-hidden">
-                        <img src="./images/product9.png" alt="问题改善和宣导" class="w-full h-full object-cover block">
+                        <img loading="lazy" decoding="async" src="./images/product9.png" alt="问题改善和宣导" class="w-full h-full object-cover block">
                     </div>
                     <div class="p-3 text-center">
                         <h6 class="font-semibold text-primary mb-1">问题改善和宣导</h6>
