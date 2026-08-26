@@ -95,8 +95,8 @@
             </div>
             <div class="grid grid-cols-2 gap-4">
                 <div class="card-shadow overflow-hidden">
-                    <div class="flex items-center justify-center">
-                       <img loading="lazy" decoding="async" src="./images/factory1.png" alt="">
+                    <div class="ratio ratio-4-3">
+                       <img loading="lazy" decoding="async" src="./images/factory1.png" alt="厂区1">
                     </div>
                     <div class="p-3 text-center">
                         <p data-i18n="about.factory1.name" class="font-medium">嘉善姚庄厂区</p>
@@ -106,8 +106,8 @@
                     </div>
                 </div>
                 <div class="card-shadow overflow-hidden">
-                    <div class="flex items-center justify-center">
-                        <img loading="lazy" decoding="async" src="./images/factory2.png" alt="">
+                    <div class="ratio ratio-4-3">
+                        <img loading="lazy" decoding="async" src="./images/factory2.png" alt="厂区2">
                     </div>
                     <div class="p-3 text-center">
                         <p data-i18n="about.factory2.name" class="font-medium">嘉善魏塘厂区</p>
@@ -122,10 +122,10 @@
         <!--组织架构-->
         <div class="mt-16 fade-in-up">
             <h4 data-i18n="about.structure.title" class="text-xl font-semibold mb-6">公司组织架构</h4>
-            <div class="card-shadow p-6 overflow-x-auto">
-                <div class="min-w-[700px] text-center">
-                    <img loading="lazy" decoding="async" style="width: 60%;margin: 0 auto;" src="./images/jiagou.png" alt="">
-                    <div data-i18n="about.structure.note" class="mt-4 text-sm text-gray-500">2023年公司规划总人数：160人 ，目前总人数：120人  ，其中制造部：80人 ，工程部：18人 品质部:10人。</div>
+            <div class="card-shadow p-4 md:p-6 overflow-x-auto">
+                <div class="min-w-[700px]">
+                    <img loading="lazy" decoding="async" class="img-arch" src="./images/jiagou.png" alt="组织架构图">
+                    <div data-i18n="about.structure.note" class="mt-4 text-sm text-gray-500 text-center">2023年公司规划总人数：160人 ，目前总人数：120人  ，其中制造部：80人 ，工程部：18人 品质部:10人。</div>
                 </div>
             </div>
         </div>
@@ -571,8 +571,8 @@
                     <img loading="lazy" decoding="async" src="./images/aoi1.png" alt="AOI Strom-2DS" class="w-full h-auto object-cover">
                 </div>
                 <div>
-                    <div class="card-shadow overflow-hidden text-center mb-6">
-                        <img loading="lazy" decoding="async" src="./images/aoi2.png" alt="AOI检测示例" class="w-full">
+                    <div class="ratio ratio-4-3 card-shadow overflow-hidden mb-6 mx-auto">
+                        <img loading="lazy" decoding="async" src="./images/aoi2.png" alt="AOI检测示例">
                     </div>
                     <h5 class="text-lg font-semibold text-dark mb-3">Strom-2DS（3D混合型光学式外观检查装置）</h5>
                     <ul class="space-y-2 text-sm text-gray-700">
@@ -597,17 +597,23 @@
                 </div>
                 <div>
                     <div class="grid grid-cols-3 gap-3 mb-6">
-                        <div class="card-shadow overflow-hidden text-center">
-                            <p class="py-2 text-sm font-medium">Reflow曲线</p>
-                            <img loading="lazy" decoding="async" src="./images/soldering-icon1.png" alt="Reflow曲线" class="w-full">
+                        <div class="card-shadow overflow-hidden">
+                            <p class="py-2 text-sm font-medium text-center">Reflow曲线</p>
+                            <div class="img-thumb-wrap !rounded-none !border-0">
+                                <img loading="lazy" decoding="async" src="./images/soldering-icon1.png" alt="Reflow曲线">
+                            </div>
                         </div>
-                        <div class="card-shadow overflow-hidden text-center">
-                            <p class="py-2 text-sm font-medium">炉温界面</p>
-                            <img loading="lazy" decoding="async" src="./images/soldering-icon2.png" alt="炉温界面" class="w-full">
+                        <div class="card-shadow overflow-hidden">
+                            <p class="py-2 text-sm font-medium text-center">炉温界面</p>
+                            <div class="img-thumb-wrap !rounded-none !border-0">
+                                <img loading="lazy" decoding="async" src="./images/soldering-icon2.png" alt="炉温界面">
+                            </div>
                         </div>
-                        <div class="card-shadow overflow-hidden text-center">
-                            <p class="py-2 text-sm font-medium">焊接PCBA</p>
-                            <img loading="lazy" decoding="async" src="./images/soldering-icon3.png" alt="焊接PCBA" class="w-full">
+                        <div class="card-shadow overflow-hidden">
+                            <p class="py-2 text-sm font-medium text-center">焊接PCBA</p>
+                            <div class="img-thumb-wrap !rounded-none !border-0">
+                                <img loading="lazy" decoding="async" src="./images/soldering-icon3.png" alt="焊接PCBA">
+                            </div>
                         </div>
                     </div>
                     <h5 class="text-lg font-semibold text-dark mb-3">劲拓回流焊 HOTFLOW 3/26XL回流炉：</h5>
@@ -978,9 +984,9 @@
         <!-- 6. 系统质量管控点 -->
         <div class="mb-12">
             <h4 class="text-xl font-semibold mb-6">质量保证能力 – 系统质量管控点</h4>
-            <div class="card-shadow overflow-hidden">
-                <div class="p-4 flex justify-center">
-                    <img loading="lazy" decoding="async" src="./images/quality3-1.png" class="w-full" alt="系统质量管控点流程图">
+            <div class="card-shadow overflow-hidden p-4">
+                <div class="img-deck">
+                    <img loading="lazy" decoding="async" src="./images/quality3-1.png" class="w-full h-auto object-contain" alt="系统质量管控点流程图">
                 </div>
             </div>
         </div>
@@ -990,11 +996,13 @@
             <h4 class="text-xl font-semibold mb-6">质量保证能力 – IQC</h4>
             <div class="grid md:grid-cols-2 gap-6">
                 <div class="card-shadow overflow-hidden">
-                    <div class="p-4 flex justify-center">
-                        <img loading="lazy" decoding="async" src="./images/quality4.png" alt="IQC检验仪器设备" class="h-full">
-                    </div>
-                    <div class="p-4 flex justify-center mt-4">
-                        <img loading="lazy" decoding="async" src="./images/quality5.png" alt="IQC检验仪器设备" class="h-full">
+                    <div class="p-4 space-y-4">
+                        <div class="ratio ratio-16-9 !aspect-auto max-h-[260px] flex items-center justify-center overflow-hidden">
+                            <img loading="lazy" decoding="async" src="./images/quality4.png" alt="IQC检验仪器设备" class="max-w-full max-h-full w-auto h-auto object-contain">
+                        </div>
+                        <div class="ratio ratio-16-9 !aspect-auto max-h-[260px] flex items-center justify-center overflow-hidden">
+                            <img loading="lazy" decoding="async" src="./images/quality5.png" alt="IQC检验仪器设备" class="max-w-full max-h-full w-auto h-auto object-contain">
+                        </div>
                     </div>
                     <p class="text-center pb-4 text-sm text-gray-500">IQC 检验仪器设备</p>
                 </div>
@@ -1021,9 +1029,9 @@
         <!-- 8. MES系统 -->
         <div class="mb-12">
             <h4 class="text-xl font-semibold mb-6">质量保证能力 – MES系统</h4>
-            <div class="card-shadow overflow-hidden">
-                <div class="p-4 flex justify-center">
-                    <img loading="lazy" decoding="async" src="./images/quality5-1.png" class="w-full" alt="质量保证能力 – MES系统">
+            <div class="card-shadow overflow-hidden p-4">
+                <div class="img-deck">
+                    <img loading="lazy" decoding="async" src="./images/quality5-1.png" class="w-full h-auto object-contain" alt="质量保证能力 – MES系统">
                 </div>
             </div>
         </div>
@@ -1034,7 +1042,9 @@
             <div class="grid md:grid-cols-2 gap-6">
                 <div class="card-shadow overflow-hidden">
                     <div class="p-4">
-                        <img loading="lazy" decoding="async" src="./images/quality6-1.png" alt="装备开发与验证流程图" class="w-full">
+                        <div class="img-deck">
+                            <img loading="lazy" decoding="async" src="./images/quality6-1.png" alt="装备开发与验证流程图" class="w-full h-auto object-contain">
+                        </div>
                     </div>
                     <p class="text-center pb-4 text-sm text-gray-500">装备开发与验证流程</p>
                 </div>
@@ -1097,8 +1107,10 @@
                         <div class="px-4 py-3 text-xs text-gray-500 bg-gray-50">* 切片和染色分析，当前委托第三方进行</div>
                     </div>
                 </div>
-                <div class="md:col-span-2 card-shadow overflow-hidden flex items-center justify-center">
-                    <img loading="lazy" decoding="async" src="./images/quality7-1.png" alt="IPC/JEDEC-9074A PWB应变曲线图" class="w-full p-4">
+                <div class="md:col-span-2 card-shadow overflow-hidden p-4 flex justify-center">
+                    <div class="img-deck">
+                        <img loading="lazy" decoding="async" src="./images/quality7-1.png" alt="IPC/JEDEC-9074A PWB应变曲线图" class="w-full h-auto object-contain">
+                    </div>
                 </div>
             </div>
         </div>
@@ -1106,9 +1118,9 @@
         <!-- 11. 过程质量框架 -->
         <div class="mb-12">
             <h4 class="text-xl font-semibold mb-6">质量保证能力 – 过程质量框架</h4>
-            <div class="card-shadow overflow-hidden">
-                <div class="p-4">
-                    <img loading="lazy" decoding="async" src="./images/quality7-2.png" alt="过程质量框架图" class="w-full">
+            <div class="card-shadow overflow-hidden p-4">
+                <div class="img-deck">
+                    <img loading="lazy" decoding="async" src="./images/quality7-2.png" alt="过程质量框架图" class="w-full h-auto object-contain">
                 </div>
             </div>
                 
@@ -1121,7 +1133,9 @@
             <!-- 12.1 流程IT化 -->
             <div class="mb-8">
                 <div class="card-shadow overflow-hidden p-4">
-                    <img loading="lazy" decoding="async" src="./images/quality7-3.png" alt="流程IT化架构图" class="w-full">
+                    <div class="img-deck">
+                        <img loading="lazy" decoding="async" src="./images/quality7-3.png" alt="流程IT化架构图" class="w-full h-auto object-contain">
+                    </div>
                 </div>
             </div>
 
@@ -1131,35 +1145,41 @@
                 <div class="grid md:grid-cols-2 gap-6">
                     <div class="card-shadow overflow-hidden p-4">
                         <h6 class="font-semibold text-primary mb-3">设备自动化</h6>
-                        <img loading="lazy" decoding="async" src="./images/product1.png" class="w-full" alt="设备自动化">
+                        <div class="ratio ratio-16-9 card-shadow overflow-hidden">
+                            <img loading="lazy" decoding="async" src="./images/product1.png" alt="设备自动化">
+                        </div>
                     </div>
                     <div class="card-shadow overflow-hidden p-4">
                         <h6 class="font-semibold text-primary mb-3">软件自动化</h6>
                         <div class="card-shadow overflow-hidden p-4">
                             <h6 class="font-bold text-primary mb-3">功能测试自动化</h6>
-                            <div class="flex ">
-                                <ul class="space-y-1 text-sm text-gray-700">
+                            <div class="grid md:grid-cols-2 gap-4 items-start">
+                                <ul class="space-y-1 text-sm text-gray-700 order-2 md:order-1">
                                     <li>1. 测试接口覆盖率100%</li>
                                     <li>2. 自动化程序与MES系统对接自动过站；防呆机制</li>
                                     <li>3. SPC监控异常预警</li>
                                     <li>4. 测试日志自动上传备份服务器</li>
                                 </ul>
-                                <div>
-                                    <img loading="lazy" decoding="async" src="./images/product2.png" alt="">
+                                <div class="ratio ratio-4-3 overflow-hidden order-1 md:order-2">
+                                    <img loading="lazy" decoding="async" src="./images/product2.png" alt="功能测试自动化">
                                 </div>
                             </div>
                         </div>
                         <div class="card-shadow overflow-hidden p-4 mt-4">
                             <h6 class="font-bold text-primary mb-3">智能仓储</h6>
-                            <div class="flex ">
-                                <ul class="space-y-1 text-sm text-gray-700">
+                            <div class="grid md:grid-cols-2 gap-4 items-start">
+                                <ul class="space-y-1 text-sm text-gray-700 order-2 md:order-1">
                                     <li>上架：随机分配储位</li>
                                     <li>备料：同工单同时亮起储位信号</li>
                                     <li>补仓：储位不足安全库存，自动亮灯提示补货</li>
                                 </ul>
-                                <div class="flex">
-                                    <img loading="lazy" decoding="async" class="w-1/2" src="./images/product2-1.png" alt="">
-                                    <img loading="lazy" decoding="async" class="w-1/2" src="./images/product2-2.png" alt="">
+                                <div class="grid grid-cols-2 gap-2 order-1 md:order-2">
+                                    <div class="ratio ratio-4-3 overflow-hidden">
+                                        <img loading="lazy" decoding="async" src="./images/product2-1.png" alt="智能仓储1">
+                                    </div>
+                                    <div class="ratio ratio-4-3 overflow-hidden">
+                                        <img loading="lazy" decoding="async" src="./images/product2-2.png" alt="智能仓储2">
+                                    </div>
                                 </div>
                             </div>
                         </div>
