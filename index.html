@@ -801,7 +801,7 @@
 </section>
 
 <!--质量体系介绍-->
-<section id="quality" class="py-16 md:py-20 bg-lightgray fade-in-up">
+<section id="quality" class="py-16 md:py-20 bg-lightgray">
     <div class="container mx-auto px-4 md:px-6">
         <h3 class="section-title">质量体系</h3>
 
@@ -1423,6 +1423,23 @@ const observer = new IntersectionObserver((entries)=>{
 document.querySelectorAll('.fade-in-up').forEach(el=>{
     observer.observe(el)
 })
+
+// 兜底：DOM 加载后 1 秒给视口内元素强制加 show；5 秒后所有 fade-in-up 兜底全部显示
+function forceShowVisible(){
+    const vh = window.innerHeight
+    document.querySelectorAll('.fade-in-up:not(.show)').forEach(el=>{
+        const r = el.getBoundingClientRect()
+        if(r.top < vh - 40 && r.bottom > 40){ el.classList.add('show') }
+    })
+}
+window.addEventListener('load', ()=>{
+    forceShowVisible()
+    setTimeout(forceShowVisible, 800)
+    setTimeout(()=>{
+        document.querySelectorAll('.fade-in-up:not(.show)').forEach(el=>el.classList.add('show'))
+    }, 4000)
+})
+window.addEventListener('scroll', forceShowVisible, {passive:true})
 </script>
 </body>
 </html>
