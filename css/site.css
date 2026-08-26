@@ -1,0 +1,90 @@
+/* ============================================================
+ * site.css — 项目自定义兜底样式（不依赖 Tailwind Play CDN）
+ * 与 tailwind.min.css 组合使用；包含首屏关键样式、
+ * section-title/card-shadow/nav-fixed/fade-in-up 等复用 class
+ * ============================================================ */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #374151;
+    background: #f9fafb;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ---------- 首屏关键 class 兜底（tailwind.min.css 有同名 class 时以它为准） ---------- */
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.py-16 { padding-top: 4rem; padding-bottom: 4rem; }
+.px-4 { padding-left: 1rem; padding-right: 1rem; }
+
+.text-primary { color: #0F52BA; }
+.bg-lightgray { background: #F3F4F6; }
+.bg-dark { background: #1E293B; }
+.bg-footerBg { background: #0b1120; }
+.text-white { color: #fff; }
+
+/* ---------- 复用组件样式（与 tailwind.config @layer utilities 语义一致） ---------- */
+.section-title {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-weight: 700;
+    color: #1E293B;
+    border-left: 4px solid #0F52BA;
+    padding-left: 1rem;
+    margin-bottom: 2rem;
+}
+
+.card-shadow {
+    background: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.08), 0 2px 4px -2px rgba(0,0,0,0.06);
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.card-shadow:hover {
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.08);
+    transform: translateY(-4px);
+}
+
+.nav-fixed {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: rgba(255,255,255,0.95);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    z-index: 50;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.08);
+}
+
+/* ---------- fade-in-up 动画（与 JS 联动） ---------- */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: all 0.6s ease-out;
+}
+
+.fade-in-up.show {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+/* ---------- 可访问性：尊重「减少动效」偏好 ---------- */
+@media (prefers-reduced-motion: reduce) {
+    .fade-in-up { opacity: 1 !important; transform: none !important; transition: none !important; }
+    html { scroll-behavior: auto; }
+    .card-shadow { transition: none; }
+    .card-shadow:hover { transform: none; }
+}

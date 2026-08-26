@@ -7,24 +7,19 @@
     <meta name="description" content="格洛特专注于电子产品领域，提供生产服务的高新技术企业X">
     <meta name="keywords" content="安徽格罗特智能科技有限公司,格罗特,格罗特智能科技,安徽格罗特">
     <meta name="theme-color" content="#0F52BA">
+
+    <!-- 预连接 & 预加载 CSS（减少阻塞） -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
     <link rel="preload" as="style" href="./css/tailwind.min.css">
+    <link rel="preload" as="style" href="./css/site.css">
+
+    <!-- 生产版 Tailwind（已 tree-shake + 压缩） -->
     <link rel="stylesheet" href="./css/tailwind.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <style>
-        html{scroll-behavior:smooth}
-        /* 首屏关键内联样式兜底，避免任何 CSS 加载延迟导致白屏 */
-        body{margin:0;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;color:#374151;background:#f9fafb}
-        .container{max-width:1200px;margin-left:auto;margin-right:auto;width:100%}
-        .py-16{padding-top:4rem;padding-bottom:4rem}
-        .px-4{padding-left:1rem;padding-right:1rem}
-        .text-primary{color:#0F52BA}
-        .bg-lightgray{background:#F3F4F6}
-        .bg-dark{background:#1E293B}
-        .text-white{color:#fff}
-        img{max-width:100%;display:block}
-    </style>
+    <!-- 项目自定义兜底 / 组件样式（section-title、card-shadow、fade-in-up、nav-fixed 等） -->
+    <link rel="stylesheet" href="./css/site.css">
+    <!-- 第三方：FontAwesome 图标字体 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
 </head>
 <body class="bg-gray-50 font-sans text-gray-700 leading-relaxed">
 <!--导航栏-->
@@ -1350,216 +1345,9 @@
     </div>
 </footer>
 
-<script>
-//导航栏滚动效果
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', ()=>{
-    if(window.scrollY > 80){
-        navbar.classList.add('nav-fixed');
-    }else{
-        navbar.classList.remove('nav-fixed');
-    }
-})
 
-//移动端菜单
-const menuBtn = document.getElementById('menuBtn');
-const mobileMenu = document.getElementById('mobileMenu');
-menuBtn.addEventListener('click', ()=>{
-    mobileMenu.classList.toggle('hidden');
-})
-
-//平滑滚动
-document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
-    anchor.addEventListener('click',function(e){
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        const targetDom = document.querySelector(targetId);
-        if(targetDom){
-            window.scrollTo({
-                top: targetDom.offsetTop - 80,
-                behavior:'smooth'
-            })
-            mobileMenu.classList.add('hidden');
-        }
-    })
-})
-
-//滚动淡入动画
-const observerOptions = {
-    threshold:0.1
-}
-const observer = new IntersectionObserver((entries)=>{
-    entries.forEach(item=>{
-        if(item.isIntersecting){
-            item.target.classList.add('show')
-        }
-    })
-},observerOptions)
-
-document.querySelectorAll('.fade-in-up').forEach(el=>{
-    observer.observe(el)
-})
-
-// 兜底：DOM 加载后 1 秒给视口内元素强制加 show；5 秒后所有 fade-in-up 兜底全部显示
-function forceShowVisible(){
-    const vh = window.innerHeight
-    document.querySelectorAll('.fade-in-up:not(.show)').forEach(el=>{
-        const r = el.getBoundingClientRect()
-        if(r.top < vh - 40 && r.bottom > 40){ el.classList.add('show') }
-    })
-}
-window.addEventListener('load', ()=>{
-    forceShowVisible()
-    setTimeout(forceShowVisible, 800)
-    setTimeout(()=>{
-        document.querySelectorAll('.fade-in-up:not(.show)').forEach(el=>el.classList.add('show'))
-    }, 4000)
-})
-window.addEventListener('scroll', forceShowVisible, {passive:true})
-
-/* ============= 中英文切换 i18n ============= */
-const I18N_DICT = {
-  zh: {
-    'nav.langBtn': 'EN',
-    'nav.about': '公司简况',
-    'nav.factory': '制造能力',
-    'nav.equipment': '设备能力',
-    'nav.quality': '质量体系',
-    'nav.contact': '联系我们',
-    'brand': '安徽格罗特智能科技',
-    'hero.title': '专业电子产品生产服务高新技术企业',
-    'hero.subtitle': 'SMT贴片、DIP、PCBA一站式服务，提供试产与批量EMS、OEM加工服务',
-    'hero.cta1': '了解我们',
-    'hero.cta2': '联系业务',
-    'about.title': '公司简况介绍',
-    'about.p1': '安徽格罗特智能科技有限公司成立于2022年6月，注册资本1000万元，二期投资总额1500万元，是一家专业从事电子产品生产服务的高新技术企业。',
-    'about.p2': '总部坐落于安徽省马鞍山市郑蒲港新区姥桥镇新陶路107号浦建半导体产业园9栋1-4层。公司前身为浙江格瑞实业股份有限公司，位于浙江嘉善。2022年与恒为科技合作，建立格罗特生产车间。',
-    'about.p3': '业务方向：SMT贴片、DIP，PCBA一站式服务，为多领域客户提供试产与批量EMS、OEM加工服务，具备完善供应链与智能制造服务能力。',
-    'about.domainTitle': '服务领域：',
-    'about.domains.0': '通信网络',
-    'about.domains.1': '汽车电子',
-    'about.domains.2': '消费电子',
-    'about.domains.3': '科研',
-    'about.domains.4': '医疗',
-    'about.domains.5': '军工',
-    'about.domains.6': '航空航天',
-    'about.factory1.name': '嘉善姚庄厂区',
-    'about.factory1.spec': '总建面3500㎡｜车间2000㎡｜办公楼1500㎡',
-    'about.factory2.name': '嘉善魏塘厂区',
-    'about.factory2.spec': '总建面50650㎡｜车间3000㎡｜办公楼6100㎡',
-    'about.structure.title': '公司组织架构',
-    'about.structure.note': '2023年公司规划总人数：160人，目前总人数：120人，其中制造部：80人，工程部：18人，品质部：10人。',
-    'factory.title': '制造能力介绍',
-    'factory.hardwareSubtitle': '制造与交付 – 硬件配置',
-    'factory.capacitySubtitle': '制造与交付 – 工厂产能',
-    'factory.totalMonthly': '月度总产能',
-    'equipment.title': '设备能力',
-    'quality.title': '质量体系',
-    'contact.title': '联系我们',
-    'contact.companyName': '安徽格罗特智能科技有限公司',
-    'contact.address': '地址：安徽省马鞍山市郑蒲港新区姥桥镇新陶路107号浦建半导体产业园9栋1-4层',
-    'contact.predecessor': '前身：浙江格瑞实业股份有限公司（嘉善生产基地）',
-    'contact.businessTitle': '业务合作',
-    'contact.businessDesc': '欢迎洽谈SMT贴片、DIP插件、PCBA加工、EMS/OEM批量与试产订单。',
-    'contact.hkTitle': '香港收货地址',
-    'footer.copyright': '©2026 安徽格罗特智能科技有限公司 版权所有 | PCBA EMS OEM电子制造服务商'
-  },
-  en: {
-    'nav.langBtn': '中',
-    'nav.about': 'About',
-    'nav.factory': 'Manufacturing',
-    'nav.equipment': 'Equipment',
-    'nav.quality': 'Quality',
-    'nav.contact': 'Contact',
-    'brand': 'Anhui Great Intelligence Technology',
-    'hero.title': 'Professional High-Tech Electronic Manufacturing Services',
-    'hero.subtitle': 'One-stop SMT, DIP and PCBA services, providing prototype and mass EMS / OEM production',
-    'hero.cta1': 'Learn More',
-    'hero.cta2': 'Contact Sales',
-    'about.title': 'Company Profile',
-    'about.p1': 'Anhui Great Intelligence Technology Co., Ltd. was founded in June 2022 with a registered capital of RMB 10 million and a second-phase total investment of RMB 15 million. We are a high-tech enterprise specialized in electronic product manufacturing services.',
-    'about.p2': 'Headquartered at Building 9, Floors 1-4, Pujian Semiconductor Industrial Park, 107 Xintao Road, Muqiao Town, Zhengpugang New District, Ma\'anshan, Anhui. Formerly known as Zhejiang Gerui Industrial Co., Ltd. based in Jiashan, Zhejiang. In 2022 we partnered with Hengwei Technology and established the Great workshop.',
-    'about.p3': 'Business scope: SMT, DIP and one-stop PCBA services providing prototype and mass EMS / OEM for customers across multiple industries, backed by a mature supply chain and intelligent manufacturing capabilities.',
-    'about.domainTitle': 'Industries served:',
-    'about.domains.0': 'Telecom & Networking',
-    'about.domains.1': 'Automotive',
-    'about.domains.2': 'Consumer',
-    'about.domains.3': 'Scientific R&D',
-    'about.domains.4': 'Medical',
-    'about.domains.5': 'Defense',
-    'about.domains.6': 'Aerospace',
-    'about.factory1.name': 'Jiashan Yaozhuang Plant',
-    'about.factory1.spec': 'Total 3,500㎡｜Workshop 2,000㎡｜Office 1,500㎡',
-    'about.factory2.name': 'Jiashan Weitang Plant',
-    'about.factory2.spec': 'Total 50,650㎡｜Workshop 3,000㎡｜Office 6,100㎡',
-    'about.structure.title': 'Organization Structure',
-    'about.structure.note': '2023 plan: 160 employees; current: 120 employees. Manufacturing: 80, Engineering: 18, Quality: 10.',
-    'factory.title': 'Manufacturing Capability',
-    'factory.hardwareSubtitle': 'Manufacturing & Delivery – Equipment Setup',
-    'factory.capacitySubtitle': 'Manufacturing & Delivery – Factory Capacity',
-    'factory.totalMonthly': 'Total Monthly Output',
-    'equipment.title': 'Equipment Capability',
-    'quality.title': 'Quality System',
-    'contact.title': 'Contact Us',
-    'contact.companyName': 'Anhui Great Intelligence Technology Co., Ltd.',
-    'contact.address': 'Address: Building 9, F1-4, Pujian Semiconductor Industrial Park, 107 Xintao Road, Muqiao Town, Zhengpugang New District, Ma\'anshan, Anhui, China',
-    'contact.predecessor': 'Formerly: Zhejiang Gerui Industrial Co., Ltd. (Jiashan Production Base)',
-    'contact.businessTitle': 'Business Cooperation',
-    'contact.businessDesc': 'Welcome to contact us for SMT, DIP, PCBA manufacturing, EMS / OEM mass production and prototype orders.',
-    'contact.hkTitle': 'Hong Kong Receiving Address',
-    'footer.copyright': '©2026 Anhui Great Intelligence Technology Co., Ltd. All Rights Reserved | PCBA EMS OEM Electronic Manufacturing Service Provider'
-  }
-};
-
-function getDefaultLang(){
-  try {
-    const saved = localStorage.getItem('rb-lang');
-    if(saved === 'zh' || saved === 'en') return saved;
-  } catch(e){}
-  const nav = (navigator && (navigator.language || navigator.userLanguage || '')).toLowerCase();
-  return nav.startsWith('zh') ? 'zh' : 'en';
-}
-
-function applyI18n(lang){
-  const dict = I18N_DICT[lang] || I18N_DICT.zh;
-  document.querySelectorAll('[data-i18n]').forEach(el=>{
-    const key = el.getAttribute('data-i18n');
-    const val = dict[key];
-    if(typeof val === 'string'){
-      // 保留内部的 FontAwesome 图标 (仅当有 <i> 子元素时)
-      const iconEl = el.querySelector('i.fa');
-      if(iconEl){
-        // 清除文字节点，保留 i.fa，再插入翻译文本
-        const clonedIcon = iconEl.cloneNode(true);
-        el.textContent = '';
-        el.appendChild(clonedIcon);
-        el.appendChild(document.createTextNode(' ' + val.replace(/^[^：:]*[：:]\s*/, '')));
-      } else {
-        el.textContent = val;
-      }
-    }
-  });
-  // 同步更新 <html lang>
-  document.documentElement.setAttribute('lang', lang);
-  try { localStorage.setItem('rb-lang', lang); } catch(e){}
-}
-
-// 页面加载先立即应用一次（避免闪屏）
-applyI18n(getDefaultLang());
-
-function toggleLang(){
-  const curr = getDefaultLang();
-  const next = curr === 'zh' ? 'en' : 'zh';
-  applyI18n(next);
-}
-
-document.addEventListener('DOMContentLoaded', ()=>{
-  const btn = document.getElementById('langToggle');
-  const btnMob = document.getElementById('langToggleMobile');
-  if(btn){ btn.addEventListener('click', toggleLang); }
-  if(btnMob){ btnMob.addEventListener('click', toggleLang); }
-  applyI18n(getDefaultLang());
-});
-</script>
+<script src="./js/navbar.js" defer></script>
+<script src="./js/animations.js" defer></script>
+<script src="./js/i18n.js" defer></script>
 </body>
 </html>
