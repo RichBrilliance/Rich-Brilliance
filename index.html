@@ -32,30 +32,33 @@
     <div class="container mx-auto px-4 md:px-6 py-4 flex justify-between items-center">
         <div class="flex items-center gap-2">
             <i class="fa fa-microchip text-primary text-2xl"></i>
-            <h1 class="text-xl md:text-2xl font-bold text-dark">安徽格罗特智能科技</h1>
+            <h1 data-i18n="brand" class="text-xl md:text-2xl font-bold text-dark">安徽格罗特智能科技</h1>
         </div>
         <!--桌面导航-->
-        <nav class="hidden md:flex gap-8">
-            <a href="#about" class="hover:text-primary transition-colors relative after:absolute after:bg-primary after:h-0.5 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all">公司简况</a>
-            <a href="#factory" class="hover:text-primary transition-colors relative after:absolute after:bg-primary after:h-0.5 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all">制造能力</a>
-           <a href="#equipment" class="hover:text-primary transition-colors relative after:absolute after:bg-primary after:h-0.5 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all">设备能力</a>
-           <a href="#contact" class="hover:text-primary transition-colors relative after:absolute after:bg-primary after:h-0.5 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all">质量体系</a>
-            <a href="#contact" class="hover:text-primary transition-colors relative after:absolute after:bg-primary after:h-0.5 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all">联系我们</a>
-            
+        <nav class="hidden md:flex items-center gap-8">
+            <a href="#about" data-i18n="nav.about" class="hover:text-primary transition-colors relative after:absolute after:bg-primary after:h-0.5 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all">公司简况</a>
+            <a href="#factory" data-i18n="nav.factory" class="hover:text-primary transition-colors relative after:absolute after:bg-primary after:h-0.5 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all">制造能力</a>
+           <a href="#equipment" data-i18n="nav.equipment" class="hover:text-primary transition-colors relative after:absolute after:bg-primary after:h-0.5 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all">设备能力</a>
+           <a href="#quality" data-i18n="nav.quality" class="hover:text-primary transition-colors relative after:absolute after:bg-primary after:h-0.5 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all">质量体系</a>
+            <a href="#contact" data-i18n="nav.contact" class="hover:text-primary transition-colors relative after:absolute after:bg-primary after:h-0.5 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all">联系我们</a>
+            <button id="langToggle" class="ml-2 px-3 py-1.5 rounded-full border border-primary text-primary text-sm font-semibold hover:bg-primary hover:text-white transition-colors" data-i18n="nav.langBtn">EN</button>
         </nav>
         <!--移动端菜单按钮-->
-        <button id="menuBtn" class="md:hidden text-dark text-xl p-1.5">
-            <i class="fa fa-bars"></i>
-        </button>
+        <div class="md:hidden flex items-center gap-2">
+            <button id="langToggleMobile" class="px-2.5 py-1 rounded-full border border-primary text-primary text-xs font-semibold" data-i18n="nav.langBtn">EN</button>
+            <button id="menuBtn" class="text-dark text-xl p-1.5">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
     </div>
     <!--移动端下拉菜单-->
     <div id="mobileMenu" class="hidden md:hidden bg-white border-t shadow-md">
         <div class="container mx-auto px-4 py-3 flex flex-col gap-2">
-            <a href="#about" class="py-2 px-2 hover:bg-gray-100 rounded">公司简况</a>
-            <a href="#factory" class="py-2 px-2 hover:bg-gray-100 rounded">制造能力</a>
-            <a href="#equipment" class="py-2 px-2 hover:bg-gray-100 rounded">设备能力</a>
-            <a href="#quality" class="py-2 px-2 hover:bg-gray-100 rounded">质量体系</a>
-            <a href="#contact" class="py-2 px-2 hover:bg-gray-100 rounded">联系我们</a>
+            <a href="#about" data-i18n="nav.about" class="py-2 px-2 hover:bg-gray-100 rounded">公司简况</a>
+            <a href="#factory" data-i18n="nav.factory" class="py-2 px-2 hover:bg-gray-100 rounded">制造能力</a>
+            <a href="#equipment" data-i18n="nav.equipment" class="py-2 px-2 hover:bg-gray-100 rounded">设备能力</a>
+            <a href="#quality" data-i18n="nav.quality" class="py-2 px-2 hover:bg-gray-100 rounded">质量体系</a>
+            <a href="#contact" data-i18n="nav.contact" class="py-2 px-2 hover:bg-gray-100 rounded">联系我们</a>
         </div>
     </div>
 </header>
@@ -64,11 +67,11 @@
 <section class="relative bg-gradient-to-r from-primary to-secondary text-white py-16 md:py-28 overflow-hidden">
     <div class="absolute inset-0 bg-black/10"></div>
     <div class="container relative mx-auto px-4 md:px-6">
-        <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-bold mb-4 fade-in-up">专业电子产品生产服务高新技术企业</h2>
-        <p class="text-lg md:text-xl opacity-95 max-w-3xl fade-in-up" style="transition-delay:0.1s">SMT贴片、DIP、PCBA一站式服务，提供试产与批量EMS、OEM加工服务</p>
+        <h2 data-i18n="hero.title" class="text-[clamp(1.8rem,4vw,3rem)] font-bold mb-4 fade-in-up">专业电子产品生产服务高新技术企业</h2>
+        <p data-i18n="hero.subtitle" class="text-lg md:text-xl opacity-95 max-w-3xl fade-in-up" style="transition-delay:0.1s">SMT贴片、DIP、PCBA一站式服务，提供试产与批量EMS、OEM加工服务</p>
         <div class="mt-8 flex flex-wrap gap-4 fade-in-up" style="transition-delay:0.2s">
-            <a href="#about" class="bg-white text-primary px-6 py-3 rounded-md font-medium hover:bg-gray-100 hover:shadow-lg transition-all">了解我们</a>
-            <a href="#contact" class="border border-white px-6 py-3 rounded-md font-medium hover:bg-white/15 transition-all">联系业务</a>
+            <a href="#about" data-i18n="hero.cta1" class="bg-white text-primary px-6 py-3 rounded-md font-medium hover:bg-gray-100 hover:shadow-lg transition-all">了解我们</a>
+            <a href="#contact" data-i18n="hero.cta2" class="border border-white px-6 py-3 rounded-md font-medium hover:bg-white/15 transition-all">联系业务</a>
         </div>
     </div>
 </section>
@@ -76,22 +79,22 @@
 <!--公司简况介绍-->
 <section id="about" class="py-16 md:py-20 fade-in-up">
     <div class="container mx-auto px-4 md:px-6">
-        <h3 class="section-title">公司简况介绍</h3>
+        <h3 data-i18n="about.title" class="section-title">公司简况介绍</h3>
         <div class="grid md:grid-cols-2 gap-10 items-center">
             <div>
-                <p class="mb-4">安徽格罗特智能科技有限公司成立于2022年6月，注册资本1000万元，二期投资总额1500万元，是一家专业从事电子产品生产服务的高新技术企业。</p>
-                <p class="mb-4">总部坐落于安徽省马鞍山市郑蒲港新区姥桥镇新陶路107号浦建半导体产业园9栋1‑4层。公司前身为浙江格瑞实业股份有限公司，位于浙江嘉善。2022年与恒为科技合作，建立格罗特生产车间。</p>
-                <p class="mb-4">业务方向：Smt贴片、Dip，Pcba一站式服务，为多领域客户提供试产与批量EMS、OEM加工服务，具备完善供应链与智能制造服务能力。</p>
+                <p data-i18n="about.p1" class="mb-4">安徽格罗特智能科技有限公司成立于2022年6月，注册资本1000万元，二期投资总额1500万元，是一家专业从事电子产品生产服务的高新技术企业。</p>
+                <p data-i18n="about.p2" class="mb-4">总部坐落于安徽省马鞍山市郑蒲港新区姥桥镇新陶路107号浦建半导体产业园9栋1‑4层。公司前身为浙江格瑞实业股份有限公司，位于浙江嘉善。2022年与恒为科技合作，建立格罗特生产车间。</p>
+                <p data-i18n="about.p3" class="mb-4">业务方向：Smt贴片、Dip，Pcba一站式服务，为多领域客户提供试产与批量EMS、OEM加工服务，具备完善供应链与智能制造服务能力。</p>
                 <div class="mt-6">
-                    <h4 class="font-semibold text-lg mb-2">服务领域：</h4>
+                    <h4 data-i18n="about.domainTitle" class="font-semibold text-lg mb-2">服务领域：</h4>
                     <div class="flex flex-wrap gap-2">
-                        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">通信网络</span>
-                        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">汽车电子</span>
-                        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">消费电子</span>
-                        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">科研</span>
-                        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">医疗</span>
-                        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">军工</span>
-                        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">航空航天</span>
+                        <span data-i18n="about.domains.0" class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">通信网络</span>
+                        <span data-i18n="about.domains.1" class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">汽车电子</span>
+                        <span data-i18n="about.domains.2" class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">消费电子</span>
+                        <span data-i18n="about.domains.3" class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">科研</span>
+                        <span data-i18n="about.domains.4" class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">医疗</span>
+                        <span data-i18n="about.domains.5" class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">军工</span>
+                        <span data-i18n="about.domains.6" class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">航空航天</span>
                     </div>
                 </div>
             </div>
@@ -101,9 +104,9 @@
                        <img loading="lazy" decoding="async" src="./images/factory1.png" alt="">
                     </div>
                     <div class="p-3 text-center">
-                        <p class="font-medium">嘉善姚庄厂区</p>
+                        <p data-i18n="about.factory1.name" class="font-medium">嘉善姚庄厂区</p>
                         <ul class="text-sm space-y-1">
-                            <li>总建面3500㎡｜车间2000㎡｜办公楼1500㎡</li>
+                            <li data-i18n="about.factory1.spec">总建面3500㎡｜车间2000㎡｜办公楼1500㎡</li>
                         </ul>
                     </div>
                 </div>
@@ -112,9 +115,9 @@
                         <img loading="lazy" decoding="async" src="./images/factory2.png" alt="">
                     </div>
                     <div class="p-3 text-center">
-                        <p class="font-medium">嘉善魏塘厂区</p>
+                        <p data-i18n="about.factory2.name" class="font-medium">嘉善魏塘厂区</p>
                         <ul class="text-sm space-y-1">
-                            <li>总建面50650㎡｜车间3000㎡｜办公楼6100㎡</li>
+                            <li data-i18n="about.factory2.spec">总建面50650㎡｜车间3000㎡｜办公楼6100㎡</li>
                         </ul>
                     </div>
                 </div>
@@ -123,11 +126,11 @@
 
         <!--组织架构-->
         <div class="mt-16 fade-in-up">
-            <h4 class="text-xl font-semibold mb-6">公司组织架构</h4>
+            <h4 data-i18n="about.structure.title" class="text-xl font-semibold mb-6">公司组织架构</h4>
             <div class="card-shadow p-6 overflow-x-auto">
                 <div class="min-w-[700px] text-center">
                     <img loading="lazy" decoding="async" style="width: 60%;margin: 0 auto;" src="./images/jiagou.png" alt="">
-                    <div class="mt-4 text-sm text-gray-500">2023年公司规划总人数：160人 ，目前总人数：120人  ，其中制造部：80人 ，工程部：18人 品质部:10人。</div>
+                    <div data-i18n="about.structure.note" class="mt-4 text-sm text-gray-500">2023年公司规划总人数：160人 ，目前总人数：120人  ，其中制造部：80人 ，工程部：18人 品质部:10人。</div>
                 </div>
             </div>
         </div>
@@ -137,8 +140,8 @@
 <!--制造能力介绍-->
 <section id="factory" class="py-16 md:py-20 bg-lightgray fade-in-up">
     <div class="container mx-auto px-4 md:px-6">
-        <h3 class="section-title">制造能力介绍</h3>
-        <h3 class="text-xl font-semibold">制造与交付 – 硬件配置</h3>
+        <h3 data-i18n="factory.title" class="section-title">制造能力介绍</h3>
+        <h3 data-i18n="factory.hardwareSubtitle" class="text-xl font-semibold">制造与交付 – 硬件配置</h3>
         <div class="overflow-x-auto rounded-lg shadow">
             <table class="w-full min-w-[800px] bg-white">
                 <thead class="bg-primary text-white">
@@ -263,7 +266,7 @@
                 </tbody>
             </table>
         </div>
-        <h3 class="text-xl font-semibold mt-6 mb-2">制造与交付 – 工厂产能</h3>
+        <h3 data-i18n="factory.capacitySubtitle" class="text-xl font-semibold mt-6 mb-2">制造与交付 – 工厂产能</h3>
 
         <div class="relative overflow-hidden rounded-xl p-6 md:p-8 mb-6" style="background: linear-gradient(135deg, #0F52BA 0%, #165DFF 100%);">
             <div class="absolute inset-0 opacity-10">
@@ -278,7 +281,7 @@
             </div>
             <div class="relative flex flex-col sm:flex-row items-center justify-between gap-4 text-white">
                 <div>
-                    <div class="text-sm md:text-base opacity-80 mb-1">月度总产能</div>
+                    <div data-i18n="factory.totalMonthly" class="text-sm md:text-base opacity-80 mb-1">月度总产能</div>
                     <div class="text-4xl md:text-5xl font-extrabold tracking-tight">2,000K+</div>
                     <div class="text-sm md:text-base opacity-80 mt-1">pcs / month</div>
                 </div>
@@ -407,7 +410,7 @@
 <!--设备能力介绍-->
 <section id="equipment" class="py-16 md:py-20 fade-in-up">
     <div class="container mx-auto px-4 md:px-6">
-        <h3 class="section-title">设备能力</h3>
+        <h3 data-i18n="equipment.title" class="section-title">设备能力</h3>
 
         <!-- 印刷机 -->
         <div class="mb-16">
@@ -776,7 +779,7 @@
 <!--质量体系介绍-->
 <section id="quality" class="py-16 md:py-20 bg-lightgray">
     <div class="container mx-auto px-4 md:px-6">
-        <h3 class="section-title">质量体系</h3>
+        <h3 data-i18n="quality.title" class="section-title">质量体系</h3>
 
         <!-- 1. 体系框架 -->
         <div class="mb-12">
@@ -1301,24 +1304,24 @@
 </section>
 <section id="contact" class="py-16 bg-dark text-white fade-in-up">
     <div class="container mx-auto px-4 md:px-6">
-        <h1 class="text-3xl mb-4">联系我们</h1>
+        <h1 data-i18n="contact.title" class="text-3xl mb-4">联系我们</h1>
         <div class="grid md:grid-cols-2 gap-8">
             <div>
-                <h4 class="text-xl font-semibold mb-4">安徽格罗特智能科技有限公司</h4>
+                <h4 data-i18n="contact.companyName" class="text-xl font-semibold mb-4">安徽格罗特智能科技有限公司</h4>
                 <ul class="space-y-3">
-                    <li><i class="fa fa-map-marker mr-2"></i>地址：安徽省马鞍山市郑蒲港新区姥桥镇新陶路107号浦建半导体产业园9栋1‑4层</li>
-                    <li><i class="fa fa-building mr-2"></i>前身：浙江格瑞实业股份有限公司（嘉善生产基地）</li>
+                    <li data-i18n="contact.address"><i class="fa fa-map-marker mr-2"></i>地址：安徽省马鞍山市郑蒲港新区姥桥镇新陶路107号浦建半导体产业园9栋1‑4层</li>
+                    <li data-i18n="contact.predecessor"><i class="fa fa-building mr-2"></i>前身：浙江格瑞实业股份有限公司（嘉善生产基地）</li>
                 </ul>
             </div>
             <div>
-                <h4 class="text-xl font-semibold mb-4">业务合作</h4>
-                <p>欢迎洽谈SMT贴片、DIP插件、PCBA加工、EMS/OEM批量与试产订单。</p>
+                <h4 data-i18n="contact.businessTitle" class="text-xl font-semibold mb-4">业务合作</h4>
+                <p data-i18n="contact.businessDesc">欢迎洽谈SMT贴片、DIP插件、PCBA加工、EMS/OEM批量与试产订单。</p>
             </div>
         </div>
 
         <!-- 香港收货地址富耀科技 -->
         <div class="mt-10 bg-white/10 p-6 rounded-xl border border-white/20">
-            <h4 class="text-xl font-semibold mb-4">香港收货地址<br></h4>
+            <h4 data-i18n="contact.hkTitle" class="text-xl font-semibold mb-4">香港收货地址<br></h4>
             <div class="grid md:grid-cols-2 gap-6 text-sm">
                 <div class="bg-white/5 p-4 rounded-lg">
                     <p class="mb-2"><strong>中文地址：</strong><br>香港元朗安樂路 109‑111號安樂工業大厦1樓 B1 室</p>
@@ -1342,7 +1345,7 @@
     <div class="container mx-auto px-4">
         <div class="border-b border-gray-700 pb-4 mb-4"></div>
         <div class="text-center">
-            ©2026 安徽格罗特智能科技有限公司 版权所有 | PCBA EMS OEM电子制造服务商
+            <span data-i18n="footer.copyright">©2026 安徽格罗特智能科技有限公司 版权所有 | PCBA EMS OEM电子制造服务商</span>
         </div>
     </div>
 </footer>
@@ -1413,6 +1416,150 @@ window.addEventListener('load', ()=>{
     }, 4000)
 })
 window.addEventListener('scroll', forceShowVisible, {passive:true})
+
+/* ============= 中英文切换 i18n ============= */
+const I18N_DICT = {
+  zh: {
+    'nav.langBtn': 'EN',
+    'nav.about': '公司简况',
+    'nav.factory': '制造能力',
+    'nav.equipment': '设备能力',
+    'nav.quality': '质量体系',
+    'nav.contact': '联系我们',
+    'brand': '安徽格罗特智能科技',
+    'hero.title': '专业电子产品生产服务高新技术企业',
+    'hero.subtitle': 'SMT贴片、DIP、PCBA一站式服务，提供试产与批量EMS、OEM加工服务',
+    'hero.cta1': '了解我们',
+    'hero.cta2': '联系业务',
+    'about.title': '公司简况介绍',
+    'about.p1': '安徽格罗特智能科技有限公司成立于2022年6月，注册资本1000万元，二期投资总额1500万元，是一家专业从事电子产品生产服务的高新技术企业。',
+    'about.p2': '总部坐落于安徽省马鞍山市郑蒲港新区姥桥镇新陶路107号浦建半导体产业园9栋1-4层。公司前身为浙江格瑞实业股份有限公司，位于浙江嘉善。2022年与恒为科技合作，建立格罗特生产车间。',
+    'about.p3': '业务方向：SMT贴片、DIP，PCBA一站式服务，为多领域客户提供试产与批量EMS、OEM加工服务，具备完善供应链与智能制造服务能力。',
+    'about.domainTitle': '服务领域：',
+    'about.domains.0': '通信网络',
+    'about.domains.1': '汽车电子',
+    'about.domains.2': '消费电子',
+    'about.domains.3': '科研',
+    'about.domains.4': '医疗',
+    'about.domains.5': '军工',
+    'about.domains.6': '航空航天',
+    'about.factory1.name': '嘉善姚庄厂区',
+    'about.factory1.spec': '总建面3500㎡｜车间2000㎡｜办公楼1500㎡',
+    'about.factory2.name': '嘉善魏塘厂区',
+    'about.factory2.spec': '总建面50650㎡｜车间3000㎡｜办公楼6100㎡',
+    'about.structure.title': '公司组织架构',
+    'about.structure.note': '2023年公司规划总人数：160人，目前总人数：120人，其中制造部：80人，工程部：18人，品质部：10人。',
+    'factory.title': '制造能力介绍',
+    'factory.hardwareSubtitle': '制造与交付 – 硬件配置',
+    'factory.capacitySubtitle': '制造与交付 – 工厂产能',
+    'factory.totalMonthly': '月度总产能',
+    'equipment.title': '设备能力',
+    'quality.title': '质量体系',
+    'contact.title': '联系我们',
+    'contact.companyName': '安徽格罗特智能科技有限公司',
+    'contact.address': '地址：安徽省马鞍山市郑蒲港新区姥桥镇新陶路107号浦建半导体产业园9栋1-4层',
+    'contact.predecessor': '前身：浙江格瑞实业股份有限公司（嘉善生产基地）',
+    'contact.businessTitle': '业务合作',
+    'contact.businessDesc': '欢迎洽谈SMT贴片、DIP插件、PCBA加工、EMS/OEM批量与试产订单。',
+    'contact.hkTitle': '香港收货地址',
+    'footer.copyright': '©2026 安徽格罗特智能科技有限公司 版权所有 | PCBA EMS OEM电子制造服务商'
+  },
+  en: {
+    'nav.langBtn': '中',
+    'nav.about': 'About',
+    'nav.factory': 'Manufacturing',
+    'nav.equipment': 'Equipment',
+    'nav.quality': 'Quality',
+    'nav.contact': 'Contact',
+    'brand': 'Anhui Great Intelligence Technology',
+    'hero.title': 'Professional High-Tech Electronic Manufacturing Services',
+    'hero.subtitle': 'One-stop SMT, DIP and PCBA services, providing prototype and mass EMS / OEM production',
+    'hero.cta1': 'Learn More',
+    'hero.cta2': 'Contact Sales',
+    'about.title': 'Company Profile',
+    'about.p1': 'Anhui Great Intelligence Technology Co., Ltd. was founded in June 2022 with a registered capital of RMB 10 million and a second-phase total investment of RMB 15 million. We are a high-tech enterprise specialized in electronic product manufacturing services.',
+    'about.p2': 'Headquartered at Building 9, Floors 1-4, Pujian Semiconductor Industrial Park, 107 Xintao Road, Muqiao Town, Zhengpugang New District, Ma\'anshan, Anhui. Formerly known as Zhejiang Gerui Industrial Co., Ltd. based in Jiashan, Zhejiang. In 2022 we partnered with Hengwei Technology and established the Great workshop.',
+    'about.p3': 'Business scope: SMT, DIP and one-stop PCBA services providing prototype and mass EMS / OEM for customers across multiple industries, backed by a mature supply chain and intelligent manufacturing capabilities.',
+    'about.domainTitle': 'Industries served:',
+    'about.domains.0': 'Telecom & Networking',
+    'about.domains.1': 'Automotive',
+    'about.domains.2': 'Consumer',
+    'about.domains.3': 'Scientific R&D',
+    'about.domains.4': 'Medical',
+    'about.domains.5': 'Defense',
+    'about.domains.6': 'Aerospace',
+    'about.factory1.name': 'Jiashan Yaozhuang Plant',
+    'about.factory1.spec': 'Total 3,500㎡｜Workshop 2,000㎡｜Office 1,500㎡',
+    'about.factory2.name': 'Jiashan Weitang Plant',
+    'about.factory2.spec': 'Total 50,650㎡｜Workshop 3,000㎡｜Office 6,100㎡',
+    'about.structure.title': 'Organization Structure',
+    'about.structure.note': '2023 plan: 160 employees; current: 120 employees. Manufacturing: 80, Engineering: 18, Quality: 10.',
+    'factory.title': 'Manufacturing Capability',
+    'factory.hardwareSubtitle': 'Manufacturing & Delivery – Equipment Setup',
+    'factory.capacitySubtitle': 'Manufacturing & Delivery – Factory Capacity',
+    'factory.totalMonthly': 'Total Monthly Output',
+    'equipment.title': 'Equipment Capability',
+    'quality.title': 'Quality System',
+    'contact.title': 'Contact Us',
+    'contact.companyName': 'Anhui Great Intelligence Technology Co., Ltd.',
+    'contact.address': 'Address: Building 9, F1-4, Pujian Semiconductor Industrial Park, 107 Xintao Road, Muqiao Town, Zhengpugang New District, Ma\'anshan, Anhui, China',
+    'contact.predecessor': 'Formerly: Zhejiang Gerui Industrial Co., Ltd. (Jiashan Production Base)',
+    'contact.businessTitle': 'Business Cooperation',
+    'contact.businessDesc': 'Welcome to contact us for SMT, DIP, PCBA manufacturing, EMS / OEM mass production and prototype orders.',
+    'contact.hkTitle': 'Hong Kong Receiving Address',
+    'footer.copyright': '©2026 Anhui Great Intelligence Technology Co., Ltd. All Rights Reserved | PCBA EMS OEM Electronic Manufacturing Service Provider'
+  }
+};
+
+function getDefaultLang(){
+  try {
+    const saved = localStorage.getItem('rb-lang');
+    if(saved === 'zh' || saved === 'en') return saved;
+  } catch(e){}
+  const nav = (navigator && (navigator.language || navigator.userLanguage || '')).toLowerCase();
+  return nav.startsWith('zh') ? 'zh' : 'en';
+}
+
+function applyI18n(lang){
+  const dict = I18N_DICT[lang] || I18N_DICT.zh;
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const key = el.getAttribute('data-i18n');
+    const val = dict[key];
+    if(typeof val === 'string'){
+      // 保留内部的 FontAwesome 图标 (仅当有 <i> 子元素时)
+      const iconEl = el.querySelector('i.fa');
+      if(iconEl){
+        // 清除文字节点，保留 i.fa，再插入翻译文本
+        const clonedIcon = iconEl.cloneNode(true);
+        el.textContent = '';
+        el.appendChild(clonedIcon);
+        el.appendChild(document.createTextNode(' ' + val.replace(/^[^：:]*[：:]\s*/, '')));
+      } else {
+        el.textContent = val;
+      }
+    }
+  });
+  // 同步更新 <html lang>
+  document.documentElement.setAttribute('lang', lang);
+  try { localStorage.setItem('rb-lang', lang); } catch(e){}
+}
+
+// 页面加载先立即应用一次（避免闪屏）
+applyI18n(getDefaultLang());
+
+function toggleLang(){
+  const curr = getDefaultLang();
+  const next = curr === 'zh' ? 'en' : 'zh';
+  applyI18n(next);
+}
+
+document.addEventListener('DOMContentLoaded', ()=>{
+  const btn = document.getElementById('langToggle');
+  const btnMob = document.getElementById('langToggleMobile');
+  if(btn){ btn.addEventListener('click', toggleLang); }
+  if(btnMob){ btnMob.addEventListener('click', toggleLang); }
+  applyI18n(getDefaultLang());
+});
 </script>
 </body>
 </html>
