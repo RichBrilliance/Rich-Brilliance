@@ -14,6 +14,7 @@
         zh: {
             'nav.langBtn': 'EN',
             'nav.about': '公司简况',
+            'nav.structure': '组织架构',
             'nav.factory': '制造能力',
             'nav.equipment': '设备能力',
             'nav.quality': '质量体系',
@@ -39,7 +40,7 @@
             'about.factory1.spec': '总建面3500㎡｜车间2000㎡｜办公楼1500㎡',
             'about.factory2.name': '嘉善魏塘厂区',
             'about.factory2.spec': '总建面50650㎡｜车间3000㎡｜办公楼6100㎡',
-            'about.structure.title': '公司组织架构',
+            'about.structure.title': '组织架构',
             'about.structure.note': '2023年公司规划总人数：160人，目前总人数：120人，其中制造部：80人，工程部：18人，品质部：10人。',
             'factory.title': '制造能力介绍',
             'factory.hardwareSubtitle': '制造与交付 – 硬件配置',
@@ -51,6 +52,8 @@
             'contact.companyName': '安徽格罗特智能科技有限公司',
             'contact.address': '地址：安徽省马鞍山市郑蒲港新区姥桥镇新陶路107号浦建半导体产业园9栋1-4层',
             'contact.predecessor': '前身：浙江格瑞实业股份有限公司（嘉善生产基地）',
+            'contact.manager1': '联系人：杨先生 电话：15061721822',
+            'contact.manager2': '上海业务处：崔经理 电话: 021-33460331',
             'contact.businessTitle': '业务合作',
             'contact.businessDesc': '欢迎洽谈SMT贴片、DIP插件、PCBA加工、EMS/OEM批量与试产订单。',
             'contact.hkTitle': '香港收货地址',
@@ -59,17 +62,18 @@
         en: {
             'nav.langBtn': '中',
             'nav.about': 'About',
+            'nav.structure': 'Organization',
             'nav.factory': 'Manufacturing',
             'nav.equipment': 'Equipment',
             'nav.quality': 'Quality',
             'nav.contact': 'Contact',
-            'brand': 'Anhui Great Intelligence Technology',
+            'brand': 'Anhui Geluote Intelligent Technology Co., Ltd',
             'hero.title': 'Professional High-Tech Electronic Manufacturing Services',
             'hero.subtitle': 'One-stop SMT, DIP and PCBA services, providing prototype and mass EMS / OEM production',
             'hero.cta1': 'Learn More',
             'hero.cta2': 'Contact Sales',
             'about.title': 'Company Profile',
-            'about.p1': 'Anhui Great Intelligence Technology Co., Ltd. was founded in June 2022 with a registered capital of RMB 10 million and a second-phase total investment of RMB 15 million. We are a high-tech enterprise specialized in electronic product manufacturing services.',
+            'about.p1': 'Anhui Geluote Intelligent Technology Co., Ltd was founded in June 2022 with a registered capital of RMB 10 million and a second-phase total investment of RMB 15 million. We are a high-tech enterprise specialized in electronic product manufacturing services.',
             'about.p2': 'Headquartered at Building 9, Floors 1-4, Pujian Semiconductor Industrial Park, 107 Xintao Road, Muqiao Town, Zhengpugang New District, Ma\'anshan, Anhui. Formerly known as Zhejiang Gerui Industrial Co., Ltd. based in Jiashan, Zhejiang. In 2022 we partnered with Hengwei Technology and established the Great workshop.',
             'about.p3': 'Business scope: SMT, DIP and one-stop PCBA services providing prototype and mass EMS / OEM for customers across multiple industries, backed by a mature supply chain and intelligent manufacturing capabilities.',
             'about.domainTitle': 'Industries served:',
@@ -93,13 +97,15 @@
             'equipment.title': 'Equipment Capability',
             'quality.title': 'Quality System',
             'contact.title': 'Contact Us',
-            'contact.companyName': 'Anhui Great Intelligence Technology Co., Ltd.',
+            'contact.companyName': 'Anhui Geluote Intelligent Technology Co., Ltd',
             'contact.address': 'Address: Building 9, F1-4, Pujian Semiconductor Industrial Park, 107 Xintao Road, Muqiao Town, Zhengpugang New District, Ma\'anshan, Anhui, China',
             'contact.predecessor': 'Formerly: Zhejiang Gerui Industrial Co., Ltd. (Jiashan Production Base)',
+            'contact.manager1': 'Contact: Mr. Yang  Tel: 15061721822',
+            'contact.manager2': 'Shanghai Office: Manager Cui  Tel: 021-33460331',
             'contact.businessTitle': 'Business Cooperation',
             'contact.businessDesc': 'Welcome to contact us for SMT, DIP, PCBA manufacturing, EMS / OEM mass production and prototype orders.',
             'contact.hkTitle': 'Hong Kong Receiving Address',
-            'footer.copyright': '©2026 Anhui Great Intelligence Technology Co., Ltd. All Rights Reserved | PCBA EMS OEM Electronic Manufacturing Service Provider'
+            'footer.copyright': '©2026 Anhui Geluote Intelligent Technology Co., Ltd All Rights Reserved | PCBA EMS OEM Electronic Manufacturing Service Provider'
         }
     };
 
@@ -817,4 +823,7 @@
     } else {
         boot();
     }
+
+    // 暴露给 module-loader.js 按需翻译动态加载内容
+    window.__i18n = { apply: applyI18n, getLang: getDefaultLang };
 })();

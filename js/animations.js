@@ -59,4 +59,30 @@
     } else {
         boot();
     }
+
+    // 暴露给 module-loader.js：对新加载的 .fade-in-up 元素重新观察 + 立即显示视口内元素
+    window.__anim = {
+        refresh: function (root) {
+            const scope = root || document;
+            if ('IntersectionObserver' in window) {
+                try {
+                    const obs = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add('show');
+                                obs.unobserve(entry.target);
+                            }
+                        });
+                    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+                    scope.querySelectorAll('.fade-in-up:not(.show)').forEach(el => obs.observe(el));
+                } catch (e) { /* ignore */ }
+            }
+            // 立即显示已在视口内的元素
+            const vh = window.innerHeight || document.documentElement.clientHeight;
+            scope.querySelectorAll('.fade-in-up:not(.show)').forEach(el => {
+                const r = el.getBoundingClientRect();
+                if (r.top < vh - 40 && r.bottom > 40) el.classList.add('show');
+            });
+        }
+    };
 })();

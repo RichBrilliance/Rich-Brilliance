@@ -69,6 +69,20 @@ img {
     box-shadow: 0 10px 15px -3px rgba(0,0,0,0.08);
 }
 
+/* ---------- 导航高亮（当前页） ---------- */
+.nav-active {
+    color: #0F52BA !important;
+}
+.nav-active::after {
+    width: 100% !important;
+}
+/* 移动端导航高亮 */
+#mobileMenu .nav-active {
+    background-color: #eff6ff;
+    color: #0F52BA !important;
+    font-weight: 600;
+}
+
 /* ---------- fade-in-up 动画（与 JS 联动） ---------- */
 .fade-in-up {
     opacity: 0;
@@ -88,6 +102,67 @@ img {
     .card-shadow { transition: none; }
     .card-shadow:hover { transform: none; }
     #scrollTopBtn { transition: none !important; }
+    .page--active { animation: none !important; }
+    .page--leaving { animation: none !important; }
+}
+
+/* ---------- 翻书式页面切换 ---------- */
+.book {
+    position: relative;
+    perspective: 1800px;
+}
+
+.page {
+    display: none;
+    backface-visibility: hidden;
+}
+
+.page--active {
+    display: block;
+    animation: pageFlipIn 0.55s cubic-bezier(0.22, 0.61, 0.36, 1);
+    transform-origin: left center;
+}
+
+.page--leaving {
+    display: block;
+    animation: pageFlipOut 0.4s cubic-bezier(0.55, 0.06, 0.68, 0.19) forwards;
+    transform-origin: right center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+@keyframes pageFlipIn {
+    0% {
+        opacity: 0;
+        transform: translateX(6%) rotateY(18deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) rotateY(0);
+    }
+}
+
+@keyframes pageFlipOut {
+    0% {
+        opacity: 1;
+        transform: translateX(0) rotateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-6%) rotateY(-18deg);
+    }
+}
+
+/* 翻页 loading 占位 */
+.page-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    color: #9ca3af;
 }
 
 /* ---------- 响应式图片通用规范 ---------- */

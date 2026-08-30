@@ -1,6 +1,7 @@
 /* ============================================================
- * navbar.js — 导航栏 / 移动端菜单 / 锚点平滑滚动
+ * navbar.js — 导航栏 / 移动端菜单
  * 依赖：<header id="navbar">, <button id="menuBtn">, <div id="mobileMenu">
+ * 注意：锚点导航和平滑滚动已由 module-loader.js 接管（翻页切换）
  * ============================================================ */
 
 (function () {
@@ -35,30 +36,13 @@
         });
     }
 
-    function initSmoothScroll() {
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const href = this.getAttribute('href');
-                if (!href || href === '#') return;
-                const targetDom = document.querySelector(href);
-                if (!targetDom) return;
-                e.preventDefault();
-                const navH = (document.getElementById('navbar') || {}).offsetHeight || 0;
-                const top = targetDom.getBoundingClientRect().top + window.scrollY - navH - 8;
-                window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
-            });
-        });
-    }
-
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', () => {
             initNavbar();
             initMobileMenu();
-            initSmoothScroll();
         });
     } else {
         initNavbar();
         initMobileMenu();
-        initSmoothScroll();
     }
 })();
