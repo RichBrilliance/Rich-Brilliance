@@ -71,7 +71,7 @@ img {
 
 /* ---------- 导航高亮（当前页） ---------- */
 .nav-active {
-    color: #0F52BA !important;
+    /* color: #0F52BA !important; */
 }
 .nav-active::after {
     width: 100% !important;

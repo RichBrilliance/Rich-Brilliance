@@ -67,7 +67,7 @@
             'nav.equipment': 'Equipment',
             'nav.quality': 'Quality',
             'nav.contact': 'Contact',
-            'brand': 'Anhui Geluote Intelligent Technology Co., Ltd',
+            'brand': 'Geluote Intelligent Technology',
             'hero.title': 'Professional High-Tech Electronic Manufacturing Services',
             'hero.subtitle': 'One-stop SMT, DIP and PCBA services, providing prototype and mass EMS / OEM production',
             'hero.cta1': 'Learn More',
